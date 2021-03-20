@@ -1,0 +1,16 @@
+C:\Users\Usuario\source\repos\proyectop2\proyectop2\bin\Debug\proyectop2.exe.config
+C:\Users\Usuario\source\repos\proyectop2\proyectop2\bin\Debug\proyectop2.exe
+C:\Users\Usuario\source\repos\proyectop2\proyectop2\bin\Debug\proyectop2.pdb
+C:\Users\Usuario\source\repos\proyectop2\proyectop2\obj\Debug\GUI.csprojAssemblyReference.cache
+C:\Users\Usuario\source\repos\proyectop2\proyectop2\obj\Debug\proyectop2.Form1.resources
+C:\Users\Usuario\source\repos\proyectop2\proyectop2\obj\Debug\proyectop2.login.resources
+C:\Users\Usuario\source\repos\proyectop2\proyectop2\obj\Debug\proyectop2.Properties.Resources.resources
+C:\Users\Usuario\source\repos\proyectop2\proyectop2\obj\Debug\GUI.csproj.GenerateResource.cache
+C:\Users\Usuario\source\repos\proyectop2\proyectop2\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\source\repos\proyectop2\proyectop2\obj\Debug\proyectop2.exe
+C:\Users\Usuario\source\repos\proyectop2\proyectop2\obj\Debug\proyectop2.pdb
+C:\Users\Usuario\source\repos\proyectop2\proyectop2\obj\Debug\proyectop2.productos.resources
+C:\Users\Usuario\source\repos\proyectop2\proyectop2\obj\Debug\proyectop2.ventas.resources
+C:\Users\Usuario\source\repos\proyectop2\proyectop2\obj\Debug\proyectop2.buscarproducto.resources
+C:\Users\Usuario\source\repos\proyectop2\proyectop2\obj\Debug\proyectop2.editarproductos.resources
+C:\Users\Usuario\source\repos\proyectop2\proyectop2\obj\Debug\proyectop2.categoriaymarca.resources
