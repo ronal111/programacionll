@@ -124,6 +124,16 @@ namespace proyectop2.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap electronica {
+            get {
+                object obj = ResourceManager.GetObject("electronica", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Heavy_red__x_ {
             get {
                 object obj = ResourceManager.GetObject("Heavy_red__x_", resourceCulture);
