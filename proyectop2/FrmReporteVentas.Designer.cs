@@ -34,17 +34,12 @@ namespace proyectop2
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnbuscarp = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.lbltotalventas = new System.Windows.Forms.Label();
-            this.lblganancia = new System.Windows.Forms.Label();
             this.dgvbproductos = new System.Windows.Forms.DataGridView();
             this.folioventa = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.fechav = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codigop = new System.Windows.Forms.DataGridViewLinkColumn();
             this.categoriap = new System.Windows.Forms.DataGridViewLinkColumn();
             this.marcap = new System.Windows.Forms.DataGridViewLinkColumn();
@@ -53,10 +48,16 @@ namespace proyectop2
             this.cantidadp = new System.Windows.Forms.DataGridViewLinkColumn();
             this.precio = new System.Windows.Forms.DataGridViewLinkColumn();
             this.preciov = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.lblganancia = new System.Windows.Forms.Label();
+            this.lbltotalventas = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btbbuscarp = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvbproductos)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -83,48 +84,33 @@ namespace proyectop2
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btnbuscarp);
-            this.panel1.Controls.Add(this.comboBox2);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.dateTimePicker2);
+            this.panel1.Controls.Add(this.dateTimePicker1);
+            this.panel1.Controls.Add(this.btbbuscarp);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1096, 116);
+            this.panel1.Size = new System.Drawing.Size(1387, 116);
             this.panel1.TabIndex = 92;
             // 
-            // btnbuscarp
+            // dateTimePicker2
             // 
-            this.btnbuscarp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.btnbuscarp.FlatAppearance.BorderSize = 0;
-            this.btnbuscarp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.btnbuscarp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnbuscarp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnbuscarp.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnbuscarp.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnbuscarp.Location = new System.Drawing.Point(556, 43);
-            this.btnbuscarp.Name = "btnbuscarp";
-            this.btnbuscarp.Size = new System.Drawing.Size(152, 31);
-            this.btnbuscarp.TabIndex = 38;
-            this.btnbuscarp.Text = "BUSCAR";
-            this.btnbuscarp.UseVisualStyleBackColor = false;
+            this.dateTimePicker2.CalendarForeColor = System.Drawing.Color.DimGray;
+            this.dateTimePicker2.CalendarMonthBackground = System.Drawing.SystemColors.WindowFrame;
+            this.dateTimePicker2.Location = new System.Drawing.Point(262, 57);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(250, 22);
+            this.dateTimePicker2.TabIndex = 45;
             // 
-            // comboBox2
+            // dateTimePicker1
             // 
-            this.comboBox2.BackColor = System.Drawing.Color.Black;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(152, 49);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(175, 24);
-            this.comboBox2.TabIndex = 37;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.Color.Black;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(354, 49);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(175, 24);
-            this.comboBox1.TabIndex = 36;
+            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.CalendarForeColor = System.Drawing.Color.DimGray;
+            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.SystemColors.WindowFrame;
+            this.dateTimePicker1.Location = new System.Drawing.Point(12, 57);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(244, 22);
+            this.dateTimePicker1.TabIndex = 44;
             // 
             // panel2
             // 
@@ -132,76 +118,8 @@ namespace proyectop2
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 116);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1096, 471);
+            this.panel2.Size = new System.Drawing.Size(1387, 471);
             this.panel2.TabIndex = 93;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.lblganancia);
-            this.panel3.Controls.Add(this.lbltotalventas);
-            this.panel3.Controls.Add(this.button2);
-            this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 587);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1096, 147);
-            this.panel3.TabIndex = 94;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button1.Location = new System.Drawing.Point(705, 26);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(152, 31);
-            this.button1.TabIndex = 39;
-            this.button1.Text = "Calcular";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button2.Location = new System.Drawing.Point(879, 26);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(200, 31);
-            this.button2.TabIndex = 92;
-            this.button2.Text = "Imprimir Reporte";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // lbltotalventas
-            // 
-            this.lbltotalventas.AutoSize = true;
-            this.lbltotalventas.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltotalventas.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbltotalventas.Location = new System.Drawing.Point(630, 76);
-            this.lbltotalventas.Name = "lbltotalventas";
-            this.lbltotalventas.Size = new System.Drawing.Size(150, 23);
-            this.lbltotalventas.TabIndex = 93;
-            this.lbltotalventas.Text = "______________";
-            // 
-            // lblganancia
-            // 
-            this.lblganancia.AutoSize = true;
-            this.lblganancia.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblganancia.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblganancia.Location = new System.Drawing.Point(943, 76);
-            this.lblganancia.Name = "lblganancia";
-            this.lblganancia.Size = new System.Drawing.Size(150, 23);
-            this.lblganancia.TabIndex = 94;
-            this.lblganancia.Text = "______________";
             // 
             // dgvbproductos
             // 
@@ -220,6 +138,7 @@ namespace proyectop2
             this.dgvbproductos.ColumnHeadersHeight = 29;
             this.dgvbproductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.folioventa,
+            this.fechav,
             this.codigop,
             this.categoriap,
             this.marcap,
@@ -241,7 +160,7 @@ namespace proyectop2
             this.dgvbproductos.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvbproductos.RowTemplate.Height = 24;
             this.dgvbproductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvbproductos.Size = new System.Drawing.Size(1096, 471);
+            this.dgvbproductos.Size = new System.Drawing.Size(1387, 471);
             this.dgvbproductos.TabIndex = 30;
             // 
             // folioventa
@@ -250,6 +169,13 @@ namespace proyectop2
             this.folioventa.MinimumWidth = 6;
             this.folioventa.Name = "folioventa";
             this.folioventa.Width = 149;
+            // 
+            // fechav
+            // 
+            this.fechav.HeaderText = "Fecha De Venta";
+            this.fechav.MinimumWidth = 6;
+            this.fechav.Name = "fechav";
+            this.fechav.Width = 186;
             // 
             // codigop
             // 
@@ -307,12 +233,101 @@ namespace proyectop2
             this.preciov.Name = "preciov";
             this.preciov.Width = 134;
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.lblganancia);
+            this.panel3.Controls.Add(this.lbltotalventas);
+            this.panel3.Controls.Add(this.button2);
+            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 587);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1387, 116);
+            this.panel3.TabIndex = 94;
+            // 
+            // lblganancia
+            // 
+            this.lblganancia.AutoSize = true;
+            this.lblganancia.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblganancia.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblganancia.Location = new System.Drawing.Point(943, 76);
+            this.lblganancia.Name = "lblganancia";
+            this.lblganancia.Size = new System.Drawing.Size(150, 23);
+            this.lblganancia.TabIndex = 94;
+            this.lblganancia.Text = "______________";
+            // 
+            // lbltotalventas
+            // 
+            this.lbltotalventas.AutoSize = true;
+            this.lbltotalventas.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltotalventas.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbltotalventas.Location = new System.Drawing.Point(630, 76);
+            this.lbltotalventas.Name = "lbltotalventas";
+            this.lbltotalventas.Size = new System.Drawing.Size(150, 23);
+            this.lbltotalventas.TabIndex = 93;
+            this.lbltotalventas.Text = "______________";
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button2.Location = new System.Drawing.Point(879, 26);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(200, 31);
+            this.button2.TabIndex = 92;
+            this.button2.Text = "Imprimir Reporte";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button1.Location = new System.Drawing.Point(705, 26);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(152, 31);
+            this.button1.TabIndex = 39;
+            this.button1.Text = "Calcular";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // btbbuscarp
+            // 
+            this.btbbuscarp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btbbuscarp.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btbbuscarp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btbbuscarp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btbbuscarp.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btbbuscarp.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btbbuscarp.IconColor = System.Drawing.Color.White;
+            this.btbbuscarp.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btbbuscarp.IconSize = 35;
+            this.btbbuscarp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btbbuscarp.Location = new System.Drawing.Point(549, 49);
+            this.btbbuscarp.Name = "btbbuscarp";
+            this.btbbuscarp.Size = new System.Drawing.Size(158, 43);
+            this.btbbuscarp.TabIndex = 43;
+            this.btbbuscarp.Text = "Buscar";
+            this.btbbuscarp.UseVisualStyleBackColor = false;
+            // 
             // FrmReporteVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(1096, 733);
+            this.ClientSize = new System.Drawing.Size(1387, 725);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -321,9 +336,9 @@ namespace proyectop2
             this.Text = "FrmReporteVentas";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvbproductos)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvbproductos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -332,9 +347,6 @@ namespace proyectop2
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnbuscarp;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button2;
@@ -343,6 +355,7 @@ namespace proyectop2
         private System.Windows.Forms.Label lbltotalventas;
         private System.Windows.Forms.DataGridView dgvbproductos;
         private System.Windows.Forms.DataGridViewLinkColumn folioventa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechav;
         private System.Windows.Forms.DataGridViewLinkColumn codigop;
         private System.Windows.Forms.DataGridViewLinkColumn categoriap;
         private System.Windows.Forms.DataGridViewLinkColumn marcap;
@@ -351,5 +364,8 @@ namespace proyectop2
         private System.Windows.Forms.DataGridViewLinkColumn cantidadp;
         private System.Windows.Forms.DataGridViewLinkColumn precio;
         private System.Windows.Forms.DataGridViewLinkColumn preciov;
+        private FontAwesome.Sharp.IconButton btbbuscarp;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
     }
 }

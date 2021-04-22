@@ -10,31 +10,21 @@ using System.Windows.Forms;
 
 namespace proyectop2
 {
-    public partial class FrmVentas : Form
+    public partial class FrmRegistroCalle : Form
     {
-        public FrmVentas()
+        public FrmRegistroCalle()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btbbuscarp_Click(object sender, EventArgs e)
         {
-            txtbuscar.Clear();
+            txtcalle.Clear();
         }
 
-        private void ibtncancelar_Click(object sender, EventArgs e)
+        private void iconButton1_Click(object sender, EventArgs e)
         {
-            txtbuscar.Clear();
+            txtcalle.Clear();
         }
     }
 }

@@ -8,7 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace proyectop2
+
+namespace proyectop2 
 {
     public partial class FrmBuscarEmpleado : Form
     {
@@ -26,6 +27,21 @@ namespace proyectop2
         {
          
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        public void ibtnaddempleados_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btbbuscarp_Click(object sender, EventArgs e)
+        {
+            txtbuscarempleado.Clear();
         }
     }
 }

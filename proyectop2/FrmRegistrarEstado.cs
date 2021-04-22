@@ -10,16 +10,21 @@ using System.Windows.Forms;
 
 namespace proyectop2
 {
-    public partial class FrmBuscarProveedor : Form
+    public partial class FrmRegistrarEstado : Form
     {
-        public FrmBuscarProveedor()
+        public FrmRegistrarEstado()
         {
             InitializeComponent();
         }
 
-        private void btbbuscarp_Click(object sender, EventArgs e)
+        private void btnguardarestado_Click(object sender, EventArgs e)
         {
-            txtbuscarproveedor.Clear();
+            txtlocalidad.Clear();
+        }
+
+        private void btncancelar_Click(object sender, EventArgs e)
+        {
+            txtlocalidad.Clear();
         }
     }
 }

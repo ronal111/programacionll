@@ -86,7 +86,7 @@ namespace proyectop2
             }
         }
         #endregion
-        private void abrirformuhijo(object formulariohijo)
+        public void abrirformuhijo(object formulariohijo)
         {
             if (this.panelcontenedor2.Controls.Count > 0)
                 this.panelcontenedor2.Controls.RemoveAt(0);
@@ -195,5 +195,15 @@ namespace proyectop2
         private void ibtnrepvd_Click(object sender, EventArgs e)
         {
             abrirformuhijo(new FrmReporteVentas());
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            abrirformuhijo(new FrmReporteCompra());
+        }
+
+        private void iconButton2_Click_1(object sender, EventArgs e)
+        {
+            abrirformuhijo(new FrmReporteProductoMasVendido());
         }
     } }

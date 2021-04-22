@@ -47,3 +47,8 @@ C:\Users\Usuario\source\repos\proyectop2\proyectop2\obj\Debug\proyectop2.FrmVent
 C:\Users\Usuario\source\repos\proyectop2\proyectop2\obj\Debug\proyectop2.FrmRegistrarEmpleado.resources
 C:\Users\Usuario\source\repos\proyectop2\proyectop2\obj\Debug\proyectop2.FrmRegistrarProveedor.resources
 C:\Users\Usuario\source\repos\proyectop2\proyectop2\obj\Debug\proyectop2.FrmReporteVentas.resources
+C:\Users\Usuario\source\repos\proyectop2\proyectop2\obj\Debug\proyectop2.FrmRegistrarEstado.resources
+C:\Users\Usuario\source\repos\proyectop2\proyectop2\obj\Debug\proyectop2.FrmRegistroCalle.resources
+C:\Users\Usuario\source\repos\proyectop2\proyectop2\obj\Debug\proyectop2.FrmRegistroLocalidad.resources
+C:\Users\Usuario\source\repos\proyectop2\proyectop2\obj\Debug\proyectop2.FrmReporteCompra.resources
+C:\Users\Usuario\source\repos\proyectop2\proyectop2\obj\Debug\proyectop2.FrmReporteProductoMasVendido.resources

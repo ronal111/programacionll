@@ -119,6 +119,24 @@
     <Compile Include="FrmBuscarProveedor.Designer.cs">
       <DependentUpon>FrmBuscarProveedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmRegistrarEstado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRegistrarEstado.Designer.cs">
+      <DependentUpon>FrmRegistrarEstado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRegistroCalle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRegistroCalle.Designer.cs">
+      <DependentUpon>FrmRegistroCalle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRegistroLocalidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRegistroLocalidad.Designer.cs">
+      <DependentUpon>FrmRegistroLocalidad.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +173,18 @@
     <Compile Include="FrmRegistrarProveedor.Designer.cs">
       <DependentUpon>FrmRegistrarProveedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmReporteCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReporteCompra.Designer.cs">
+      <DependentUpon>FrmReporteCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReporteProductoMasVendido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReporteProductoMasVendido.Designer.cs">
+      <DependentUpon>FrmReporteProductoMasVendido.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmReporteVentas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,6 +205,15 @@
     <EmbeddedResource Include="FrmBuscarProveedor.resx">
       <DependentUpon>FrmBuscarProveedor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmRegistrarEstado.resx">
+      <DependentUpon>FrmRegistrarEstado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRegistroCalle.resx">
+      <DependentUpon>FrmRegistroCalle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRegistroLocalidad.resx">
+      <DependentUpon>FrmRegistroLocalidad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMenu.resx">
       <DependentUpon>FrmMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -192,6 +231,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRegistrarProveedor.resx">
       <DependentUpon>FrmRegistrarProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReporteCompra.resx">
+      <DependentUpon>FrmReporteCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReporteProductoMasVendido.resx">
+      <DependentUpon>FrmReporteProductoMasVendido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmReporteVentas.resx">
       <DependentUpon>FrmReporteVentas.cs</DependentUpon>

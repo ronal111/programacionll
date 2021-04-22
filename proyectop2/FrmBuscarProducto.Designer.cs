@@ -32,22 +32,24 @@ namespace proyectop2
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnvertodo = new System.Windows.Forms.Button();
-            this.btnbuscarp = new System.Windows.Forms.Button();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.ibtnaddempleados = new FontAwesome.Sharp.IconButton();
+            this.btbbuscarp = new FontAwesome.Sharp.IconButton();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.txtempleado = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.txtbuscarproducto = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvbproductos = new System.Windows.Forms.DataGridView();
             this.codigop = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.categoriap = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.marcap = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.modelop = new System.Windows.Forms.DataGridViewLinkColumn();
             this.nombrep = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.descripcionp = new System.Windows.Forms.DataGridViewLinkColumn();
             this.colorp = new System.Windows.Forms.DataGridViewLinkColumn();
             this.cantidadp = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.descripcionp = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.marcap = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.modelop = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.categoriap = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.unmedida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.medida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precio = new System.Windows.Forms.DataGridViewLinkColumn();
             this.preciov = new System.Windows.Forms.DataGridViewLinkColumn();
             this.panel1.SuspendLayout();
@@ -57,49 +59,95 @@ namespace proyectop2
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btnvertodo);
-            this.panel1.Controls.Add(this.btnbuscarp);
+            this.panel1.Controls.Add(this.iconButton2);
+            this.panel1.Controls.Add(this.iconButton1);
+            this.panel1.Controls.Add(this.ibtnaddempleados);
+            this.panel1.Controls.Add(this.btbbuscarp);
             this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.txtempleado);
-            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.txtbuscarproducto);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1125, 152);
+            this.panel1.Size = new System.Drawing.Size(1425, 152);
             this.panel1.TabIndex = 29;
             // 
-            // btnvertodo
+            // iconButton2
             // 
-            this.btnvertodo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.btnvertodo.FlatAppearance.BorderSize = 0;
-            this.btnvertodo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.btnvertodo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnvertodo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnvertodo.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnvertodo.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnvertodo.Location = new System.Drawing.Point(476, 48);
-            this.btnvertodo.Name = "btnvertodo";
-            this.btnvertodo.Size = new System.Drawing.Size(152, 31);
-            this.btnvertodo.TabIndex = 35;
-            this.btnvertodo.Text = "Ver Todo";
-            this.btnvertodo.UseVisualStyleBackColor = false;
+            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.iconButton2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.iconButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Tasks;
+            this.iconButton2.IconColor = System.Drawing.Color.White;
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.IconSize = 35;
+            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton2.Location = new System.Drawing.Point(503, 56);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Size = new System.Drawing.Size(163, 38);
+            this.iconButton2.TabIndex = 44;
+            this.iconButton2.Text = "Mostrar Todo";
+            this.iconButton2.UseVisualStyleBackColor = false;
             // 
-            // btnbuscarp
+            // iconButton1
             // 
-            this.btnbuscarp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.btnbuscarp.FlatAppearance.BorderSize = 0;
-            this.btnbuscarp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.btnbuscarp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnbuscarp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnbuscarp.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnbuscarp.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnbuscarp.Location = new System.Drawing.Point(476, 11);
-            this.btnbuscarp.Name = "btnbuscarp";
-            this.btnbuscarp.Size = new System.Drawing.Size(152, 31);
-            this.btnbuscarp.TabIndex = 32;
-            this.btnbuscarp.Text = "BUSCAR";
-            this.btnbuscarp.UseVisualStyleBackColor = false;
+            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.iconButton1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.iconButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.ForeColor = System.Drawing.Color.White;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Dizzy;
+            this.iconButton1.IconColor = System.Drawing.Color.White;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 30;
+            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.Location = new System.Drawing.Point(791, 14);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(113, 36);
+            this.iconButton1.TabIndex = 43;
+            this.iconButton1.Text = "Eliminar";
+            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton1.UseVisualStyleBackColor = false;
+            // 
+            // ibtnaddempleados
+            // 
+            this.ibtnaddempleados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.ibtnaddempleados.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.ibtnaddempleados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.ibtnaddempleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ibtnaddempleados.ForeColor = System.Drawing.Color.White;
+            this.ibtnaddempleados.IconChar = FontAwesome.Sharp.IconChar.PenAlt;
+            this.ibtnaddempleados.IconColor = System.Drawing.Color.White;
+            this.ibtnaddempleados.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibtnaddempleados.IconSize = 30;
+            this.ibtnaddempleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ibtnaddempleados.Location = new System.Drawing.Point(672, 13);
+            this.ibtnaddempleados.Name = "ibtnaddempleados";
+            this.ibtnaddempleados.Size = new System.Drawing.Size(113, 36);
+            this.ibtnaddempleados.TabIndex = 42;
+            this.ibtnaddempleados.Text = "Editar";
+            this.ibtnaddempleados.UseVisualStyleBackColor = false;
+            // 
+            // btbbuscarp
+            // 
+            this.btbbuscarp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btbbuscarp.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btbbuscarp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btbbuscarp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btbbuscarp.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btbbuscarp.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btbbuscarp.IconColor = System.Drawing.Color.White;
+            this.btbbuscarp.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btbbuscarp.IconSize = 35;
+            this.btbbuscarp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btbbuscarp.Location = new System.Drawing.Point(503, 12);
+            this.btbbuscarp.Name = "btbbuscarp";
+            this.btbbuscarp.Size = new System.Drawing.Size(163, 38);
+            this.btbbuscarp.TabIndex = 41;
+            this.btbbuscarp.Text = "Buscar";
+            this.btbbuscarp.UseVisualStyleBackColor = false;
+            this.btbbuscarp.Click += new System.EventHandler(this.btbbuscarp_Click);
             // 
             // comboBox1
             // 
@@ -110,46 +158,13 @@ namespace proyectop2
             this.comboBox1.Size = new System.Drawing.Size(175, 24);
             this.comboBox1.TabIndex = 30;
             // 
-            // button1
+            // txtbuscarproducto
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button1.Location = new System.Drawing.Point(634, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(152, 31);
-            this.button1.TabIndex = 33;
-            this.button1.Text = "EDITAR";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // txtempleado
-            // 
-            this.txtempleado.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.txtempleado.Location = new System.Drawing.Point(108, 18);
-            this.txtempleado.Name = "txtempleado";
-            this.txtempleado.Size = new System.Drawing.Size(144, 22);
-            this.txtempleado.TabIndex = 31;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button4.Location = new System.Drawing.Point(792, 12);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(152, 31);
-            this.button4.TabIndex = 34;
-            this.button4.Text = "ELIMINAR";
-            this.button4.UseVisualStyleBackColor = false;
+            this.txtbuscarproducto.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.txtbuscarproducto.Location = new System.Drawing.Point(108, 18);
+            this.txtbuscarproducto.Name = "txtbuscarproducto";
+            this.txtbuscarproducto.Size = new System.Drawing.Size(144, 22);
+            this.txtbuscarproducto.TabIndex = 31;
             // 
             // panel2
             // 
@@ -157,7 +172,7 @@ namespace proyectop2
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 152);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1125, 441);
+            this.panel2.Size = new System.Drawing.Size(1425, 441);
             this.panel2.TabIndex = 30;
             // 
             // dgvbproductos
@@ -177,13 +192,15 @@ namespace proyectop2
             this.dgvbproductos.ColumnHeadersHeight = 29;
             this.dgvbproductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codigop,
-            this.categoriap,
-            this.marcap,
-            this.modelop,
             this.nombrep,
+            this.descripcionp,
             this.colorp,
             this.cantidadp,
-            this.descripcionp,
+            this.marcap,
+            this.modelop,
+            this.categoriap,
+            this.unmedida,
+            this.medida,
             this.precio,
             this.preciov});
             this.dgvbproductos.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -199,76 +216,90 @@ namespace proyectop2
             this.dgvbproductos.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvbproductos.RowTemplate.Height = 24;
             this.dgvbproductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvbproductos.Size = new System.Drawing.Size(1125, 441);
+            this.dgvbproductos.Size = new System.Drawing.Size(1425, 441);
             this.dgvbproductos.TabIndex = 29;
             this.dgvbproductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvbproductos_CellContentClick);
             // 
             // codigop
             // 
-            this.codigop.HeaderText = "codigo";
+            this.codigop.HeaderText = "Codigo";
             this.codigop.MinimumWidth = 6;
             this.codigop.Name = "codigop";
-            this.codigop.Width = 83;
-            // 
-            // categoriap
-            // 
-            this.categoriap.HeaderText = "categoria";
-            this.categoriap.MinimumWidth = 6;
-            this.categoriap.Name = "categoriap";
-            this.categoriap.Width = 108;
-            // 
-            // marcap
-            // 
-            this.marcap.HeaderText = "marca";
-            this.marcap.MinimumWidth = 6;
-            this.marcap.Name = "marcap";
-            this.marcap.Width = 78;
-            // 
-            // modelop
-            // 
-            this.modelop.HeaderText = "modelo";
-            this.modelop.MinimumWidth = 6;
-            this.modelop.Name = "modelop";
-            this.modelop.Width = 88;
+            this.codigop.Width = 86;
             // 
             // nombrep
             // 
-            this.nombrep.HeaderText = "nombre";
+            this.nombrep.HeaderText = "Nombre";
             this.nombrep.MinimumWidth = 6;
             this.nombrep.Name = "nombrep";
-            this.nombrep.Width = 88;
-            // 
-            // colorp
-            // 
-            this.colorp.HeaderText = "color";
-            this.colorp.MinimumWidth = 6;
-            this.colorp.Name = "colorp";
-            this.colorp.Width = 63;
-            // 
-            // cantidadp
-            // 
-            this.cantidadp.HeaderText = "disponibles";
-            this.cantidadp.MinimumWidth = 6;
-            this.cantidadp.Name = "cantidadp";
-            this.cantidadp.Width = 121;
+            this.nombrep.Width = 91;
             // 
             // descripcionp
             // 
-            this.descripcionp.HeaderText = "descripcion";
+            this.descripcionp.HeaderText = "Descripcion";
             this.descripcionp.MinimumWidth = 6;
             this.descripcionp.Name = "descripcionp";
             this.descripcionp.Width = 125;
             // 
+            // colorp
+            // 
+            this.colorp.HeaderText = "Color";
+            this.colorp.MinimumWidth = 6;
+            this.colorp.Name = "colorp";
+            this.colorp.Width = 66;
+            // 
+            // cantidadp
+            // 
+            this.cantidadp.HeaderText = "Disponibles";
+            this.cantidadp.MinimumWidth = 6;
+            this.cantidadp.Name = "cantidadp";
+            this.cantidadp.Width = 121;
+            // 
+            // marcap
+            // 
+            this.marcap.HeaderText = "Marca";
+            this.marcap.MinimumWidth = 6;
+            this.marcap.Name = "marcap";
+            this.marcap.Width = 77;
+            // 
+            // modelop
+            // 
+            this.modelop.HeaderText = "Modelo";
+            this.modelop.MinimumWidth = 6;
+            this.modelop.Name = "modelop";
+            this.modelop.Width = 87;
+            // 
+            // categoriap
+            // 
+            this.categoriap.HeaderText = "Categoria";
+            this.categoriap.MinimumWidth = 6;
+            this.categoriap.Name = "categoriap";
+            this.categoriap.Width = 111;
+            // 
+            // unmedida
+            // 
+            this.unmedida.HeaderText = "Unidad medida";
+            this.unmedida.MinimumWidth = 6;
+            this.unmedida.Name = "unmedida";
+            this.unmedida.Width = 186;
+            // 
+            // medida
+            // 
+            this.medida.HeaderText = "Medida";
+            this.medida.MinimumWidth = 6;
+            this.medida.Name = "medida";
+            this.medida.Width = 112;
+            // 
             // precio
             // 
-            this.precio.HeaderText = "precio compra";
+            this.precio.HeaderText = "Precio Compra";
             this.precio.MinimumWidth = 6;
             this.precio.Name = "precio";
-            this.precio.Width = 155;
+            this.precio.Width = 156;
             // 
             // preciov
             // 
-            this.preciov.HeaderText = "precio venta";
+            this.preciov.HeaderText = "Precio Venta";
             this.preciov.MinimumWidth = 6;
             this.preciov.Name = "preciov";
             this.preciov.Width = 134;
@@ -279,7 +310,7 @@ namespace proyectop2
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1125, 637);
+            this.ClientSize = new System.Drawing.Size(1425, 637);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -297,23 +328,25 @@ namespace proyectop2
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnbuscarp;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox txtempleado;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox txtbuscarproducto;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dgvbproductos;
         private System.Windows.Forms.DataGridViewLinkColumn codigop;
-        private System.Windows.Forms.DataGridViewLinkColumn categoriap;
-        private System.Windows.Forms.DataGridViewLinkColumn marcap;
-        private System.Windows.Forms.DataGridViewLinkColumn modelop;
         private System.Windows.Forms.DataGridViewLinkColumn nombrep;
+        private System.Windows.Forms.DataGridViewLinkColumn descripcionp;
         private System.Windows.Forms.DataGridViewLinkColumn colorp;
         private System.Windows.Forms.DataGridViewLinkColumn cantidadp;
-        private System.Windows.Forms.DataGridViewLinkColumn descripcionp;
+        private System.Windows.Forms.DataGridViewLinkColumn marcap;
+        private System.Windows.Forms.DataGridViewLinkColumn modelop;
+        private System.Windows.Forms.DataGridViewLinkColumn categoriap;
+        private System.Windows.Forms.DataGridViewTextBoxColumn unmedida;
+        private System.Windows.Forms.DataGridViewTextBoxColumn medida;
         private System.Windows.Forms.DataGridViewLinkColumn precio;
         private System.Windows.Forms.DataGridViewLinkColumn preciov;
-        private System.Windows.Forms.Button btnvertodo;
+        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton ibtnaddempleados;
+        private FontAwesome.Sharp.IconButton btbbuscarp;
+        private FontAwesome.Sharp.IconButton iconButton2;
     }
 }

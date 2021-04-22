@@ -31,5 +31,39 @@ namespace proyectop2
         {
 
         }
+
+        private void btnaddlocalidad_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btbbuscarp_Click(object sender, EventArgs e)
+        {
+            txtrfc.Clear();
+            txtempleado.Clear();
+            txtapellido.Clear();
+            txtpass.Clear();
+            txtsueldo.Clear();
+            txttelefonoe.Clear();
+            txtuser.Clear();
+            txtpuesto.Clear();
+            txtnumero.Clear();
+            txtcolonia.Clear();
+         
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            txtrfc.Clear();
+            txtempleado.Clear();
+            txtapellido.Clear();
+            txtpass.Clear();
+            txtsueldo.Clear();
+            txttelefonoe.Clear();
+            txtuser.Clear();
+            txtpuesto.Clear();
+            txtnumero.Clear();
+            txtcolonia.Clear();
+        }
     }
 }

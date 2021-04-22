@@ -76,6 +76,7 @@ namespace proyectop2
             this.txtuser.Size = new System.Drawing.Size(404, 23);
             this.txtuser.TabIndex = 1;
             this.txtuser.Text = "usuario";
+            this.txtuser.TextChanged += new System.EventHandler(this.txtuser_TextChanged);
             // 
             // txtcontraseña
             // 
@@ -157,7 +158,7 @@ namespace proyectop2
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
-            // login
+            // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -172,10 +173,11 @@ namespace proyectop2
             this.Controls.Add(this.txtuser);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "login";
+            this.Name = "FrmLogin";
             this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "login";
+            this.Load += new System.EventHandler(this.FrmLogin_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnmini)).EndInit();

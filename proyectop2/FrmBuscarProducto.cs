@@ -48,5 +48,10 @@ namespace proyectop2
         {
 
         }
+
+        private void btbbuscarp_Click(object sender, EventArgs e)
+        {
+            txtbuscarproducto.Clear();
+        }
     }
 }

@@ -41,5 +41,32 @@ namespace proyectop2
         {
 
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Guardar_Click(object sender, EventArgs e)
+        {
+            txtcolor.Clear();
+            txtdescripcion.Clear();
+            txtnombreproducto.Clear();
+            txtpreciocompra.Clear();
+            txtproductocodigo.Clear();
+            txtproveedor.Clear();
+            txtventa.Clear();
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            txtcolor.Clear();
+            txtdescripcion.Clear();
+            txtnombreproducto.Clear();
+            txtpreciocompra.Clear();
+            txtproductocodigo.Clear();
+            txtproveedor.Clear();
+            txtventa.Clear();
+        }
     }
 }

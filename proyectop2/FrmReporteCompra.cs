@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace proyectop2
 {
-    public partial class FrmBuscarProveedor : Form
+    public partial class FrmReporteCompra : Form
     {
-        public FrmBuscarProveedor()
+        public FrmReporteCompra()
         {
             InitializeComponent();
         }
 
-        private void btbbuscarp_Click(object sender, EventArgs e)
+        private void FrmReporteCompra_Load(object sender, EventArgs e)
         {
-            txtbuscarproveedor.Clear();
+
         }
     }
 }

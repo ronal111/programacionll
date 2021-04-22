@@ -16,6 +16,7 @@ namespace proyectop2
         {
             InitializeComponent();
         }
+        Form formulario = new FrmMenu();
 
         private void btnmini_Click(object sender, EventArgs e)
         {
@@ -41,10 +42,11 @@ namespace proyectop2
         {
             if ((txtuser.Text == "admin") && (txtcontraseña.Text == "admin"))
             {
-                Form formulario = new FrmMenu();
-                formulario.Show();
+                
 
                 this.Hide();
+
+               formulario.Show();
             }
             else
             {
@@ -53,6 +55,16 @@ namespace proyectop2
         }
 
         private void txtcontraseña_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtuser_TextChanged(object sender, EventArgs e)
         {
 
         }
