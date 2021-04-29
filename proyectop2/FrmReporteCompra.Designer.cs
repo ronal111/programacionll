@@ -29,8 +29,8 @@ namespace proyectop2
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblganancia = new System.Windows.Forms.Label();
             this.lbltotalventas = new System.Windows.Forms.Label();
@@ -56,9 +56,9 @@ namespace proyectop2
             this.numerotelprov = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.correop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btbbuscarp = new FontAwesome.Sharp.IconButton();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.btbbuscarp = new FontAwesome.Sharp.IconButton();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvbproductos)).BeginInit();
             this.panel1.SuspendLayout();
@@ -162,14 +162,14 @@ namespace proyectop2
             this.dgvbproductos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvbproductos.BackgroundColor = System.Drawing.Color.Black;
             this.dgvbproductos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvbproductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvbproductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvbproductos.ColumnHeadersHeight = 29;
             this.dgvbproductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.foliocompra,
@@ -194,15 +194,15 @@ namespace proyectop2
             this.dgvbproductos.Location = new System.Drawing.Point(0, 116);
             this.dgvbproductos.Name = "dgvbproductos";
             this.dgvbproductos.RowHeadersWidth = 51;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.dgvbproductos.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.dgvbproductos.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvbproductos.RowTemplate.Height = 24;
             this.dgvbproductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvbproductos.Size = new System.Drawing.Size(1942, 471);
-            this.dgvbproductos.TabIndex = 95;
+            this.dgvbproductos.TabIndex = 4;
             // 
             // foliocompra
             // 
@@ -327,6 +327,25 @@ namespace proyectop2
             this.panel1.Size = new System.Drawing.Size(1942, 116);
             this.panel1.TabIndex = 96;
             // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.CalendarForeColor = System.Drawing.Color.DimGray;
+            this.dateTimePicker2.CalendarMonthBackground = System.Drawing.SystemColors.WindowFrame;
+            this.dateTimePicker2.Location = new System.Drawing.Point(297, 47);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(250, 22);
+            this.dateTimePicker2.TabIndex = 2;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.CalendarForeColor = System.Drawing.Color.DimGray;
+            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.SystemColors.WindowFrame;
+            this.dateTimePicker1.Location = new System.Drawing.Point(47, 47);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(244, 22);
+            this.dateTimePicker1.TabIndex = 1;
+            // 
             // btbbuscarp
             // 
             this.btbbuscarp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
@@ -342,28 +361,9 @@ namespace proyectop2
             this.btbbuscarp.Location = new System.Drawing.Point(566, 41);
             this.btbbuscarp.Name = "btbbuscarp";
             this.btbbuscarp.Size = new System.Drawing.Size(163, 38);
-            this.btbbuscarp.TabIndex = 42;
+            this.btbbuscarp.TabIndex = 3;
             this.btbbuscarp.Text = "Buscar";
             this.btbbuscarp.UseVisualStyleBackColor = false;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.CalendarForeColor = System.Drawing.Color.DimGray;
-            this.dateTimePicker2.CalendarMonthBackground = System.Drawing.SystemColors.WindowFrame;
-            this.dateTimePicker2.Location = new System.Drawing.Point(297, 47);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(250, 22);
-            this.dateTimePicker2.TabIndex = 47;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.CalendarForeColor = System.Drawing.Color.DimGray;
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.SystemColors.WindowFrame;
-            this.dateTimePicker1.Location = new System.Drawing.Point(47, 47);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(244, 22);
-            this.dateTimePicker1.TabIndex = 46;
             // 
             // FrmReporteCompra
             // 

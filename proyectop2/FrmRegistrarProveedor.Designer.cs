@@ -29,6 +29,7 @@ namespace proyectop2
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.ibtañadircalle = new FontAwesome.Sharp.IconButton();
@@ -53,7 +54,9 @@ namespace proyectop2
             this.lblnompreprov = new System.Windows.Forms.Label();
             this.lblcoreo = new System.Windows.Forms.Label();
             this.lbltelp = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -98,7 +101,7 @@ namespace proyectop2
             this.comboBox2.Location = new System.Drawing.Point(852, 110);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(175, 24);
-            this.comboBox2.TabIndex = 156;
+            this.comboBox2.TabIndex = 5;
             // 
             // ibtañadircalle
             // 
@@ -115,7 +118,7 @@ namespace proyectop2
             this.ibtañadircalle.Location = new System.Drawing.Point(735, 336);
             this.ibtañadircalle.Name = "ibtañadircalle";
             this.ibtañadircalle.Size = new System.Drawing.Size(292, 41);
-            this.ibtañadircalle.TabIndex = 155;
+            this.ibtañadircalle.TabIndex = 10;
             this.ibtañadircalle.Text = "Anadir Nueva Calle";
             this.ibtañadircalle.UseVisualStyleBackColor = false;
             // 
@@ -134,7 +137,7 @@ namespace proyectop2
             this.iconButton3.Location = new System.Drawing.Point(735, 384);
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Size = new System.Drawing.Size(292, 41);
-            this.iconButton3.TabIndex = 154;
+            this.iconButton3.TabIndex = 11;
             this.iconButton3.Text = "Anadir Nueva Localidad";
             this.iconButton3.UseVisualStyleBackColor = false;
             // 
@@ -153,7 +156,7 @@ namespace proyectop2
             this.iconButton2.Location = new System.Drawing.Point(735, 432);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Size = new System.Drawing.Size(292, 41);
-            this.iconButton2.TabIndex = 153;
+            this.iconButton2.TabIndex = 12;
             this.iconButton2.Text = "Anadir Nuevo Estado";
             this.iconButton2.UseVisualStyleBackColor = false;
             // 
@@ -172,7 +175,7 @@ namespace proyectop2
             this.btncancelar.Location = new System.Drawing.Point(886, 490);
             this.btncancelar.Name = "btncancelar";
             this.btncancelar.Size = new System.Drawing.Size(141, 40);
-            this.btncancelar.TabIndex = 152;
+            this.btncancelar.TabIndex = 14;
             this.btncancelar.Text = "Cancelar";
             this.btncancelar.UseVisualStyleBackColor = false;
             this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
@@ -192,7 +195,7 @@ namespace proyectop2
             this.btbguardar.Location = new System.Drawing.Point(735, 490);
             this.btbguardar.Name = "btbguardar";
             this.btbguardar.Size = new System.Drawing.Size(145, 39);
-            this.btbguardar.TabIndex = 151;
+            this.btbguardar.TabIndex = 13;
             this.btbguardar.Text = "Guardar";
             this.btbguardar.UseVisualStyleBackColor = false;
             this.btbguardar.Click += new System.EventHandler(this.btbguardar_Click);
@@ -205,7 +208,7 @@ namespace proyectop2
             this.txtnumero.Location = new System.Drawing.Point(852, 144);
             this.txtnumero.Name = "txtnumero";
             this.txtnumero.Size = new System.Drawing.Size(175, 28);
-            this.txtnumero.TabIndex = 150;
+            this.txtnumero.TabIndex = 6;
             // 
             // txtcolonia
             // 
@@ -215,7 +218,7 @@ namespace proyectop2
             this.txtcolonia.Location = new System.Drawing.Point(852, 182);
             this.txtcolonia.Name = "txtcolonia";
             this.txtcolonia.Size = new System.Drawing.Size(175, 28);
-            this.txtcolonia.TabIndex = 149;
+            this.txtcolonia.TabIndex = 7;
             // 
             // comboBox1
             // 
@@ -225,7 +228,7 @@ namespace proyectop2
             this.comboBox1.Location = new System.Drawing.Point(852, 219);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(175, 24);
-            this.comboBox1.TabIndex = 147;
+            this.comboBox1.TabIndex = 8;
             // 
             // comboBox3
             // 
@@ -235,7 +238,7 @@ namespace proyectop2
             this.comboBox3.Location = new System.Drawing.Point(852, 262);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(175, 24);
-            this.comboBox3.TabIndex = 146;
+            this.comboBox3.TabIndex = 9;
             // 
             // label14
             // 
@@ -300,7 +303,7 @@ namespace proyectop2
             this.txtcompañia.Location = new System.Drawing.Point(314, 149);
             this.txtcompañia.Name = "txtcompañia";
             this.txtcompañia.Size = new System.Drawing.Size(175, 28);
-            this.txtcompañia.TabIndex = 140;
+            this.txtcompañia.TabIndex = 2;
             // 
             // txtcorreo
             // 
@@ -310,7 +313,7 @@ namespace proyectop2
             this.txtcorreo.Location = new System.Drawing.Point(314, 187);
             this.txtcorreo.Name = "txtcorreo";
             this.txtcorreo.Size = new System.Drawing.Size(175, 28);
-            this.txtcorreo.TabIndex = 139;
+            this.txtcorreo.TabIndex = 3;
             // 
             // txttelefono
             // 
@@ -320,7 +323,7 @@ namespace proyectop2
             this.txttelefono.Location = new System.Drawing.Point(314, 221);
             this.txttelefono.Name = "txttelefono";
             this.txttelefono.Size = new System.Drawing.Size(175, 28);
-            this.txttelefono.TabIndex = 138;
+            this.txttelefono.TabIndex = 4;
             // 
             // txtproveedor
             // 
@@ -330,7 +333,7 @@ namespace proyectop2
             this.txtproveedor.Location = new System.Drawing.Point(314, 111);
             this.txtproveedor.Name = "txtproveedor";
             this.txtproveedor.Size = new System.Drawing.Size(175, 28);
-            this.txtproveedor.TabIndex = 137;
+            this.txtproveedor.TabIndex = 1;
             // 
             // lblcompañiaprov
             // 
@@ -376,6 +379,10 @@ namespace proyectop2
             this.lbltelp.TabIndex = 136;
             this.lbltelp.Text = "Telefono:";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // FrmRegistrarProveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -388,6 +395,7 @@ namespace proyectop2
             this.Text = "FrmRegistrarProveedor";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -418,5 +426,6 @@ namespace proyectop2
         private System.Windows.Forms.Label lblcoreo;
         private System.Windows.Forms.Label lbltelp;
         private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

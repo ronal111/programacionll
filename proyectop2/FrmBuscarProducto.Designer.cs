@@ -86,7 +86,7 @@ namespace proyectop2
             this.iconButton2.Location = new System.Drawing.Point(503, 56);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Size = new System.Drawing.Size(163, 38);
-            this.iconButton2.TabIndex = 44;
+            this.iconButton2.TabIndex = 4;
             this.iconButton2.Text = "Mostrar Todo";
             this.iconButton2.UseVisualStyleBackColor = false;
             // 
@@ -105,7 +105,7 @@ namespace proyectop2
             this.iconButton1.Location = new System.Drawing.Point(791, 14);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(113, 36);
-            this.iconButton1.TabIndex = 43;
+            this.iconButton1.TabIndex = 6;
             this.iconButton1.Text = "Eliminar";
             this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton1.UseVisualStyleBackColor = false;
@@ -125,7 +125,7 @@ namespace proyectop2
             this.ibtnaddempleados.Location = new System.Drawing.Point(672, 13);
             this.ibtnaddempleados.Name = "ibtnaddempleados";
             this.ibtnaddempleados.Size = new System.Drawing.Size(113, 36);
-            this.ibtnaddempleados.TabIndex = 42;
+            this.ibtnaddempleados.TabIndex = 5;
             this.ibtnaddempleados.Text = "Editar";
             this.ibtnaddempleados.UseVisualStyleBackColor = false;
             // 
@@ -144,7 +144,7 @@ namespace proyectop2
             this.btbbuscarp.Location = new System.Drawing.Point(503, 12);
             this.btbbuscarp.Name = "btbbuscarp";
             this.btbbuscarp.Size = new System.Drawing.Size(163, 38);
-            this.btbbuscarp.TabIndex = 41;
+            this.btbbuscarp.TabIndex = 3;
             this.btbbuscarp.Text = "Buscar";
             this.btbbuscarp.UseVisualStyleBackColor = false;
             this.btbbuscarp.Click += new System.EventHandler(this.btbbuscarp_Click);
@@ -156,7 +156,7 @@ namespace proyectop2
             this.comboBox1.Location = new System.Drawing.Point(283, 18);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(175, 24);
-            this.comboBox1.TabIndex = 30;
+            this.comboBox1.TabIndex = 2;
             // 
             // txtbuscarproducto
             // 
@@ -164,7 +164,7 @@ namespace proyectop2
             this.txtbuscarproducto.Location = new System.Drawing.Point(108, 18);
             this.txtbuscarproducto.Name = "txtbuscarproducto";
             this.txtbuscarproducto.Size = new System.Drawing.Size(144, 22);
-            this.txtbuscarproducto.TabIndex = 31;
+            this.txtbuscarproducto.TabIndex = 1;
             // 
             // panel2
             // 
@@ -217,7 +217,7 @@ namespace proyectop2
             this.dgvbproductos.RowTemplate.Height = 24;
             this.dgvbproductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvbproductos.Size = new System.Drawing.Size(1425, 441);
-            this.dgvbproductos.TabIndex = 29;
+            this.dgvbproductos.TabIndex = 7;
             this.dgvbproductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvbproductos_CellContentClick);
             // 
             // codigop

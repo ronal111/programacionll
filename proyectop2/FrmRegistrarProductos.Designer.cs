@@ -29,6 +29,7 @@ namespace proyectop2
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.gbreprod = new System.Windows.Forms.GroupBox();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
@@ -58,9 +59,11 @@ namespace proyectop2
             this.label15 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtdescripcion = new System.Windows.Forms.RichTextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             this.gbreprod.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -126,7 +129,7 @@ namespace proyectop2
             this.iconButton2.Location = new System.Drawing.Point(633, 375);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Size = new System.Drawing.Size(292, 41);
-            this.iconButton2.TabIndex = 158;
+            this.iconButton2.TabIndex = 12;
             this.iconButton2.Text = "Anadir Nueva Categoria";
             this.iconButton2.UseVisualStyleBackColor = false;
             // 
@@ -145,7 +148,7 @@ namespace proyectop2
             this.ibtañadircalle.Location = new System.Drawing.Point(633, 422);
             this.ibtañadircalle.Name = "ibtañadircalle";
             this.ibtañadircalle.Size = new System.Drawing.Size(292, 41);
-            this.ibtañadircalle.TabIndex = 157;
+            this.ibtañadircalle.TabIndex = 13;
             this.ibtañadircalle.Text = "Anadir Nueva Marca";
             this.ibtañadircalle.UseVisualStyleBackColor = false;
             // 
@@ -164,7 +167,7 @@ namespace proyectop2
             this.iconButton3.Location = new System.Drawing.Point(633, 469);
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Size = new System.Drawing.Size(292, 41);
-            this.iconButton3.TabIndex = 156;
+            this.iconButton3.TabIndex = 14;
             this.iconButton3.Text = "Anadir Nuevo Modelo";
             this.iconButton3.UseVisualStyleBackColor = false;
             // 
@@ -175,7 +178,7 @@ namespace proyectop2
             this.comboBox2.Location = new System.Drawing.Point(318, 252);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(175, 24);
-            this.comboBox2.TabIndex = 114;
+            this.comboBox2.TabIndex = 4;
             // 
             // iconButton1
             // 
@@ -192,7 +195,7 @@ namespace proyectop2
             this.iconButton1.Location = new System.Drawing.Point(784, 516);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(141, 40);
-            this.iconButton1.TabIndex = 113;
+            this.iconButton1.TabIndex = 16;
             this.iconButton1.Text = "Cancelar";
             this.iconButton1.UseVisualStyleBackColor = false;
             this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
@@ -223,7 +226,7 @@ namespace proyectop2
             this.Guardar.Location = new System.Drawing.Point(633, 516);
             this.Guardar.Name = "Guardar";
             this.Guardar.Size = new System.Drawing.Size(145, 40);
-            this.Guardar.TabIndex = 112;
+            this.Guardar.TabIndex = 15;
             this.Guardar.Text = "Guardar";
             this.Guardar.UseVisualStyleBackColor = false;
             this.Guardar.Click += new System.EventHandler(this.Guardar_Click);
@@ -247,7 +250,7 @@ namespace proyectop2
             this.txtproveedor.Location = new System.Drawing.Point(750, 292);
             this.txtproveedor.Name = "txtproveedor";
             this.txtproveedor.Size = new System.Drawing.Size(175, 28);
-            this.txtproveedor.TabIndex = 60;
+            this.txtproveedor.TabIndex = 11;
             // 
             // label4
             // 
@@ -268,7 +271,7 @@ namespace proyectop2
             this.txtventa.Location = new System.Drawing.Point(750, 254);
             this.txtventa.Name = "txtventa";
             this.txtventa.Size = new System.Drawing.Size(175, 28);
-            this.txtventa.TabIndex = 59;
+            this.txtventa.TabIndex = 10;
             // 
             // label5
             // 
@@ -289,7 +292,7 @@ namespace proyectop2
             this.txtpreciocompra.Location = new System.Drawing.Point(750, 220);
             this.txtpreciocompra.Name = "txtpreciocompra";
             this.txtpreciocompra.Size = new System.Drawing.Size(175, 28);
-            this.txtpreciocompra.TabIndex = 58;
+            this.txtpreciocompra.TabIndex = 9;
             // 
             // label6
             // 
@@ -310,7 +313,7 @@ namespace proyectop2
             this.txtcolor.Location = new System.Drawing.Point(750, 137);
             this.txtcolor.Name = "txtcolor";
             this.txtcolor.Size = new System.Drawing.Size(175, 28);
-            this.txtcolor.TabIndex = 57;
+            this.txtcolor.TabIndex = 7;
             // 
             // label7
             // 
@@ -331,7 +334,7 @@ namespace proyectop2
             this.txtnombreproducto.Location = new System.Drawing.Point(318, 291);
             this.txtnombreproducto.Name = "txtnombreproducto";
             this.txtnombreproducto.Size = new System.Drawing.Size(175, 28);
-            this.txtnombreproducto.TabIndex = 56;
+            this.txtnombreproducto.TabIndex = 5;
             // 
             // label12
             // 
@@ -362,7 +365,7 @@ namespace proyectop2
             this.comboBox1.Location = new System.Drawing.Point(318, 215);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(175, 24);
-            this.comboBox1.TabIndex = 54;
+            this.comboBox1.TabIndex = 3;
             // 
             // numericUpDown2
             // 
@@ -372,7 +375,7 @@ namespace proyectop2
             this.numericUpDown2.Location = new System.Drawing.Point(751, 183);
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(174, 28);
-            this.numericUpDown2.TabIndex = 45;
+            this.numericUpDown2.TabIndex = 8;
             // 
             // comboBox3
             // 
@@ -381,7 +384,7 @@ namespace proyectop2
             this.comboBox3.Location = new System.Drawing.Point(318, 177);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(175, 24);
-            this.comboBox3.TabIndex = 53;
+            this.comboBox3.TabIndex = 2;
             // 
             // label14
             // 
@@ -402,7 +405,7 @@ namespace proyectop2
             this.txtproductocodigo.Location = new System.Drawing.Point(318, 136);
             this.txtproductocodigo.Name = "txtproductocodigo";
             this.txtproductocodigo.Size = new System.Drawing.Size(175, 28);
-            this.txtproductocodigo.TabIndex = 52;
+            this.txtproductocodigo.TabIndex = 1;
             // 
             // label15
             // 
@@ -431,8 +434,13 @@ namespace proyectop2
             this.txtdescripcion.Location = new System.Drawing.Point(318, 336);
             this.txtdescripcion.Name = "txtdescripcion";
             this.txtdescripcion.Size = new System.Drawing.Size(277, 131);
-            this.txtdescripcion.TabIndex = 48;
+            this.txtdescripcion.TabIndex = 6;
             this.txtdescripcion.Text = "";
+            this.txtdescripcion.TextChanged += new System.EventHandler(this.txtdescripcion_TextChanged);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // FrmRegistrarProductos
             // 
@@ -448,6 +456,7 @@ namespace proyectop2
             this.gbreprod.ResumeLayout(false);
             this.gbreprod.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -483,5 +492,6 @@ namespace proyectop2
         private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton ibtañadircalle;
         private FontAwesome.Sharp.IconButton iconButton3;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

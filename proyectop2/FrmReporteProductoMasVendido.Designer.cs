@@ -69,7 +69,7 @@ namespace proyectop2
             this.dateTimePicker2.Location = new System.Drawing.Point(262, 57);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(250, 22);
-            this.dateTimePicker2.TabIndex = 45;
+            this.dateTimePicker2.TabIndex = 2;
             // 
             // dateTimePicker1
             // 
@@ -79,7 +79,7 @@ namespace proyectop2
             this.dateTimePicker1.Location = new System.Drawing.Point(12, 57);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(244, 22);
-            this.dateTimePicker1.TabIndex = 44;
+            this.dateTimePicker1.TabIndex = 1;
             // 
             // btbbuscarp
             // 
@@ -96,7 +96,7 @@ namespace proyectop2
             this.btbbuscarp.Location = new System.Drawing.Point(549, 49);
             this.btbbuscarp.Name = "btbbuscarp";
             this.btbbuscarp.Size = new System.Drawing.Size(158, 43);
-            this.btbbuscarp.TabIndex = 43;
+            this.btbbuscarp.TabIndex = 3;
             this.btbbuscarp.Text = "Buscar";
             this.btbbuscarp.UseVisualStyleBackColor = false;
             // 
@@ -138,7 +138,7 @@ namespace proyectop2
             this.dgvbproductos.RowTemplate.Height = 24;
             this.dgvbproductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvbproductos.Size = new System.Drawing.Size(1135, 637);
-            this.dgvbproductos.TabIndex = 94;
+            this.dgvbproductos.TabIndex = 4;
             // 
             // nombrep
             // 
@@ -218,7 +218,7 @@ namespace proyectop2
             this.button2.Location = new System.Drawing.Point(923, 28);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(200, 31);
-            this.button2.TabIndex = 92;
+            this.button2.TabIndex = 5;
             this.button2.Text = "Imprimir Reporte";
             this.button2.UseVisualStyleBackColor = false;
             // 

@@ -29,8 +29,9 @@ namespace proyectop2
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.cboxedad = new System.Windows.Forms.NumericUpDown();
             this.ibtañadircalle = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
@@ -63,13 +64,15 @@ namespace proyectop2
             this.lblcoreo = new System.Windows.Forms.Label();
             this.lblapellidoe = new System.Windows.Forms.Label();
             this.lblnomemp = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboxedad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.numericUpDown2);
+            this.groupBox1.Controls.Add(this.cboxedad);
             this.groupBox1.Controls.Add(this.ibtañadircalle);
             this.groupBox1.Controls.Add(this.iconButton3);
             this.groupBox1.Controls.Add(this.iconButton2);
@@ -102,7 +105,6 @@ namespace proyectop2
             this.groupBox1.Controls.Add(this.lblcoreo);
             this.groupBox1.Controls.Add(this.lblapellidoe);
             this.groupBox1.Controls.Add(this.lblnomemp);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
@@ -111,15 +113,16 @@ namespace proyectop2
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registrar Empleado";
             // 
-            // numericUpDown2
+            // cboxedad
             // 
-            this.numericUpDown2.BackColor = System.Drawing.Color.Black;
-            this.numericUpDown2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown2.ForeColor = System.Drawing.SystemColors.Info;
-            this.numericUpDown2.Location = new System.Drawing.Point(328, 201);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(175, 28);
-            this.numericUpDown2.TabIndex = 161;
+            this.cboxedad.BackColor = System.Drawing.Color.Black;
+            this.cboxedad.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboxedad.ForeColor = System.Drawing.SystemColors.Info;
+            this.cboxedad.Location = new System.Drawing.Point(328, 201);
+            this.cboxedad.Name = "cboxedad";
+            this.cboxedad.Size = new System.Drawing.Size(175, 28);
+            this.cboxedad.TabIndex = 4;
+         
             // 
             // ibtañadircalle
             // 
@@ -136,7 +139,7 @@ namespace proyectop2
             this.ibtañadircalle.Location = new System.Drawing.Point(676, 306);
             this.ibtañadircalle.Name = "ibtañadircalle";
             this.ibtañadircalle.Size = new System.Drawing.Size(292, 41);
-            this.ibtañadircalle.TabIndex = 160;
+            this.ibtañadircalle.TabIndex = 15;
             this.ibtañadircalle.Text = "Anadir Nueva Calle";
             this.ibtañadircalle.UseVisualStyleBackColor = false;
             // 
@@ -155,7 +158,7 @@ namespace proyectop2
             this.iconButton3.Location = new System.Drawing.Point(676, 354);
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Size = new System.Drawing.Size(292, 41);
-            this.iconButton3.TabIndex = 159;
+            this.iconButton3.TabIndex = 16;
             this.iconButton3.Text = "Anadir Nueva Localidad";
             this.iconButton3.UseVisualStyleBackColor = false;
             // 
@@ -174,7 +177,7 @@ namespace proyectop2
             this.iconButton2.Location = new System.Drawing.Point(676, 402);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Size = new System.Drawing.Size(292, 41);
-            this.iconButton2.TabIndex = 158;
+            this.iconButton2.TabIndex = 17;
             this.iconButton2.Text = "Anadir Nuevo Estado";
             this.iconButton2.UseVisualStyleBackColor = false;
             // 
@@ -193,7 +196,7 @@ namespace proyectop2
             this.iconButton1.Location = new System.Drawing.Point(827, 460);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(141, 40);
-            this.iconButton1.TabIndex = 157;
+            this.iconButton1.TabIndex = 19;
             this.iconButton1.Text = "Cancelar";
             this.iconButton1.UseVisualStyleBackColor = false;
             this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
@@ -213,7 +216,7 @@ namespace proyectop2
             this.btbbuscarp.Location = new System.Drawing.Point(676, 460);
             this.btbbuscarp.Name = "btbbuscarp";
             this.btbbuscarp.Size = new System.Drawing.Size(145, 39);
-            this.btbbuscarp.TabIndex = 156;
+            this.btbbuscarp.TabIndex = 18;
             this.btbbuscarp.Text = "Guardar";
             this.btbbuscarp.UseVisualStyleBackColor = false;
             this.btbbuscarp.Click += new System.EventHandler(this.btbbuscarp_Click);
@@ -225,7 +228,7 @@ namespace proyectop2
             this.cboxcalle.Location = new System.Drawing.Point(793, 86);
             this.cboxcalle.Name = "cboxcalle";
             this.cboxcalle.Size = new System.Drawing.Size(175, 24);
-            this.cboxcalle.TabIndex = 133;
+            this.cboxcalle.TabIndex = 10;
             // 
             // txtsueldo
             // 
@@ -235,7 +238,7 @@ namespace proyectop2
             this.txtsueldo.Location = new System.Drawing.Point(328, 394);
             this.txtsueldo.Name = "txtsueldo";
             this.txtsueldo.Size = new System.Drawing.Size(175, 28);
-            this.txtsueldo.TabIndex = 131;
+            this.txtsueldo.TabIndex = 9;
             // 
             // txtpuesto
             // 
@@ -245,7 +248,7 @@ namespace proyectop2
             this.txtpuesto.Location = new System.Drawing.Point(328, 349);
             this.txtpuesto.Name = "txtpuesto";
             this.txtpuesto.Size = new System.Drawing.Size(175, 28);
-            this.txtpuesto.TabIndex = 130;
+            this.txtpuesto.TabIndex = 8;
             // 
             // txttelefonoe
             // 
@@ -255,7 +258,8 @@ namespace proyectop2
             this.txttelefonoe.Location = new System.Drawing.Point(328, 307);
             this.txttelefonoe.Name = "txttelefonoe";
             this.txttelefonoe.Size = new System.Drawing.Size(175, 28);
-            this.txttelefonoe.TabIndex = 129;
+            this.txttelefonoe.TabIndex = 7;
+            this.txttelefonoe.Validating += new System.ComponentModel.CancelEventHandler(this.txttelefonoe_Validating);
             // 
             // lblsueldo
             // 
@@ -309,7 +313,7 @@ namespace proyectop2
             this.txtrfc.Location = new System.Drawing.Point(328, 87);
             this.txtrfc.Name = "txtrfc";
             this.txtrfc.Size = new System.Drawing.Size(175, 28);
-            this.txtrfc.TabIndex = 123;
+            this.txtrfc.TabIndex = 1;
             // 
             // lblrfc
             // 
@@ -330,7 +334,7 @@ namespace proyectop2
             this.txtapellido.Location = new System.Drawing.Point(328, 163);
             this.txtapellido.Name = "txtapellido";
             this.txtapellido.Size = new System.Drawing.Size(175, 28);
-            this.txtapellido.TabIndex = 119;
+            this.txtapellido.TabIndex = 3;
             // 
             // txtuser
             // 
@@ -340,7 +344,7 @@ namespace proyectop2
             this.txtuser.Location = new System.Drawing.Point(328, 234);
             this.txtuser.Name = "txtuser";
             this.txtuser.Size = new System.Drawing.Size(175, 28);
-            this.txtuser.TabIndex = 118;
+            this.txtuser.TabIndex = 5;
             // 
             // txtnumero
             // 
@@ -350,7 +354,8 @@ namespace proyectop2
             this.txtnumero.Location = new System.Drawing.Point(793, 125);
             this.txtnumero.Name = "txtnumero";
             this.txtnumero.Size = new System.Drawing.Size(175, 28);
-            this.txtnumero.TabIndex = 117;
+            this.txtnumero.TabIndex = 11;
+            this.txtnumero.TextChanged += new System.EventHandler(this.txtnumero_TextChanged);
             // 
             // txtcolonia
             // 
@@ -360,7 +365,7 @@ namespace proyectop2
             this.txtcolonia.Location = new System.Drawing.Point(793, 163);
             this.txtcolonia.Name = "txtcolonia";
             this.txtcolonia.Size = new System.Drawing.Size(175, 28);
-            this.txtcolonia.TabIndex = 116;
+            this.txtcolonia.TabIndex = 12;
             // 
             // txtpass
             // 
@@ -370,7 +375,7 @@ namespace proyectop2
             this.txtpass.Location = new System.Drawing.Point(328, 268);
             this.txtpass.Name = "txtpass";
             this.txtpass.Size = new System.Drawing.Size(175, 28);
-            this.txtpass.TabIndex = 115;
+            this.txtpass.TabIndex = 6;
             // 
             // cboxestado
             // 
@@ -379,7 +384,7 @@ namespace proyectop2
             this.cboxestado.Location = new System.Drawing.Point(793, 200);
             this.cboxestado.Name = "cboxestado";
             this.cboxestado.Size = new System.Drawing.Size(175, 24);
-            this.cboxestado.TabIndex = 114;
+            this.cboxestado.TabIndex = 13;
             // 
             // cboxlocalidad
             // 
@@ -388,7 +393,7 @@ namespace proyectop2
             this.cboxlocalidad.Location = new System.Drawing.Point(793, 243);
             this.cboxlocalidad.Name = "cboxlocalidad";
             this.cboxlocalidad.Size = new System.Drawing.Size(175, 24);
-            this.cboxlocalidad.TabIndex = 113;
+            this.cboxlocalidad.TabIndex = 14;
             // 
             // txtempleado
             // 
@@ -398,7 +403,7 @@ namespace proyectop2
             this.txtempleado.Location = new System.Drawing.Point(328, 125);
             this.txtempleado.Name = "txtempleado";
             this.txtempleado.Size = new System.Drawing.Size(175, 28);
-            this.txtempleado.TabIndex = 112;
+            this.txtempleado.TabIndex = 2;
             // 
             // lbllocalisas
             // 
@@ -499,6 +504,10 @@ namespace proyectop2
             this.lblnomemp.TabIndex = 101;
             this.lblnomemp.Text = "Nombre Del Empleado:";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // FrmRegistrarEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -512,7 +521,8 @@ namespace proyectop2
             this.Text = "FrmRegistrarEmpleado";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboxedad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -552,6 +562,7 @@ namespace proyectop2
         private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton iconButton1;
         private FontAwesome.Sharp.IconButton btbbuscarp;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown cboxedad;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

@@ -60,7 +60,7 @@ namespace proyectop2
             this.txtlocalidad.Location = new System.Drawing.Point(233, 162);
             this.txtlocalidad.Name = "txtlocalidad";
             this.txtlocalidad.Size = new System.Drawing.Size(175, 28);
-            this.txtlocalidad.TabIndex = 93;
+            this.txtlocalidad.TabIndex = 1;
             // 
             // btncancelar
             // 
@@ -75,7 +75,7 @@ namespace proyectop2
             this.btncancelar.Location = new System.Drawing.Point(568, 159);
             this.btncancelar.Name = "btncancelar";
             this.btncancelar.Size = new System.Drawing.Size(114, 31);
-            this.btncancelar.TabIndex = 92;
+            this.btncancelar.TabIndex = 3;
             this.btncancelar.Text = "CANCELAR";
             this.btncancelar.UseVisualStyleBackColor = false;
             this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
@@ -93,7 +93,7 @@ namespace proyectop2
             this.btnguardarestado.Location = new System.Drawing.Point(436, 159);
             this.btnguardarestado.Name = "btnguardarestado";
             this.btnguardarestado.Size = new System.Drawing.Size(108, 31);
-            this.btnguardarestado.TabIndex = 91;
+            this.btnguardarestado.TabIndex = 2;
             this.btnguardarestado.Text = "GUARDAR";
             this.btnguardarestado.UseVisualStyleBackColor = false;
             this.btnguardarestado.Click += new System.EventHandler(this.btnguardarestado_Click);

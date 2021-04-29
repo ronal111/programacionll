@@ -52,3 +52,4 @@ C:\Users\Usuario\source\repos\proyectop2\proyectop2\obj\Debug\proyectop2.FrmRegi
 C:\Users\Usuario\source\repos\proyectop2\proyectop2\obj\Debug\proyectop2.FrmRegistroLocalidad.resources
 C:\Users\Usuario\source\repos\proyectop2\proyectop2\obj\Debug\proyectop2.FrmReporteCompra.resources
 C:\Users\Usuario\source\repos\proyectop2\proyectop2\obj\Debug\proyectop2.FrmReporteProductoMasVendido.resources
+C:\Users\Usuario\source\repos\proyectop2\proyectop2\obj\Debug\proyectop2.FrmBusquedaEmergente.resources

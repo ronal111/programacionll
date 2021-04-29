@@ -32,14 +32,8 @@ namespace proyectop2
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.ibtnaddempleados = new FontAwesome.Sharp.IconButton();
-            this.btbbuscarp = new FontAwesome.Sharp.IconButton();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.txtbuscarempleado = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvbproductos = new System.Windows.Forms.DataGridView();
             this.rfc = new System.Windows.Forms.DataGridViewLinkColumn();
             this.nombree = new System.Windows.Forms.DataGridViewLinkColumn();
@@ -55,128 +49,45 @@ namespace proyectop2
             this.coloniae = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.localidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clestado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.ibtnaddempleados = new FontAwesome.Sharp.IconButton();
+            this.btbbuscarp = new FontAwesome.Sharp.IconButton();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txtbuscarempleado = new System.Windows.Forms.TextBox();
+            this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvbproductos)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // groupBox3
             // 
-            this.panel1.Controls.Add(this.iconButton2);
-            this.panel1.Controls.Add(this.iconButton1);
-            this.panel1.Controls.Add(this.ibtnaddempleados);
-            this.panel1.Controls.Add(this.btbbuscarp);
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.txtbuscarempleado);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1384, 149);
-            this.panel1.TabIndex = 11;
+            this.groupBox3.Controls.Add(this.groupBox2);
+            this.groupBox3.Controls.Add(this.groupBox1);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox3.Location = new System.Drawing.Point(0, 0);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(1337, 615);
+            this.groupBox3.TabIndex = 16;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Buscar Empleado";
             // 
-            // iconButton2
+            // groupBox2
             // 
-            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.iconButton2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.iconButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Tasks;
-            this.iconButton2.IconColor = System.Drawing.Color.White;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 35;
-            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(478, 62);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(163, 38);
-            this.iconButton2.TabIndex = 40;
-            this.iconButton2.Text = "Mostrar Todo";
-            this.iconButton2.UseVisualStyleBackColor = false;
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.iconButton1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.iconButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.ForeColor = System.Drawing.Color.White;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Dizzy;
-            this.iconButton1.IconColor = System.Drawing.Color.White;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 30;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(766, 17);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(122, 36);
-            this.iconButton1.TabIndex = 39;
-            this.iconButton1.Text = "Eliminar";
-            this.iconButton1.UseVisualStyleBackColor = false;
-            // 
-            // ibtnaddempleados
-            // 
-            this.ibtnaddempleados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.ibtnaddempleados.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.ibtnaddempleados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.ibtnaddempleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ibtnaddempleados.ForeColor = System.Drawing.Color.White;
-            this.ibtnaddempleados.IconChar = FontAwesome.Sharp.IconChar.PenAlt;
-            this.ibtnaddempleados.IconColor = System.Drawing.Color.White;
-            this.ibtnaddempleados.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ibtnaddempleados.IconSize = 30;
-            this.ibtnaddempleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtnaddempleados.Location = new System.Drawing.Point(647, 18);
-            this.ibtnaddempleados.Name = "ibtnaddempleados";
-            this.ibtnaddempleados.Size = new System.Drawing.Size(113, 36);
-            this.ibtnaddempleados.TabIndex = 38;
-            this.ibtnaddempleados.Text = "Editar";
-            this.ibtnaddempleados.UseVisualStyleBackColor = false;
-            this.ibtnaddempleados.Click += new System.EventHandler(this.ibtnaddempleados_Click);
-            // 
-            // btbbuscarp
-            // 
-            this.btbbuscarp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.btbbuscarp.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.btbbuscarp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.btbbuscarp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btbbuscarp.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btbbuscarp.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.btbbuscarp.IconColor = System.Drawing.Color.White;
-            this.btbbuscarp.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btbbuscarp.IconSize = 35;
-            this.btbbuscarp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btbbuscarp.Location = new System.Drawing.Point(478, 18);
-            this.btbbuscarp.Name = "btbbuscarp";
-            this.btbbuscarp.Size = new System.Drawing.Size(163, 38);
-            this.btbbuscarp.TabIndex = 37;
-            this.btbbuscarp.Text = "Buscar";
-            this.btbbuscarp.UseVisualStyleBackColor = false;
-            this.btbbuscarp.Click += new System.EventHandler(this.btbbuscarp_Click);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.Color.Black;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(278, 24);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(175, 24);
-            this.comboBox1.TabIndex = 13;
-            // 
-            // txtbuscarempleado
-            // 
-            this.txtbuscarempleado.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.txtbuscarempleado.Location = new System.Drawing.Point(110, 26);
-            this.txtbuscarempleado.Name = "txtbuscarempleado";
-            this.txtbuscarempleado.Size = new System.Drawing.Size(144, 22);
-            this.txtbuscarempleado.TabIndex = 11;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.dgvbproductos);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 149);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1384, 454);
-            this.panel2.TabIndex = 12;
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.dgvbproductos);
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox2.Location = new System.Drawing.Point(54, 172);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(1234, 303);
+            this.groupBox2.TabIndex = 17;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Contenido";
             // 
             // dgvbproductos
             // 
@@ -211,15 +122,15 @@ namespace proyectop2
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.GrayText;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvbproductos.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvbproductos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dgvbproductos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvbproductos.EnableHeadersVisualStyles = false;
             this.dgvbproductos.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvbproductos.Location = new System.Drawing.Point(0, 0);
+            this.dgvbproductos.Location = new System.Drawing.Point(3, 18);
             this.dgvbproductos.Name = "dgvbproductos";
             this.dgvbproductos.RowHeadersWidth = 51;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.Black;
@@ -229,8 +140,8 @@ namespace proyectop2
             this.dgvbproductos.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvbproductos.RowTemplate.Height = 24;
             this.dgvbproductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgvbproductos.Size = new System.Drawing.Size(1384, 454);
-            this.dgvbproductos.TabIndex = 5;
+            this.dgvbproductos.Size = new System.Drawing.Size(1228, 282);
+            this.dgvbproductos.TabIndex = 15;
             // 
             // rfc
             // 
@@ -331,32 +242,142 @@ namespace proyectop2
             this.clestado.Name = "clestado";
             this.clestado.Width = 101;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.iconButton2);
+            this.groupBox1.Controls.Add(this.iconButton1);
+            this.groupBox1.Controls.Add(this.ibtnaddempleados);
+            this.groupBox1.Controls.Add(this.btbbuscarp);
+            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.txtbuscarempleado);
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox1.Location = new System.Drawing.Point(50, 21);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1238, 142);
+            this.groupBox1.TabIndex = 16;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Opciones";
+            // 
+            // iconButton2
+            // 
+            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.iconButton2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.iconButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Tasks;
+            this.iconButton2.IconColor = System.Drawing.Color.White;
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.IconSize = 35;
+            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton2.Location = new System.Drawing.Point(434, 85);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Size = new System.Drawing.Size(163, 38);
+            this.iconButton2.TabIndex = 10;
+            this.iconButton2.Text = "Mostrar Todo";
+            this.iconButton2.UseVisualStyleBackColor = false;
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.iconButton1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.iconButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.ForeColor = System.Drawing.Color.White;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Dizzy;
+            this.iconButton1.IconColor = System.Drawing.Color.White;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 30;
+            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.Location = new System.Drawing.Point(722, 40);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(122, 36);
+            this.iconButton1.TabIndex = 12;
+            this.iconButton1.Text = "Eliminar";
+            this.iconButton1.UseVisualStyleBackColor = false;
+            // 
+            // ibtnaddempleados
+            // 
+            this.ibtnaddempleados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.ibtnaddempleados.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.ibtnaddempleados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.ibtnaddempleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ibtnaddempleados.ForeColor = System.Drawing.Color.White;
+            this.ibtnaddempleados.IconChar = FontAwesome.Sharp.IconChar.PenAlt;
+            this.ibtnaddempleados.IconColor = System.Drawing.Color.White;
+            this.ibtnaddempleados.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibtnaddempleados.IconSize = 30;
+            this.ibtnaddempleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ibtnaddempleados.Location = new System.Drawing.Point(603, 41);
+            this.ibtnaddempleados.Name = "ibtnaddempleados";
+            this.ibtnaddempleados.Size = new System.Drawing.Size(113, 36);
+            this.ibtnaddempleados.TabIndex = 11;
+            this.ibtnaddempleados.Text = "Editar";
+            this.ibtnaddempleados.UseVisualStyleBackColor = false;
+            // 
+            // btbbuscarp
+            // 
+            this.btbbuscarp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btbbuscarp.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btbbuscarp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btbbuscarp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btbbuscarp.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btbbuscarp.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btbbuscarp.IconColor = System.Drawing.Color.White;
+            this.btbbuscarp.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btbbuscarp.IconSize = 35;
+            this.btbbuscarp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btbbuscarp.Location = new System.Drawing.Point(434, 41);
+            this.btbbuscarp.Name = "btbbuscarp";
+            this.btbbuscarp.Size = new System.Drawing.Size(163, 38);
+            this.btbbuscarp.TabIndex = 9;
+            this.btbbuscarp.Text = "Buscar";
+            this.btbbuscarp.UseVisualStyleBackColor = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.Black;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(234, 47);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(175, 24);
+            this.comboBox1.TabIndex = 8;
+            // 
+            // txtbuscarempleado
+            // 
+            this.txtbuscarempleado.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.txtbuscarempleado.Location = new System.Drawing.Point(66, 49);
+            this.txtbuscarempleado.Name = "txtbuscarempleado";
+            this.txtbuscarempleado.Size = new System.Drawing.Size(144, 22);
+            this.txtbuscarempleado.TabIndex = 7;
+            // 
             // FrmBuscarEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1384, 615);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(1337, 615);
+            this.Controls.Add(this.groupBox3);
+            this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmBuscarEmpleado";
             this.Text = "buscar empleado";
             this.Load += new System.EventHandler(this.buscarempleado_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvbproductos)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox txtbuscarempleado;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dgvbproductos;
         private System.Windows.Forms.DataGridViewLinkColumn rfc;
         private System.Windows.Forms.DataGridViewLinkColumn nombree;
@@ -372,9 +393,12 @@ namespace proyectop2
         private System.Windows.Forms.DataGridViewTextBoxColumn coloniae;
         private System.Windows.Forms.DataGridViewTextBoxColumn localidade;
         private System.Windows.Forms.DataGridViewTextBoxColumn clestado;
-        private FontAwesome.Sharp.IconButton btbbuscarp;
+        private System.Windows.Forms.GroupBox groupBox1;
         private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton iconButton1;
         public FontAwesome.Sharp.IconButton ibtnaddempleados;
+        private FontAwesome.Sharp.IconButton btbbuscarp;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox txtbuscarempleado;
     }
 }
