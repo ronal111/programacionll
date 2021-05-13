@@ -26,5 +26,10 @@ namespace proyectop2
         {
             txtlocalidad.Clear();
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

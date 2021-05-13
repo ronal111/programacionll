@@ -34,8 +34,8 @@ namespace proyectop2
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.btbbuscarp = new FontAwesome.Sharp.IconButton();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -119,15 +119,6 @@ namespace proyectop2
             this.btbbuscarp.UseVisualStyleBackColor = false;
             this.btbbuscarp.Click += new System.EventHandler(this.btbbuscarp_Click);
             // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.Color.Black;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(562, 170);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(175, 24);
-            this.comboBox1.TabIndex = 2;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -138,6 +129,15 @@ namespace proyectop2
             this.label1.Size = new System.Drawing.Size(121, 23);
             this.label1.TabIndex = 157;
             this.label1.Text = "Del estado:";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.Black;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(562, 170);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(175, 24);
+            this.comboBox1.TabIndex = 2;
             // 
             // FrmRegistroLocalidad
             // 

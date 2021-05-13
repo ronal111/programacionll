@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using System.Data;
+using System.Data.SqlClient;
+
 
 namespace proyectop2
 {
@@ -16,7 +19,30 @@ namespace proyectop2
         public FrmRegistrarEmpleado()
         {
             InitializeComponent();
+            conexion.Conectar();
+            SqlCommand comando1 = new SqlCommand("select * from calle ", conexion.Conectar());
+            SqlDataReader registro1 = comando1.ExecuteReader();
+            while (registro1.Read())
+            {
+                cboxcalle.Items.Add(registro1["calle"].ToString());
+                      }
+            SqlCommand comando2 = new SqlCommand(" select * from  Localidad ", conexion.Conectar());
+            SqlDataReader registro2 = comando2.ExecuteReader();
+            while (registro2.Read())
+            {
+                cboxlocalidad.Items.Add(registro2["localidad"].ToString());
+            }
+            SqlCommand comando3 = new SqlCommand(" select * from Estado", conexion.Conectar());
+            SqlDataReader registro3 = comando3.ExecuteReader();
+            while (registro3.Read())
+            {
+                cboxestado.Items.Add(registro3["estado"].ToString());
+            }
+          
         }
+  
+
+
 
         private void label4_Click(object sender, EventArgs e)
         {
@@ -41,10 +67,13 @@ namespace proyectop2
         private void btbbuscarp_Click(object sender, EventArgs e)
         {
             borrarmensajeerror();
-          
+
+            conexion.Conectar();
+            
             if (ValidarCampos())
             {
-                MessageBox.Show("datos ingresados correctamente");
+             string insertar = "insert into Empleados values (idrfc,nombree,apellido,usuario,contraseña,numerotel,edad,puesto,sueldo,fk_iddomicilioe)values(@txtrfc,@txtempleado,@txtapellido,@cboxedad,@txtuser,@txtpass,@txttelfonoe,@txtpuesto,@txtsueldo,@cboccalle)";
+             MessageBox.Show("datos ingresados correctamente");
             }
 
 
@@ -183,8 +212,15 @@ namespace proyectop2
             }
         }
 
-   
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
 
-        
+        }
+
+        private void ibtañadircalle_Click(object sender, EventArgs e)
+        {
+            Form formularioadd = new FrmRegistroCalle();
+            formularioadd.Show();
+        }
     }
 }

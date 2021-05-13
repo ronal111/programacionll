@@ -53,3 +53,5 @@ C:\Users\Usuario\source\repos\proyectop2\proyectop2\obj\Debug\proyectop2.FrmRegi
 C:\Users\Usuario\source\repos\proyectop2\proyectop2\obj\Debug\proyectop2.FrmReporteCompra.resources
 C:\Users\Usuario\source\repos\proyectop2\proyectop2\obj\Debug\proyectop2.FrmReporteProductoMasVendido.resources
 C:\Users\Usuario\source\repos\proyectop2\proyectop2\obj\Debug\proyectop2.FrmBusquedaEmergente.resources
+C:\Users\Usuario\source\repos\proyectop2\proyectop2\bin\Debug\DAL.dll
+C:\Users\Usuario\source\repos\proyectop2\proyectop2\bin\Debug\DAL.pdb

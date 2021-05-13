@@ -112,6 +112,7 @@ namespace proyectop2
             this.groupBox1.TabIndex = 100;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registrar Empleado";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // cboxedad
             // 
@@ -122,7 +123,6 @@ namespace proyectop2
             this.cboxedad.Name = "cboxedad";
             this.cboxedad.Size = new System.Drawing.Size(175, 28);
             this.cboxedad.TabIndex = 4;
-         
             // 
             // ibtañadircalle
             // 
@@ -142,6 +142,7 @@ namespace proyectop2
             this.ibtañadircalle.TabIndex = 15;
             this.ibtañadircalle.Text = "Anadir Nueva Calle";
             this.ibtañadircalle.UseVisualStyleBackColor = false;
+            this.ibtañadircalle.Click += new System.EventHandler(this.ibtañadircalle_Click);
             // 
             // iconButton3
             // 
@@ -224,6 +225,7 @@ namespace proyectop2
             // cboxcalle
             // 
             this.cboxcalle.BackColor = System.Drawing.Color.Black;
+            this.cboxcalle.ForeColor = System.Drawing.Color.White;
             this.cboxcalle.FormattingEnabled = true;
             this.cboxcalle.Location = new System.Drawing.Point(793, 86);
             this.cboxcalle.Name = "cboxcalle";
@@ -380,6 +382,7 @@ namespace proyectop2
             // cboxestado
             // 
             this.cboxestado.BackColor = System.Drawing.Color.Black;
+            this.cboxestado.ForeColor = System.Drawing.Color.White;
             this.cboxestado.FormattingEnabled = true;
             this.cboxestado.Location = new System.Drawing.Point(793, 200);
             this.cboxestado.Name = "cboxestado";
@@ -389,6 +392,7 @@ namespace proyectop2
             // cboxlocalidad
             // 
             this.cboxlocalidad.BackColor = System.Drawing.Color.Black;
+            this.cboxlocalidad.ForeColor = System.Drawing.Color.White;
             this.cboxlocalidad.FormattingEnabled = true;
             this.cboxlocalidad.Location = new System.Drawing.Point(793, 243);
             this.cboxlocalidad.Name = "cboxlocalidad";

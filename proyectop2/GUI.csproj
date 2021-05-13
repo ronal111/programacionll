@@ -107,6 +107,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="conexion.cs" />
     <Compile Include="FrmBuscarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -324,6 +325,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\electronica.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{3c2c6cf2-4294-4c49-8ccf-66d2c9e45724}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

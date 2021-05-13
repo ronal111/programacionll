@@ -34,23 +34,9 @@ namespace proyectop2
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dgvbproductos = new System.Windows.Forms.DataGridView();
-            this.rfc = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.nombree = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.apellidoe = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.usuarioe = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.contraseñae = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.telefono = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.edade = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.puestoe = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.sueldoe = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.calleE = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.numeroe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coloniae = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.localidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clestado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvbempleados = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.selecall = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.ibtnaddempleados = new FontAwesome.Sharp.IconButton();
             this.btbbuscarp = new FontAwesome.Sharp.IconButton();
@@ -58,7 +44,7 @@ namespace proyectop2
             this.txtbuscarempleado = new System.Windows.Forms.TextBox();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvbproductos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvbempleados)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,13 +60,14 @@ namespace proyectop2
             this.groupBox3.TabIndex = 16;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Buscar Empleado";
+            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // groupBox2
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.dgvbproductos);
+            this.groupBox2.Controls.Add(this.dgvbempleados);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox2.Location = new System.Drawing.Point(54, 172);
             this.groupBox2.Name = "groupBox2";
@@ -89,12 +76,12 @@ namespace proyectop2
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Contenido";
             // 
-            // dgvbproductos
+            // dgvbempleados
             // 
-            this.dgvbproductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvbproductos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvbproductos.BackgroundColor = System.Drawing.Color.Black;
-            this.dgvbproductos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvbempleados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvbempleados.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvbempleados.BackgroundColor = System.Drawing.Color.Black;
+            this.dgvbempleados.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -102,23 +89,8 @@ namespace proyectop2
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.GrayText;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvbproductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvbproductos.ColumnHeadersHeight = 29;
-            this.dgvbproductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.rfc,
-            this.nombree,
-            this.apellidoe,
-            this.usuarioe,
-            this.contraseñae,
-            this.telefono,
-            this.edade,
-            this.puestoe,
-            this.sueldoe,
-            this.calleE,
-            this.numeroe,
-            this.coloniae,
-            this.localidade,
-            this.clestado});
+            this.dgvbempleados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvbempleados.ColumnHeadersHeight = 29;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -126,127 +98,28 @@ namespace proyectop2
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.GrayText;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvbproductos.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvbproductos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvbproductos.EnableHeadersVisualStyles = false;
-            this.dgvbproductos.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvbproductos.Location = new System.Drawing.Point(3, 18);
-            this.dgvbproductos.Name = "dgvbproductos";
-            this.dgvbproductos.RowHeadersWidth = 51;
+            this.dgvbempleados.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvbempleados.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvbempleados.EnableHeadersVisualStyles = false;
+            this.dgvbempleados.GridColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvbempleados.Location = new System.Drawing.Point(3, 18);
+            this.dgvbempleados.Name = "dgvbempleados";
+            this.dgvbempleados.RowHeadersWidth = 51;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.GrayText;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.dgvbproductos.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvbproductos.RowTemplate.Height = 24;
-            this.dgvbproductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgvbproductos.Size = new System.Drawing.Size(1228, 282);
-            this.dgvbproductos.TabIndex = 15;
-            // 
-            // rfc
-            // 
-            this.rfc.HeaderText = "RFC";
-            this.rfc.MinimumWidth = 6;
-            this.rfc.Name = "rfc";
-            this.rfc.Width = 51;
-            // 
-            // nombree
-            // 
-            this.nombree.HeaderText = "Nombre";
-            this.nombree.MinimumWidth = 6;
-            this.nombree.Name = "nombree";
-            this.nombree.Width = 91;
-            // 
-            // apellidoe
-            // 
-            this.apellidoe.HeaderText = "Apellido";
-            this.apellidoe.MinimumWidth = 6;
-            this.apellidoe.Name = "apellidoe";
-            this.apellidoe.Width = 95;
-            // 
-            // usuarioe
-            // 
-            this.usuarioe.HeaderText = "Usuario";
-            this.usuarioe.MinimumWidth = 6;
-            this.usuarioe.Name = "usuarioe";
-            this.usuarioe.Width = 84;
-            // 
-            // contraseñae
-            // 
-            this.contraseñae.HeaderText = "Contraseña";
-            this.contraseñae.MinimumWidth = 6;
-            this.contraseñae.Name = "contraseñae";
-            this.contraseñae.Width = 123;
-            // 
-            // telefono
-            // 
-            this.telefono.HeaderText = "Telefono";
-            this.telefono.MinimumWidth = 6;
-            this.telefono.Name = "telefono";
-            this.telefono.Width = 93;
-            // 
-            // edade
-            // 
-            this.edade.HeaderText = "Edad";
-            this.edade.MinimumWidth = 6;
-            this.edade.Name = "edade";
-            this.edade.Width = 65;
-            // 
-            // puestoe
-            // 
-            this.puestoe.HeaderText = "Puesto";
-            this.puestoe.MinimumWidth = 6;
-            this.puestoe.Name = "puestoe";
-            this.puestoe.Width = 76;
-            // 
-            // sueldoe
-            // 
-            this.sueldoe.HeaderText = "Sueldo";
-            this.sueldoe.MinimumWidth = 6;
-            this.sueldoe.Name = "sueldoe";
-            this.sueldoe.Text = "";
-            this.sueldoe.Width = 79;
-            // 
-            // calleE
-            // 
-            this.calleE.HeaderText = "Calle";
-            this.calleE.MinimumWidth = 6;
-            this.calleE.Name = "calleE";
-            this.calleE.Width = 66;
-            // 
-            // numeroe
-            // 
-            this.numeroe.HeaderText = "Numero";
-            this.numeroe.MinimumWidth = 6;
-            this.numeroe.Name = "numeroe";
-            this.numeroe.Width = 112;
-            // 
-            // coloniae
-            // 
-            this.coloniae.HeaderText = "Colonia";
-            this.coloniae.MinimumWidth = 6;
-            this.coloniae.Name = "coloniae";
-            this.coloniae.Width = 112;
-            // 
-            // localidade
-            // 
-            this.localidade.HeaderText = "Localidad";
-            this.localidade.MinimumWidth = 6;
-            this.localidade.Name = "localidade";
-            this.localidade.Width = 133;
-            // 
-            // clestado
-            // 
-            this.clestado.HeaderText = "Estado";
-            this.clestado.MinimumWidth = 6;
-            this.clestado.Name = "clestado";
-            this.clestado.Width = 101;
+            this.dgvbempleados.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvbempleados.RowTemplate.Height = 24;
+            this.dgvbempleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dgvbempleados.Size = new System.Drawing.Size(1228, 282);
+            this.dgvbempleados.TabIndex = 15;
             // 
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.iconButton2);
+            this.groupBox1.Controls.Add(this.selecall);
             this.groupBox1.Controls.Add(this.iconButton1);
             this.groupBox1.Controls.Add(this.ibtnaddempleados);
             this.groupBox1.Controls.Add(this.btbbuscarp);
@@ -260,24 +133,25 @@ namespace proyectop2
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Opciones";
             // 
-            // iconButton2
+            // selecall
             // 
-            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.iconButton2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.iconButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Tasks;
-            this.iconButton2.IconColor = System.Drawing.Color.White;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 35;
-            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(434, 85);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(163, 38);
-            this.iconButton2.TabIndex = 10;
-            this.iconButton2.Text = "Mostrar Todo";
-            this.iconButton2.UseVisualStyleBackColor = false;
+            this.selecall.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.selecall.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.selecall.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.selecall.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.selecall.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.selecall.IconChar = FontAwesome.Sharp.IconChar.Tasks;
+            this.selecall.IconColor = System.Drawing.Color.White;
+            this.selecall.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.selecall.IconSize = 35;
+            this.selecall.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.selecall.Location = new System.Drawing.Point(434, 85);
+            this.selecall.Name = "selecall";
+            this.selecall.Size = new System.Drawing.Size(163, 38);
+            this.selecall.TabIndex = 10;
+            this.selecall.Text = "Mostrar Todo";
+            this.selecall.UseVisualStyleBackColor = false;
+            this.selecall.Click += new System.EventHandler(this.selecall_Click);
             // 
             // iconButton1
             // 
@@ -367,7 +241,7 @@ namespace proyectop2
             this.Load += new System.EventHandler(this.buscarempleado_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvbproductos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvbempleados)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -378,23 +252,9 @@ namespace proyectop2
 
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dgvbproductos;
-        private System.Windows.Forms.DataGridViewLinkColumn rfc;
-        private System.Windows.Forms.DataGridViewLinkColumn nombree;
-        private System.Windows.Forms.DataGridViewLinkColumn apellidoe;
-        private System.Windows.Forms.DataGridViewLinkColumn usuarioe;
-        private System.Windows.Forms.DataGridViewLinkColumn contraseñae;
-        private System.Windows.Forms.DataGridViewLinkColumn telefono;
-        private System.Windows.Forms.DataGridViewLinkColumn edade;
-        private System.Windows.Forms.DataGridViewLinkColumn puestoe;
-        private System.Windows.Forms.DataGridViewLinkColumn sueldoe;
-        private System.Windows.Forms.DataGridViewLinkColumn calleE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numeroe;
-        private System.Windows.Forms.DataGridViewTextBoxColumn coloniae;
-        private System.Windows.Forms.DataGridViewTextBoxColumn localidade;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clestado;
+        private System.Windows.Forms.DataGridView dgvbempleados;
         private System.Windows.Forms.GroupBox groupBox1;
-        private FontAwesome.Sharp.IconButton iconButton2;
+        private FontAwesome.Sharp.IconButton selecall;
         private FontAwesome.Sharp.IconButton iconButton1;
         public FontAwesome.Sharp.IconButton ibtnaddempleados;
         private FontAwesome.Sharp.IconButton btbbuscarp;
