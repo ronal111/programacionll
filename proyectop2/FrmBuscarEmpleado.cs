@@ -7,28 +7,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data;
 using System.Data.SqlClient;
+using business;
 
 namespace proyectop2 
-{
+{ 
     public partial class FrmBuscarEmpleado : Form
     {
+        private B_Operaciones_Empleados opem = new B_Operaciones_Empleados();
+      
         public FrmBuscarEmpleado()
         {
             InitializeComponent();
-            conexion.Conectar();
+            
       
         }
-        public DataTable llenar_empleados()
+        public void llenar_empleados()
         {
-            conexion.Conectar();
-            DataTable dt = new DataTable();
-            string consulta = "select Empleados.nombree,apellido,usuario,contraseña,numerotel,edad,puesto,sueldo,Domicilio.numero,Estado.estado,Localidad.localidad,Calle.calle from Empleados inner join Domicilio on Empleados.fk_iddomicilioe = Domicilio.iddomicilio inner join Estado on Domicilio.fk_estado = Estado.fk_localidad inner join Localidad on Estado.fk_localidad = Localidad.idlocalidad inner join Calle on Localidad.fk_calles = Calle.idcalle";
-            SqlCommand cmd = new SqlCommand(consulta, conexion.Conectar());
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-            return dt;
+
+            var lista = opem.buscarEmpleado();
+            dgvbempleados.DataSource = lista;
+            
+            
         }
         private void buscarempleado_Load(object sender, EventArgs e)
         {
@@ -63,7 +63,12 @@ namespace proyectop2
 
         private void selecall_Click(object sender, EventArgs e)
         {
-            dgvbempleados.DataSource = llenar_empleados();
+         llenar_empleados();
+        }
+
+        private void dgvbempleados_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
         }
     }
 }

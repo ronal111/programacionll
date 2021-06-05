@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace DAL.CRUD
+namespace DAL
 {
     public class insertarcalle
     {
        
         
         public static void registrarcalle() {
-            conexion.Conectar();
-            string insertar = "insert into Empleados values (calle) values (@calle)";
-            SqlCommand cmd = new SqlCommand(insertar, conexion.Conectar());
+            //conexion.Conectar();
+            //string insertar = "insert into Empleados values (calle) values (@calle)";
+            //SqlCommand cmd = new SqlCommand(insertar, conexion.Conectar());
         
 
         }

@@ -502,7 +502,7 @@ namespace proyectop2
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelcontenedor2.Location = new System.Drawing.Point(366, 140);
             this.panelcontenedor2.Name = "panelcontenedor2";
-            this.panelcontenedor2.Size = new System.Drawing.Size(723, 877);
+            this.panelcontenedor2.Size = new System.Drawing.Size(723, 984);
             this.panelcontenedor2.TabIndex = 2;
             this.panelcontenedor2.Paint += new System.Windows.Forms.PaintEventHandler(this.panelcontenedor2_Paint);
             // 

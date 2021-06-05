@@ -55,11 +55,16 @@ namespace proyectop2
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvbproductos = new System.Windows.Forms.DataGridView();
-            this.codigop = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.nombrep = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.cantidadp = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.preciov = new System.Windows.Forms.DataGridViewLinkColumn();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.nomproduct = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.preciouni = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.cantidadp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iva = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.preciov = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.groupventa.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -92,13 +97,11 @@ namespace proyectop2
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.textBox1);
             this.groupBox3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox3.Location = new System.Drawing.Point(866, 275);
+            this.groupBox3.Location = new System.Drawing.Point(905, 275);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(418, 338);
+            this.groupBox3.Size = new System.Drawing.Size(379, 328);
             this.groupBox3.TabIndex = 92;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Pago";
@@ -115,7 +118,7 @@ namespace proyectop2
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton2.IconSize = 35;
             this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(255, 264);
+            this.iconButton2.Location = new System.Drawing.Point(241, 279);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Size = new System.Drawing.Size(125, 28);
             this.iconButton2.TabIndex = 11;
@@ -134,7 +137,7 @@ namespace proyectop2
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 35;
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(273, 114);
+            this.iconButton1.Location = new System.Drawing.Point(241, 114);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(125, 28);
             this.iconButton1.TabIndex = 10;
@@ -146,7 +149,7 @@ namespace proyectop2
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(193, 194);
+            this.label7.Location = new System.Drawing.Point(170, 194);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(65, 23);
             this.label7.TabIndex = 111;
@@ -157,7 +160,7 @@ namespace proyectop2
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(39, 194);
+            this.label6.Location = new System.Drawing.Point(16, 194);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(148, 23);
             this.label6.TabIndex = 110;
@@ -168,7 +171,7 @@ namespace proyectop2
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(39, 114);
+            this.label5.Location = new System.Drawing.Point(16, 114);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(113, 23);
             this.label5.TabIndex = 109;
@@ -179,7 +182,7 @@ namespace proyectop2
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(106, 51);
+            this.label4.Location = new System.Drawing.Point(563, 264);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 23);
             this.label4.TabIndex = 108;
@@ -190,7 +193,7 @@ namespace proyectop2
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(39, 51);
+            this.label3.Location = new System.Drawing.Point(496, 264);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 23);
             this.label3.TabIndex = 107;
@@ -201,7 +204,7 @@ namespace proyectop2
             this.textBox1.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.textBox1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.SystemColors.Info;
-            this.textBox1.Location = new System.Drawing.Point(158, 114);
+            this.textBox1.Location = new System.Drawing.Point(135, 114);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 28);
             this.textBox1.TabIndex = 9;
@@ -216,8 +219,6 @@ namespace proyectop2
             this.groupBox2.Controls.Add(this.numericUpDown2);
             this.groupBox2.Controls.Add(this.comboBox1);
             this.groupBox2.Controls.Add(this.ibtncancelar);
-            this.groupBox2.Controls.Add(this.ibtnvenderp);
-            this.groupBox2.Controls.Add(this.quitarp);
             this.groupBox2.Controls.Add(this.btbbuscarp);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label1);
@@ -244,7 +245,7 @@ namespace proyectop2
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label13.Location = new System.Drawing.Point(44, 155);
+            this.label13.Location = new System.Drawing.Point(80, 104);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(104, 23);
             this.label13.TabIndex = 106;
@@ -255,7 +256,7 @@ namespace proyectop2
             this.numericUpDown2.BackColor = System.Drawing.Color.Black;
             this.numericUpDown2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown2.ForeColor = System.Drawing.SystemColors.Info;
-            this.numericUpDown2.Location = new System.Drawing.Point(159, 156);
+            this.numericUpDown2.Location = new System.Drawing.Point(210, 99);
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(174, 28);
             this.numericUpDown2.TabIndex = 7;
@@ -281,7 +282,7 @@ namespace proyectop2
             this.ibtncancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtncancelar.IconSize = 35;
             this.ibtncancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtncancelar.Location = new System.Drawing.Point(575, 105);
+            this.ibtncancelar.Location = new System.Drawing.Point(579, 39);
             this.ibtncancelar.Name = "ibtncancelar";
             this.ibtncancelar.Size = new System.Drawing.Size(158, 43);
             this.ibtncancelar.TabIndex = 6;
@@ -300,7 +301,7 @@ namespace proyectop2
             this.ibtnvenderp.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnvenderp.IconSize = 35;
             this.ibtnvenderp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtnvenderp.Location = new System.Drawing.Point(399, 105);
+            this.ibtnvenderp.Location = new System.Drawing.Point(675, 257);
             this.ibtnvenderp.Name = "ibtnvenderp";
             this.ibtnvenderp.Size = new System.Drawing.Size(158, 43);
             this.ibtnvenderp.TabIndex = 5;
@@ -319,7 +320,7 @@ namespace proyectop2
             this.quitarp.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.quitarp.IconSize = 35;
             this.quitarp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.quitarp.Location = new System.Drawing.Point(575, 36);
+            this.quitarp.Location = new System.Drawing.Point(675, 208);
             this.quitarp.Name = "quitarp";
             this.quitarp.Size = new System.Drawing.Size(158, 43);
             this.quitarp.TabIndex = 4;
@@ -372,11 +373,19 @@ namespace proyectop2
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox1.AutoSize = true;
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.dgvbproductos);
+            this.groupBox1.Controls.Add(this.ibtnvenderp);
+            this.groupBox1.Controls.Add(this.quitarp);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox1.Location = new System.Drawing.Point(60, 275);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(785, 338);
+            this.groupBox1.Size = new System.Drawing.Size(839, 328);
             this.groupBox1.TabIndex = 90;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Productos a Vender";
@@ -397,13 +406,14 @@ namespace proyectop2
             this.dgvbproductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvbproductos.ColumnHeadersHeight = 29;
             this.dgvbproductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.codigop,
-            this.nombrep,
+            this.nomproduct,
+            this.preciouni,
             this.cantidadp,
+            this.iva,
             this.preciov});
             this.dgvbproductos.EnableHeadersVisualStyles = false;
             this.dgvbproductos.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvbproductos.Location = new System.Drawing.Point(48, 41);
+            this.dgvbproductos.Location = new System.Drawing.Point(22, 41);
             this.dgvbproductos.Name = "dgvbproductos";
             this.dgvbproductos.RowHeadersWidth = 8;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
@@ -413,40 +423,92 @@ namespace proyectop2
             this.dgvbproductos.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvbproductos.RowTemplate.Height = 24;
             this.dgvbproductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvbproductos.Size = new System.Drawing.Size(608, 266);
+            this.dgvbproductos.Size = new System.Drawing.Size(634, 192);
             this.dgvbproductos.TabIndex = 38;
-            // 
-            // codigop
-            // 
-            this.codigop.HeaderText = "Codigo De Producto";
-            this.codigop.MinimumWidth = 6;
-            this.codigop.Name = "codigop";
-            this.codigop.Width = 204;
-            // 
-            // nombrep
-            // 
-            this.nombrep.HeaderText = "Nombre";
-            this.nombrep.MinimumWidth = 6;
-            this.nombrep.Name = "nombrep";
-            this.nombrep.Width = 91;
-            // 
-            // cantidadp
-            // 
-            this.cantidadp.HeaderText = "Descripcion";
-            this.cantidadp.MinimumWidth = 6;
-            this.cantidadp.Name = "cantidadp";
-            this.cantidadp.Width = 125;
-            // 
-            // preciov
-            // 
-            this.preciov.HeaderText = "Precio Venta";
-            this.preciov.MinimumWidth = 6;
-            this.preciov.Name = "preciov";
-            this.preciov.Width = 134;
+            this.dgvbproductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvbproductos_CellContentClick);
             // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
+            // 
+            // nomproduct
+            // 
+            this.nomproduct.HeaderText = "Nombre del Producto";
+            this.nomproduct.MinimumWidth = 6;
+            this.nomproduct.Name = "nomproduct";
+            this.nomproduct.Width = 214;
+            // 
+            // preciouni
+            // 
+            this.preciouni.HeaderText = "P/U         ";
+            this.preciouni.MinimumWidth = 6;
+            this.preciouni.Name = "preciouni";
+            this.preciouni.Width = 94;
+            // 
+            // cantidadp
+            // 
+            this.cantidadp.HeaderText = "Cantidad";
+            this.cantidadp.MinimumWidth = 6;
+            this.cantidadp.Name = "cantidadp";
+            this.cantidadp.Width = 128;
+            // 
+            // iva
+            // 
+            this.iva.HeaderText = "IVA";
+            this.iva.MinimumWidth = 6;
+            this.iva.Name = "iva";
+            this.iva.Width = 48;
+            // 
+            // preciov
+            // 
+            this.preciov.HeaderText = "Importe";
+            this.preciov.MinimumWidth = 6;
+            this.preciov.Name = "preciov";
+            this.preciov.Width = 88;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label8.Location = new System.Drawing.Point(80, 264);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(94, 23);
+            this.label8.TabIndex = 109;
+            this.label8.Text = "Subtotal:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label9.Location = new System.Drawing.Point(191, 264);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(65, 23);
+            this.label9.TabIndex = 110;
+            this.label9.Text = "$$$$$";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label10.Location = new System.Drawing.Point(277, 264);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(107, 23);
+            this.label10.TabIndex = 111;
+            this.label10.Text = "Impuesto:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label11.Location = new System.Drawing.Point(404, 264);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(65, 23);
+            this.label11.TabIndex = 112;
+            this.label11.Text = "$$$$$";
             // 
             // FrmVentas
             // 
@@ -467,6 +529,7 @@ namespace proyectop2
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvbproductos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
@@ -496,12 +559,17 @@ namespace proyectop2
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvbproductos;
-        private System.Windows.Forms.DataGridViewLinkColumn codigop;
-        private System.Windows.Forms.DataGridViewLinkColumn nombrep;
-        private System.Windows.Forms.DataGridViewLinkColumn cantidadp;
-        private System.Windows.Forms.DataGridViewLinkColumn preciov;
         private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DataGridViewLinkColumn nomproduct;
+        private System.Windows.Forms.DataGridViewLinkColumn preciouni;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cantidadp;
+        private System.Windows.Forms.DataGridViewLinkColumn iva;
+        private System.Windows.Forms.DataGridViewLinkColumn preciov;
     }
 }

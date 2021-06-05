@@ -21,5 +21,10 @@ namespace proyectop2
         {
             txtbuscarproveedor.Clear();
         }
+
+        private void dgvbproveedores_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

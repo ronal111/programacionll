@@ -114,6 +114,7 @@ namespace proyectop2
             this.dgvbempleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvbempleados.Size = new System.Drawing.Size(1228, 282);
             this.dgvbempleados.TabIndex = 15;
+            this.dgvbempleados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvbempleados_CellContentClick);
             // 
             // groupBox1
             // 

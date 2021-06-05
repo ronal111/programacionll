@@ -107,7 +107,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="conexion.cs" />
     <Compile Include="FrmBuscarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,23 +125,11 @@
     <Compile Include="FrmBusquedaEmergente.Designer.cs">
       <DependentUpon>FrmBusquedaEmergente.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmRegistrarEstado.cs">
+    <Compile Include="FrmEmpleadoReg.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmRegistrarEstado.Designer.cs">
-      <DependentUpon>FrmRegistrarEstado.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmRegistroCalle.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmRegistroCalle.Designer.cs">
-      <DependentUpon>FrmRegistroCalle.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmRegistroLocalidad.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmRegistroLocalidad.Designer.cs">
-      <DependentUpon>FrmRegistroLocalidad.cs</DependentUpon>
+    <Compile Include="FrmEmpleadoReg.Designer.cs">
+      <DependentUpon>FrmEmpleadoReg.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmMenu.cs">
       <SubType>Form</SubType>
@@ -161,12 +148,6 @@
     </Compile>
     <Compile Include="FrmBuscarEmpleado.Designer.cs">
       <DependentUpon>FrmBuscarEmpleado.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmRegistrarEmpleado.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmRegistrarEmpleado.Designer.cs">
-      <DependentUpon>FrmRegistrarEmpleado.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmRegistrarProductos.cs">
       <SubType>Form</SubType>
@@ -215,14 +196,8 @@
     <EmbeddedResource Include="FrmBusquedaEmergente.resx">
       <DependentUpon>FrmBusquedaEmergente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmRegistrarEstado.resx">
-      <DependentUpon>FrmRegistrarEstado.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmRegistroCalle.resx">
-      <DependentUpon>FrmRegistroCalle.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmRegistroLocalidad.resx">
-      <DependentUpon>FrmRegistroLocalidad.cs</DependentUpon>
+    <EmbeddedResource Include="FrmEmpleadoReg.resx">
+      <DependentUpon>FrmEmpleadoReg.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMenu.resx">
       <DependentUpon>FrmMenu.cs</DependentUpon>
@@ -232,9 +207,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmBuscarEmpleado.resx">
       <DependentUpon>FrmBuscarEmpleado.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmRegistrarEmpleado.resx">
-      <DependentUpon>FrmRegistrarEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRegistrarProductos.resx">
       <DependentUpon>FrmRegistrarProductos.cs</DependentUpon>
@@ -330,9 +302,9 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DAL\DAL.csproj">
-      <Project>{3c2c6cf2-4294-4c49-8ccf-66d2c9e45724}</Project>
-      <Name>DAL</Name>
+    <ProjectReference Include="..\business\business.csproj">
+      <Project>{f0435259-5300-42db-9db3-0c33d1769b34}</Project>
+      <Name>business</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

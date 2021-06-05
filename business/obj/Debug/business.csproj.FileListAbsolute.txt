@@ -1,0 +1,9 @@
+C:\Users\Usuario\source\repos\proyectop2\business\obj\Debug\business.csprojAssemblyReference.cache
+C:\Users\Usuario\source\repos\proyectop2\business\obj\Debug\business.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\source\repos\proyectop2\business\bin\Debug\business.dll
+C:\Users\Usuario\source\repos\proyectop2\business\bin\Debug\business.pdb
+C:\Users\Usuario\source\repos\proyectop2\business\bin\Debug\DAL.dll
+C:\Users\Usuario\source\repos\proyectop2\business\bin\Debug\DAL.pdb
+C:\Users\Usuario\source\repos\proyectop2\business\obj\Debug\business.csproj.CopyComplete
+C:\Users\Usuario\source\repos\proyectop2\business\obj\Debug\business.dll
+C:\Users\Usuario\source\repos\proyectop2\business\obj\Debug\business.pdb

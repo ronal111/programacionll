@@ -6,17 +6,21 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace proyectop2
+
+namespace DAL
 {
-    class conexion
+    class D_Conexion
     {
-                public static SqlConnection Conectar()
+        public static SqlConnection Conectar()
         {
 
             SqlConnection cn = new SqlConnection("data source=DESKTOP-4DL7T3L\\SQLEXPRESS;initial catalog=tiendaelectronica;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework");
             cn.Open();
 
+
             return cn;
         }
+
+
     }
 }

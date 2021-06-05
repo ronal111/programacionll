@@ -75,7 +75,7 @@ namespace proyectop2
             this.txtuser.Name = "txtuser";
             this.txtuser.Size = new System.Drawing.Size(404, 23);
             this.txtuser.TabIndex = 1;
-            this.txtuser.Text = "usuario";
+            this.txtuser.Text = "admin";
             this.txtuser.TextChanged += new System.EventHandler(this.txtuser_TextChanged);
             // 
             // txtcontraseña
@@ -89,7 +89,7 @@ namespace proyectop2
             this.txtcontraseña.PasswordChar = '*';
             this.txtcontraseña.Size = new System.Drawing.Size(404, 23);
             this.txtcontraseña.TabIndex = 2;
-            this.txtcontraseña.Text = "contraseña";
+            this.txtcontraseña.Text = "admin";
             this.txtcontraseña.TextChanged += new System.EventHandler(this.txtcontraseña_TextChanged);
             // 
             // lblogin

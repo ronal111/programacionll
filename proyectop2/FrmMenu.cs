@@ -174,7 +174,7 @@ namespace proyectop2
         }
         private void ibtnaddempleados_Click(object sender, EventArgs e)
         {
-            abrirformuhijo(new FrmRegistrarEmpleado());
+            abrirformuhijo(new FrmEmpleadoReg());
         }
 
         private void ibtnaddproveedor_Click(object sender, EventArgs e)

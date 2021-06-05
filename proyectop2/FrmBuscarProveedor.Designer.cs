@@ -92,6 +92,7 @@ namespace proyectop2
             this.dgvbproveedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvbproveedores.Size = new System.Drawing.Size(1178, 526);
             this.dgvbproveedores.TabIndex = 7;
+            this.dgvbproveedores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvbproveedores_CellContentClick);
             // 
             // nombreprov
             // 

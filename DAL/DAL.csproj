@@ -41,11 +41,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CRUD\insertarcalle.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CRUD\D_Conexion.cs" />
+    <Compile Include="CRUD\D_Productos.cs" />
+    <Compile Include="insertarcalle.cs" />
+    <Compile Include="CRUD\D_Domicilio.cs" />
+    <Compile Include="CRUD\D_Categoria.cs" />
+    <Compile Include="CRUD\D_Compras.cs" />
+    <Compile Include="CRUD\D_Compra_Productos.cs" />
+    <Compile Include="CRUD\D_Empleados.cs" />
+    <Compile Include="CRUD\D_Marca_Producto.cs" />
+    <Compile Include="CRUD\D_Modelo_Producto.cs" />
+    <Compile Include="CRUD\D_Proveedor.cs" />
+    <Compile Include="CRUD\D_Unidad_Medida.cs" />
+    <Compile Include="CRUD\D_Ventas.cs" />
+    <Compile Include="CRUD\D_Venta_Producto.cs" />
+    <Compile Include="AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="modelos\" />
+    <Folder Include="Properties\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

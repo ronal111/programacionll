@@ -36,5 +36,10 @@ namespace proyectop2
         {
             txtbuscar.Clear();
         }
+
+        private void dgvbproductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
