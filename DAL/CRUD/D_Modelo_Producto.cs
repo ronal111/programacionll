@@ -8,21 +8,28 @@ using System.Data.SqlClient;
 
 namespace DAL
 {
-   public  class D_Modelo_Producto
+    public class D_Modelo_Producto
     {
+
+        private D_Conexion conectar = new D_Conexion();
         public int idmodelo { get; set; }
         public string modelo { get; set; }
-        public DataTable Buscarmodelos(int idmarca)
+        public int fkmarca {get; set;}
+
+
+        public DataTable llenarcombo(int idmarca)
         {
             DataTable tablamodelo = new DataTable();
             try
             {
-                string consulta = "select idmodelo, modelo from Modelo_Producto where idmarca=" + idmarca;
-                SqlCommand cmd = new SqlCommand(consulta, D_Conexion.Conectar());
+                conectar.abrir();
+                string consulta = " select idmodelo,modelo from Modelo_Producto where idmarca ='" + idmarca + "'";
+                SqlCommand cmd = new SqlCommand(consulta, conectar.Conectar);
                 var reader = cmd.ExecuteReader();
                 if (reader.HasRows == false)
                     return null;
                 tablamodelo.Load(reader);
+                conectar.cerrar();
             }
             catch (Exception)
             {
@@ -32,23 +39,96 @@ namespace DAL
             return tablamodelo;
 
         }
-
-
-        public void insertar()
+        public DataTable Buscarmodelosespecifico(string marca)
         {
+            DataTable tablamodelo = new DataTable();
+            try
+            {
+                conectar.abrir();
+                string consulta = " select Modelo_Producto.idmodelo,modelo , Marca_Producto.marcaproducto from Modelo_Producto join Marca_Producto on Modelo_Producto.idmarca=Marca_Producto.idmarca  where modelo  LIKE " + "'%" + marca + "%'";
+                SqlCommand cmd = new SqlCommand(consulta, conectar.Conectar);
+                var reader = cmd.ExecuteReader();
+                if (reader.HasRows == false)
+                    return null;
+                tablamodelo.Load(reader);
+                conectar.cerrar();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return tablamodelo;
 
         }
-        public void mostrar()
+        public DataTable Buscartodomodelo ()
         {
+            DataTable tablamodelo = new DataTable();
+            try
+            {
+                conectar.abrir();
+                string consulta = " select Modelo_Producto.idmodelo,modelo , Marca_Producto.marcaproducto  from Modelo_Producto join Marca_Producto on Modelo_Producto.idmarca=Marca_Producto.idmarca";
+                SqlCommand cmd = new SqlCommand(consulta, conectar.Conectar);
+                var reader = cmd.ExecuteReader();
+                if (reader.HasRows == false)
+                    return null;
+                tablamodelo.Load(reader);
+                conectar.cerrar();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return tablamodelo;
 
         }
-        public void borrar()
+        public bool actualizarmodelo()
         {
+            bool success = false;
 
+            try
+            {
+
+                conectar.abrir();
+                string insertar = "update Modelo_Producto set modelo ='" + modelo + "',idmarca = '" + fkmarca + "' where idmodelo ='" + idmodelo + "'";
+                SqlCommand cmd = new SqlCommand(insertar, conectar.Conectar);
+                var resultado = cmd.ExecuteNonQuery();
+                if (resultado == 1)
+                    success = true;
+                conectar.cerrar();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return success;
         }
 
-        public void actualizar()
+        public bool insertarmodelo()
         {
+            bool success = false;
+
+            try
+            {
+
+                conectar.abrir();
+
+                string insertar = "insert into Modelo_Producto values ('" + modelo + "','" + fkmarca + "')";
+                SqlCommand cmd = new SqlCommand(insertar,conectar.Conectar);
+                var resultado = cmd.ExecuteNonQuery();
+                if (resultado == 1)
+                    success = true;
+                conectar.cerrar();
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return success;
 
         }
     }

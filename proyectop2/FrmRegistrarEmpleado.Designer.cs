@@ -1,7 +1,7 @@
 ﻿
 namespace proyectop2
 {
-    partial class FrmEmpleadoReg
+    partial class FrmRegistrarEmpleado
     {
         /// <summary>
         /// Required designer variable.

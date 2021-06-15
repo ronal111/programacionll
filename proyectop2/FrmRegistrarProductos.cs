@@ -156,14 +156,14 @@ namespace proyectop2
             cboxcat.DisplayMember = "categoria";
             cboxcat.ValueMember = "idcategoria";
 
-            var lista3 = b_marcas.buscar_marcaccombo();
+            var lista3 = b_marcas.buscar_marca();
             cboxmarca.ValueMember = "idmarca";
             cboxmarca.DisplayMember = "marcaproducto";
             cboxmarca.DataSource = lista3;
         }
 
 
-        private void FrmRegistrarProductos_Load(object sender, EventArgs e)
+       public void FrmRegistrarProductos_Load(object sender, EventArgs e)
         {
             cargarDatosIniciales();
         }
@@ -178,7 +178,7 @@ namespace proyectop2
             int marca = Convert.ToInt32(cboxmarca.SelectedValue);
             if (marca > 0)
             {
-                var modelos = b_modelos.cargarmodelos(marca);
+                var modelos = b_modelos.llenarcombo(marca);
                 cboxmodelo.DataSource = null;
                 cboxmarca.Text = "";
 
@@ -187,14 +187,6 @@ namespace proyectop2
                     cboxmodelo.DataSource = modelos;
                     cboxmodelo.DisplayMember = "modelo";
                     cboxmodelo.ValueMember = "idmodelo";
-
-                    /*
-                                        for (int i = 0; i < modelos.Rows.Count; i++)
-                                        {
-                                            cboxmodelo.Items.Add(modelos.Rows[i]["modelo"]);
-
-
-                                        }*/
 
                     cboxmodelo.SelectedIndex = 0;
                 }
@@ -326,6 +318,36 @@ namespace proyectop2
             var lista = b_opeprod.buscar_productoespecific(txtbuscar.Text);
             dgvproductos.DataSource = lista;
 
+        }
+
+        private void btncancelar_Click(object sender, EventArgs e)
+        {
+            limpiar_campos();
+            btnActualizar.Enabled = false;
+            btnGuardar.Enabled = true;
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            FrmRegistrarCategoria catego = new FrmRegistrarCategoria();
+            catego.Show();
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ibtañadircalle_Click(object sender, EventArgs e)
+        {
+            FRM_MARCA marca = new FRM_MARCA();
+            marca.Show();
+        }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            FRM_Modelos modelos = new FRM_Modelos();
+            modelos.Show();
         }
     }
 }

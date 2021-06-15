@@ -12,6 +12,7 @@ namespace DAL
 {
     public class D_Domicilio
     {
+        private D_Conexion conectar = new D_Conexion();
 
 
         public string iddomicilio { get; set; }
@@ -29,20 +30,20 @@ namespace DAL
             try
             {
 
-                D_Conexion.Conectar();
+                conectar.abrir();
                 string insertar = string.Format("insert into Domicilio(numero,numero_int,calle,cp,colonia,municipio,estado) values('{0}','{1}','{2}','{3}','{4}','{5}','{6}')",
                     numero, numero_int, calle, cp, colonia, municipio, estado);
                 
-                SqlCommand cmd = new SqlCommand(insertar, D_Conexion.Conectar());
+                SqlCommand cmd = new SqlCommand(insertar, conectar.Conectar);
                 var resultado = cmd.ExecuteNonQuery();
                 if (resultado == 1)
                     success = true;
                 insertar = "select max(iddomicilio) as ultimo_id from Domicilio";
-                cmd = new SqlCommand(insertar, D_Conexion.Conectar());
+                cmd = new SqlCommand(insertar, conectar.Conectar);
                 var reader = cmd.ExecuteReader();
                 reader.Read();
                  iddomicilio = reader.GetValue(0).ToString();
-
+                conectar.cerrar();
 
             }
             catch (Exception e)
@@ -60,12 +61,14 @@ namespace DAL
             DataTable tablacalle = new DataTable();
             try
             {
+                conectar.abrir();
                 string consulta = "select * from codigos_postales where cp =" + cp;
-                SqlCommand cmd = new SqlCommand(consulta, D_Conexion.Conectar());
+                SqlCommand cmd = new SqlCommand(consulta, conectar.Conectar);
                 var reader = cmd.ExecuteReader();
                 if (reader.HasRows == false)
                     return null;
                 tablacalle.Load(reader);
+                conectar.cerrar();
             }
             catch (Exception)
             {
@@ -87,9 +90,9 @@ namespace DAL
             try
             {
 
-                D_Conexion.Conectar();
+                conectar.abrir();
                 string insertar = "update Domicilio set numero='"+numero+"',numero_int='"+numero_int+"',calle='"+calle+"',cp='"+cp+"',colonia='"+colonia+"',municipio='"+municipio+"',estado='"+estado+"' where iddomicilio='" + iddomicilio+"'";
-                SqlCommand cmd = new SqlCommand(insertar, D_Conexion.Conectar());
+                SqlCommand cmd = new SqlCommand(insertar, conectar.Conectar);
                 var resultado = cmd.ExecuteNonQuery();
                 if (resultado == 1)
                     success = true;

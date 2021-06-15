@@ -11,6 +11,7 @@ namespace DAL
 {
    public  class D_Proveedor
     {
+        private D_Conexion conectar = new D_Conexion();
         public int idproveedor { get; set; }
         public string nombrepv { get; set; }
         public string compañia { get; set; }
@@ -25,14 +26,15 @@ namespace DAL
             try
             {
 
-                D_Conexion.Conectar();
+                conectar.abrir();
 
                 string insertar = "insert into Empleados values ('" + idproveedor + "','" + nombrepv + "','" + compañia + "','" + correoC +
                     "','" + tel + "','" + fk_iddomiciliop + "')";
-                SqlCommand cmd = new SqlCommand(insertar, D_Conexion.Conectar());
+                SqlCommand cmd = new SqlCommand(insertar, conectar.Conectar);
                 var resultado = cmd.ExecuteNonQuery();
                 if (resultado == 1)
                     success = true;
+                conectar.cerrar();
 
 
             }
@@ -50,12 +52,14 @@ namespace DAL
             DataTable tablaPreovedor = new DataTable();
             try
             {
+                conectar.abrir();
                 string consulta = "select Proveedor.idproveedor,nombrepv,compañia,correop,tel, Domicilio.iddomicilio,calle,numero,numero_int,cp,colonia,municipio,estado from Proveedor join Domicilio on Proveedor.fk_iddomiciliop= Domicilio.iddomicilio;";
-                SqlCommand cmd = new SqlCommand(consulta, D_Conexion.Conectar());
+                SqlCommand cmd = new SqlCommand(consulta, conectar.Conectar);
                 var reader = cmd.ExecuteReader();
                 if (reader.HasRows == false)
                     return null;
                 tablaPreovedor.Load(reader);
+                conectar.cerrar();
             }
             catch (Exception)
             {
@@ -73,13 +77,14 @@ namespace DAL
             try
             {
 
-                D_Conexion.Conectar();
+                conectar.abrir();
 
                 string insertar = "update Proveedor set nombrepv='" + nombrepv + "',compañia='" + compañia + "',correop='" + correoC + "',tel='" + tel + "' where idproveedor='" + idproveedor + "'";
-                SqlCommand cmd = new SqlCommand(insertar, D_Conexion.Conectar());
+                SqlCommand cmd = new SqlCommand(insertar, conectar.Conectar);
                 var resultado = cmd.ExecuteNonQuery();
                 if (resultado == 1)
                     success = true;
+                conectar.cerrar();
             }
             catch (Exception)
             {
@@ -94,12 +99,14 @@ namespace DAL
             DataTable tablaPreovedor = new DataTable();
             try
             {
+                conectar.abrir();
                 string consulta = "select idproveedor,nombrepv from Proveedor";
-                SqlCommand cmd = new SqlCommand(consulta, D_Conexion.Conectar());
+                SqlCommand cmd = new SqlCommand(consulta, conectar.Conectar);
                 var reader = cmd.ExecuteReader();
                 if (reader.HasRows == false)
                     return null;
                 tablaPreovedor.Load(reader);
+                conectar.cerrar();
             }
             catch (Exception)
             {
@@ -115,12 +122,14 @@ namespace DAL
             DataTable tablaPreovedor = new DataTable();
             try
             {
+                conectar.abrir();
                 string consulta = "select Proveedor.idproveedor,nombrepv,compañia,correop,tel, Domicilio.iddomicilio,calle,numero,numero_int,cp,colonia,municipio,estado from Proveedor join Domicilio on Proveedor.fk_iddomiciliop= Domicilio.iddomicilio where nombrepv  LIKE " + "'%" + nombrep + "%'";
-                SqlCommand cmd = new SqlCommand(consulta, D_Conexion.Conectar());
+                SqlCommand cmd = new SqlCommand(consulta, conectar.Conectar);
                 var reader = cmd.ExecuteReader();
                 if (reader.HasRows == false)
                     return null;
                 tablaPreovedor.Load(reader);
+                conectar.cerrar();
             }
             catch (Exception)
             {

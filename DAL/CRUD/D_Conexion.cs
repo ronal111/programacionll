@@ -9,18 +9,42 @@ using System.Data.SqlClient;
 
 namespace DAL
 {
-    class D_Conexion
+
+    public class D_Conexion
     {
-        public static SqlConnection Conectar()
+        
+        //Cadena de Conexion
+        private readonly string cadena = "data source=DESKTOP-4DL7T3L\\SQLEXPRESS;initial catalog=tiendaelectronica;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework";
+
+        public SqlConnection Conectar = new SqlConnection();
+
+        //Constructor
+        public D_Conexion()
         {
+            Conectar.ConnectionString = cadena;
+        }
 
-            SqlConnection cn = new SqlConnection("data source=DESKTOP-4DL7T3L\\SQLEXPRESS;initial catalog=tiendaelectronica;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework");
-            cn.Open();
+        //Metodo para abrir la conexion
+        public void abrir()
+        {
+            try
+            {
+                Conectar.Open();
+                Console.WriteLine("Conexion abierta");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("error al abrir BD " + ex.Message);
+            }
+        }
 
-
-            return cn;
+        //Metodo para cerrar la conexion
+        public void cerrar()
+        {
+            Conectar.Close();
         }
 
 
     }
 }
+    

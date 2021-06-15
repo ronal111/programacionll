@@ -30,9 +30,9 @@ namespace proyectop2
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.gbreprod = new System.Windows.Forms.GroupBox();
             this.btnActualizar = new FontAwesome.Sharp.IconButton();
@@ -41,7 +41,7 @@ namespace proyectop2
             this.lblfkmarca = new System.Windows.Forms.Label();
             this.cbocproveedor = new System.Windows.Forms.ComboBox();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.ibtañadircalle = new FontAwesome.Sharp.IconButton();
+            this.ibtañadirmarca = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.cboxmodelo = new System.Windows.Forms.ComboBox();
             this.btncancelar = new FontAwesome.Sharp.IconButton();
@@ -90,7 +90,7 @@ namespace proyectop2
             this.gbreprod.Controls.Add(this.lblfkmarca);
             this.gbreprod.Controls.Add(this.cbocproveedor);
             this.gbreprod.Controls.Add(this.iconButton2);
-            this.gbreprod.Controls.Add(this.ibtañadircalle);
+            this.gbreprod.Controls.Add(this.ibtañadirmarca);
             this.gbreprod.Controls.Add(this.iconButton3);
             this.gbreprod.Controls.Add(this.cboxmodelo);
             this.gbreprod.Controls.Add(this.btncancelar);
@@ -118,7 +118,7 @@ namespace proyectop2
             this.gbreprod.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.gbreprod.Location = new System.Drawing.Point(12, 11);
             this.gbreprod.Name = "gbreprod";
-            this.gbreprod.Size = new System.Drawing.Size(1494, 572);
+            this.gbreprod.Size = new System.Drawing.Size(1494, 512);
             this.gbreprod.TabIndex = 115;
             this.gbreprod.TabStop = false;
             this.gbreprod.Text = "Registrar Productos";
@@ -137,7 +137,7 @@ namespace proyectop2
             this.btnActualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnActualizar.IconSize = 35;
             this.btnActualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnActualizar.Location = new System.Drawing.Point(642, 496);
+            this.btnActualizar.Location = new System.Drawing.Point(650, 407);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(179, 36);
             this.btnActualizar.TabIndex = 55;
@@ -153,7 +153,7 @@ namespace proyectop2
             this.cboxest.Items.AddRange(new object[] {
             "ACTIVO",
             "INACTIVO"});
-            this.cboxest.Location = new System.Drawing.Point(761, 201);
+            this.cboxest.Location = new System.Drawing.Point(769, 164);
             this.cboxest.Name = "cboxest";
             this.cboxest.Size = new System.Drawing.Size(175, 24);
             this.cboxest.TabIndex = 54;
@@ -163,7 +163,7 @@ namespace proyectop2
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(548, 241);
+            this.label1.Location = new System.Drawing.Point(556, 204);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(194, 23);
             this.label1.TabIndex = 53;
@@ -172,7 +172,7 @@ namespace proyectop2
             // lblfkmarca
             // 
             this.lblfkmarca.AutoSize = true;
-            this.lblfkmarca.Location = new System.Drawing.Point(168, 298);
+            this.lblfkmarca.Location = new System.Drawing.Point(176, 261);
             this.lblfkmarca.Name = "lblfkmarca";
             this.lblfkmarca.Size = new System.Drawing.Size(0, 17);
             this.lblfkmarca.TabIndex = 51;
@@ -182,7 +182,7 @@ namespace proyectop2
             this.cbocproveedor.BackColor = System.Drawing.Color.Black;
             this.cbocproveedor.ForeColor = System.Drawing.Color.White;
             this.cbocproveedor.FormattingEnabled = true;
-            this.cbocproveedor.Location = new System.Drawing.Point(760, 319);
+            this.cbocproveedor.Location = new System.Drawing.Point(768, 282);
             this.cbocproveedor.Name = "cbocproveedor";
             this.cbocproveedor.Size = new System.Drawing.Size(175, 24);
             this.cbocproveedor.TabIndex = 50;
@@ -199,31 +199,33 @@ namespace proyectop2
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton2.IconSize = 35;
             this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(974, 121);
+            this.iconButton2.Location = new System.Drawing.Point(982, 84);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Size = new System.Drawing.Size(292, 41);
             this.iconButton2.TabIndex = 12;
             this.iconButton2.Text = "Anadir Nueva Categoria";
             this.iconButton2.UseVisualStyleBackColor = false;
+            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
             // 
-            // ibtañadircalle
+            // ibtañadirmarca
             // 
-            this.ibtañadircalle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.ibtañadircalle.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.ibtañadircalle.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.ibtañadircalle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ibtañadircalle.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ibtañadircalle.IconChar = FontAwesome.Sharp.IconChar.Edit;
-            this.ibtañadircalle.IconColor = System.Drawing.Color.White;
-            this.ibtañadircalle.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ibtañadircalle.IconSize = 35;
-            this.ibtañadircalle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtañadircalle.Location = new System.Drawing.Point(974, 179);
-            this.ibtañadircalle.Name = "ibtañadircalle";
-            this.ibtañadircalle.Size = new System.Drawing.Size(292, 41);
-            this.ibtañadircalle.TabIndex = 13;
-            this.ibtañadircalle.Text = "Anadir Nueva Marca";
-            this.ibtañadircalle.UseVisualStyleBackColor = false;
+            this.ibtañadirmarca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.ibtañadirmarca.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.ibtañadirmarca.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.ibtañadirmarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ibtañadirmarca.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ibtañadirmarca.IconChar = FontAwesome.Sharp.IconChar.Edit;
+            this.ibtañadirmarca.IconColor = System.Drawing.Color.White;
+            this.ibtañadirmarca.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibtañadirmarca.IconSize = 35;
+            this.ibtañadirmarca.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ibtañadirmarca.Location = new System.Drawing.Point(982, 142);
+            this.ibtañadirmarca.Name = "ibtañadirmarca";
+            this.ibtañadirmarca.Size = new System.Drawing.Size(292, 41);
+            this.ibtañadirmarca.TabIndex = 13;
+            this.ibtañadirmarca.Text = "Anadir Nueva Marca";
+            this.ibtañadirmarca.UseVisualStyleBackColor = false;
+            this.ibtañadirmarca.Click += new System.EventHandler(this.ibtañadircalle_Click);
             // 
             // iconButton3
             // 
@@ -237,19 +239,20 @@ namespace proyectop2
             this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton3.IconSize = 35;
             this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.Location = new System.Drawing.Point(974, 244);
+            this.iconButton3.Location = new System.Drawing.Point(982, 207);
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Size = new System.Drawing.Size(292, 41);
             this.iconButton3.TabIndex = 14;
             this.iconButton3.Text = "Anadir Nuevo Modelo";
             this.iconButton3.UseVisualStyleBackColor = false;
+            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
             // 
             // cboxmodelo
             // 
             this.cboxmodelo.BackColor = System.Drawing.Color.Black;
             this.cboxmodelo.ForeColor = System.Drawing.Color.White;
             this.cboxmodelo.FormattingEnabled = true;
-            this.cboxmodelo.Location = new System.Drawing.Point(318, 290);
+            this.cboxmodelo.Location = new System.Drawing.Point(326, 253);
             this.cboxmodelo.Name = "cboxmodelo";
             this.cboxmodelo.Size = new System.Drawing.Size(175, 24);
             this.cboxmodelo.TabIndex = 4;
@@ -266,19 +269,20 @@ namespace proyectop2
             this.btncancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btncancelar.IconSize = 35;
             this.btncancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btncancelar.Location = new System.Drawing.Point(858, 431);
+            this.btncancelar.Location = new System.Drawing.Point(864, 403);
             this.btncancelar.Name = "btncancelar";
             this.btncancelar.Size = new System.Drawing.Size(160, 40);
             this.btncancelar.TabIndex = 16;
             this.btncancelar.Text = "Cancelar";
             this.btncancelar.UseVisualStyleBackColor = false;
+            this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(94, 136);
+            this.label2.Location = new System.Drawing.Point(102, 99);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(218, 23);
             this.label2.TabIndex = 37;
@@ -296,7 +300,7 @@ namespace proyectop2
             this.btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuardar.IconSize = 35;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(642, 431);
+            this.btnGuardar.Location = new System.Drawing.Point(650, 345);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(179, 40);
             this.btnGuardar.TabIndex = 15;
@@ -309,7 +313,7 @@ namespace proyectop2
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(201, 179);
+            this.label3.Location = new System.Drawing.Point(209, 142);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(111, 23);
             this.label3.TabIndex = 38;
@@ -320,7 +324,7 @@ namespace proyectop2
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(232, 257);
+            this.label4.Location = new System.Drawing.Point(240, 220);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 23);
             this.label4.TabIndex = 39;
@@ -331,7 +335,7 @@ namespace proyectop2
             this.txtventa.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.txtventa.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtventa.ForeColor = System.Drawing.SystemColors.Info;
-            this.txtventa.Location = new System.Drawing.Point(761, 282);
+            this.txtventa.Location = new System.Drawing.Point(769, 245);
             this.txtventa.Name = "txtventa";
             this.txtventa.Size = new System.Drawing.Size(175, 28);
             this.txtventa.TabIndex = 10;
@@ -341,7 +345,7 @@ namespace proyectop2
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(220, 291);
+            this.label5.Location = new System.Drawing.Point(228, 254);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(92, 23);
             this.label5.TabIndex = 40;
@@ -352,7 +356,7 @@ namespace proyectop2
             this.txtpreciocompra.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.txtpreciocompra.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtpreciocompra.ForeColor = System.Drawing.SystemColors.Info;
-            this.txtpreciocompra.Location = new System.Drawing.Point(760, 241);
+            this.txtpreciocompra.Location = new System.Drawing.Point(768, 204);
             this.txtpreciocompra.Name = "txtpreciocompra";
             this.txtpreciocompra.Size = new System.Drawing.Size(175, 28);
             this.txtpreciocompra.TabIndex = 9;
@@ -362,7 +366,7 @@ namespace proyectop2
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(111, 216);
+            this.label6.Location = new System.Drawing.Point(119, 179);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(201, 23);
             this.label6.TabIndex = 41;
@@ -373,7 +377,7 @@ namespace proyectop2
             this.txtcolor.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.txtcolor.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcolor.ForeColor = System.Drawing.SystemColors.Info;
-            this.txtcolor.Location = new System.Drawing.Point(760, 121);
+            this.txtcolor.Location = new System.Drawing.Point(768, 84);
             this.txtcolor.Name = "txtcolor";
             this.txtcolor.Size = new System.Drawing.Size(175, 28);
             this.txtcolor.TabIndex = 7;
@@ -383,7 +387,7 @@ namespace proyectop2
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(181, 336);
+            this.label7.Location = new System.Drawing.Point(189, 299);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(131, 23);
             this.label7.TabIndex = 42;
@@ -394,7 +398,7 @@ namespace proyectop2
             this.txtnombreproducto.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.txtnombreproducto.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtnombreproducto.ForeColor = System.Drawing.SystemColors.Info;
-            this.txtnombreproducto.Location = new System.Drawing.Point(318, 211);
+            this.txtnombreproducto.Location = new System.Drawing.Point(326, 174);
             this.txtnombreproducto.Name = "txtnombreproducto";
             this.txtnombreproducto.Size = new System.Drawing.Size(175, 28);
             this.txtnombreproducto.TabIndex = 5;
@@ -404,7 +408,7 @@ namespace proyectop2
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label12.Location = new System.Drawing.Point(676, 128);
+            this.label12.Location = new System.Drawing.Point(684, 91);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(66, 23);
             this.label12.TabIndex = 43;
@@ -415,7 +419,7 @@ namespace proyectop2
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label13.Location = new System.Drawing.Point(638, 163);
+            this.label13.Location = new System.Drawing.Point(646, 126);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(104, 23);
             this.label13.TabIndex = 44;
@@ -428,7 +432,7 @@ namespace proyectop2
             this.cboxmarca.FormattingEnabled = true;
             this.cboxmarca.Items.AddRange(new object[] {
             "selecciona una marca"});
-            this.cboxmarca.Location = new System.Drawing.Point(318, 253);
+            this.cboxmarca.Location = new System.Drawing.Point(326, 216);
             this.cboxmarca.Name = "cboxmarca";
             this.cboxmarca.Size = new System.Drawing.Size(175, 24);
             this.cboxmarca.TabIndex = 3;
@@ -439,7 +443,7 @@ namespace proyectop2
             this.numericUpDown2.BackColor = System.Drawing.Color.Black;
             this.numericUpDown2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown2.ForeColor = System.Drawing.SystemColors.Info;
-            this.numericUpDown2.Location = new System.Drawing.Point(762, 162);
+            this.numericUpDown2.Location = new System.Drawing.Point(770, 125);
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(174, 28);
             this.numericUpDown2.TabIndex = 8;
@@ -449,7 +453,7 @@ namespace proyectop2
             this.cboxcat.BackColor = System.Drawing.Color.Black;
             this.cboxcat.ForeColor = System.Drawing.Color.White;
             this.cboxcat.FormattingEnabled = true;
-            this.cboxcat.Location = new System.Drawing.Point(318, 178);
+            this.cboxcat.Location = new System.Drawing.Point(326, 141);
             this.cboxcat.Name = "cboxcat";
             this.cboxcat.Size = new System.Drawing.Size(175, 24);
             this.cboxcat.TabIndex = 2;
@@ -459,7 +463,7 @@ namespace proyectop2
             this.lblest.AutoSize = true;
             this.lblest.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblest.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblest.Location = new System.Drawing.Point(662, 202);
+            this.lblest.Location = new System.Drawing.Point(670, 165);
             this.lblest.Name = "lblest";
             this.lblest.Size = new System.Drawing.Size(80, 23);
             this.lblest.TabIndex = 46;
@@ -471,7 +475,7 @@ namespace proyectop2
             this.txtproductocodigo.Enabled = false;
             this.txtproductocodigo.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtproductocodigo.ForeColor = System.Drawing.SystemColors.Info;
-            this.txtproductocodigo.Location = new System.Drawing.Point(318, 136);
+            this.txtproductocodigo.Location = new System.Drawing.Point(326, 99);
             this.txtproductocodigo.Name = "txtproductocodigo";
             this.txtproductocodigo.Size = new System.Drawing.Size(80, 28);
             this.txtproductocodigo.TabIndex = 1;
@@ -481,7 +485,7 @@ namespace proyectop2
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label15.Location = new System.Drawing.Point(561, 285);
+            this.label15.Location = new System.Drawing.Point(569, 248);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(181, 23);
             this.label15.TabIndex = 47;
@@ -492,7 +496,7 @@ namespace proyectop2
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(625, 317);
+            this.label8.Location = new System.Drawing.Point(633, 280);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(117, 23);
             this.label8.TabIndex = 49;
@@ -500,7 +504,7 @@ namespace proyectop2
             // 
             // txtdescripcion
             // 
-            this.txtdescripcion.Location = new System.Drawing.Point(318, 349);
+            this.txtdescripcion.Location = new System.Drawing.Point(326, 312);
             this.txtdescripcion.Name = "txtdescripcion";
             this.txtdescripcion.Size = new System.Drawing.Size(277, 131);
             this.txtdescripcion.TabIndex = 6;
@@ -513,12 +517,13 @@ namespace proyectop2
             this.groupBox2.Controls.Add(this.dgvproductos);
             this.groupBox2.Controls.Add(this.mostarprodutos);
             this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(12, 631);
+            this.groupBox2.Location = new System.Drawing.Point(12, 543);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1494, 330);
+            this.groupBox2.Size = new System.Drawing.Size(1494, 291);
             this.groupBox2.TabIndex = 136;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Buscar Proveedor";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // comboBox1
             // 
@@ -548,36 +553,36 @@ namespace proyectop2
             this.dgvproductos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvproductos.BackgroundColor = System.Drawing.Color.Black;
             this.dgvproductos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvproductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvproductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvproductos.ColumnHeadersHeight = 29;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvproductos.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvproductos.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvproductos.EnableHeadersVisualStyles = false;
             this.dgvproductos.GridColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvproductos.Location = new System.Drawing.Point(46, 68);
             this.dgvproductos.Name = "dgvproductos";
             this.dgvproductos.RowHeadersWidth = 51;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.dgvproductos.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.dgvproductos.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvproductos.RowTemplate.Height = 24;
             this.dgvproductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgvproductos.Size = new System.Drawing.Size(1406, 241);
+            this.dgvproductos.Size = new System.Drawing.Size(1406, 121);
             this.dgvproductos.TabIndex = 20;
             this.dgvproductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvproductos_CellContentClick);
             // 
@@ -606,7 +611,7 @@ namespace proyectop2
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1604, 1102);
+            this.ClientSize = new System.Drawing.Size(1532, 856);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.gbreprod);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -629,7 +634,7 @@ namespace proyectop2
         private System.Windows.Forms.GroupBox gbreprod;
         private System.Windows.Forms.ComboBox cbocproveedor;
         private FontAwesome.Sharp.IconButton iconButton2;
-        private FontAwesome.Sharp.IconButton ibtañadircalle;
+        private FontAwesome.Sharp.IconButton ibtañadirmarca;
         private FontAwesome.Sharp.IconButton iconButton3;
         private System.Windows.Forms.ComboBox cboxmodelo;
         private FontAwesome.Sharp.IconButton btncancelar;

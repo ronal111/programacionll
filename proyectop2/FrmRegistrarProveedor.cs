@@ -55,6 +55,7 @@ namespace proyectop2
                 borrarmensajeerror();
                 if (ValidarCampos())
                     conversiones();
+                LimpiarCampos();
               
             }
 
@@ -152,6 +153,7 @@ namespace proyectop2
             if (ValidarCampos())
             {
                 conversionactualizar();
+                LimpiarCampos();
               btbguardar.Enabled = true;
             Actualizar.Enabled = false;
             }

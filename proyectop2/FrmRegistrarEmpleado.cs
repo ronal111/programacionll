@@ -13,12 +13,12 @@ using business;
 
 namespace proyectop2
 {
-    public partial class FrmEmpleadoReg : Form
+    public partial class FrmRegistrarEmpleado : Form
     { 
         private B_Operaciones_Empleados bopem = new B_Operaciones_Empleados();
         private B_Operaciones bop = new B_Operaciones();
         string iddomicilio;
-        public FrmEmpleadoReg()
+        public FrmRegistrarEmpleado()
         {
             InitializeComponent();
             iddomicilio = "";
@@ -57,10 +57,10 @@ namespace proyectop2
                 }
             }
 
-            if (!(cboxedad.Value > 0))
+            if (!(cboxedad.Value > 18))
             {
                 ok = false;
-                errorProvider1.SetError(cboxedad, "Elija una edad");
+                errorProvider1.SetError(cboxedad, "la edad debe ser mayor a 18");
             }
 
             if (txtempleado.Text == "")
@@ -154,6 +154,8 @@ namespace proyectop2
             cboxcolonia.Text = "";
             txtmunicipio.Clear();
             txtestado.Clear();
+            txtcalle.Clear();
+            cboxedad.Value =0;
             btbbuscarE.Enabled = true;
             Actualizar.Enabled = false;
         }
@@ -232,6 +234,7 @@ namespace proyectop2
             borrarmensajeerror();
             if (ValidarCampos())
             {  conversionactualizar();
+                LimpiarCampos();
                 btnguardar.Enabled = true;
                 Actualizar.Enabled = false;
             }

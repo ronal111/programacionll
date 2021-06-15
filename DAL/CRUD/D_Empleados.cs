@@ -10,6 +10,7 @@ namespace DAL
 {
     public class D_Empleados
     {
+        private D_Conexion conectar = new D_Conexion();
         public string idrfc { get; set; }
         public string nombree { get; set; }
         public string apellido { get; set; }
@@ -26,15 +27,15 @@ namespace DAL
             try
             {
 
-                D_Conexion.Conectar();
+                conectar.abrir();
                 
                 string insertar = "insert into Empleados values ('" + idrfc + "','" + nombree + "','" + apellido + "','" + numerotel +
                     "','" + edad + "','" + puesto + "','" + sueldo + "','" + fk_iddomicilioe + "')";
-                SqlCommand cmd = new SqlCommand(insertar, D_Conexion.Conectar());
+                SqlCommand cmd = new SqlCommand(insertar, conectar.Conectar);
                 var resultado = cmd.ExecuteNonQuery();
                 if (resultado == 1)
                     success = true;
-              
+                conectar.cerrar();
 
             }
             catch (Exception)
@@ -50,12 +51,14 @@ namespace DAL
             DataTable tablaempleado = new DataTable();
             try
             {
+                conectar.abrir();
                 string consulta = "select Empleados.idrfc,nombree,apellido,numerotel,edad,puesto,sueldo, Domicilio.iddomicilio,calle,numero,numero_int,cp,colonia,municipio,estado from Empleados join Domicilio on Empleados.fk_iddomicilioe = Domicilio.iddomicilio ";
-                SqlCommand cmd = new SqlCommand(consulta, D_Conexion.Conectar());
+                SqlCommand cmd = new SqlCommand(consulta, conectar.Conectar);
                 var reader = cmd.ExecuteReader();
                 if (reader.HasRows == false)
                     return null;
                 tablaempleado.Load(reader);
+                conectar.cerrar();
             }
             catch (Exception)
             {
@@ -73,10 +76,10 @@ namespace DAL
             try
             {
 
-                D_Conexion.Conectar();
+                conectar.abrir();
 
                 string insertar = "update Empleados set nombree='"+nombree+"',apellido='"+apellido+"',numerotel='"+numerotel+"',edad='"+edad+"', puesto='"+puesto+"' where idrfc='"+ idrfc + "'";
-                SqlCommand cmd = new SqlCommand(insertar, D_Conexion.Conectar());
+                SqlCommand cmd = new SqlCommand(insertar, conectar.Conectar);
                 var resultado = cmd.ExecuteNonQuery();
                 if (resultado == 1)
                     success = true;
@@ -89,17 +92,41 @@ namespace DAL
             return success;
         }
 
+        //public DataTable mostrarempleadosespecifico(string nombre)
+        //{
+        //    DataTable tablaempleado = new DataTable();
+        //    try
+        //    {
+        //        string consulta = "select Empleados.idrfc,nombree,apellido,numerotel,edad,puesto,sueldo, Domicilio.iddomicilio,calle,numero,numero_int,cp,colonia,municipio,estado from Empleados join Domicilio on Empleados.fk_iddomicilioe = Domicilio.iddomicilio where nombree  LIKE " + "'%" + nombre + "%'";
+        //        SqlCommand cmd = new SqlCommand(consulta, D_Conexion.Conectar());
+        //        var reader = cmd.ExecuteReader();
+        //        if (reader.HasRows == false)
+        //            return null;
+        //        tablaempleado.Load(reader);
+        //    }
+        //    catch (Exception)
+        //    {
+
+        //        throw;
+        //    }
+        //    return tablaempleado;
+
+        //}
         public DataTable mostrarempleadosespecifico(string nombre)
         {
             DataTable tablaempleado = new DataTable();
             try
             {
-                string consulta = "select Empleados.idrfc,nombree,apellido,numerotel,edad,puesto,sueldo, Domicilio.iddomicilio,calle,numero,numero_int,cp,colonia,municipio,estado from Empleados join Domicilio on Empleados.fk_iddomicilioe = Domicilio.iddomicilio where nombree  LIKE " + "'%" + nombre + "%'";
-                SqlCommand cmd = new SqlCommand(consulta, D_Conexion.Conectar());
+                conectar.abrir();
+                SqlCommand cmd = new SqlCommand("sp_buscarempleado", conectar.Conectar);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue ("@nombre", nombre);
+
                 var reader = cmd.ExecuteReader();
                 if (reader.HasRows == false)
                     return null;
                 tablaempleado.Load(reader);
+                conectar.cerrar();
             }
             catch (Exception)
             {
@@ -109,7 +136,6 @@ namespace DAL
             return tablaempleado;
 
         }
-        
 
 
 

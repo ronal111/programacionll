@@ -44,15 +44,12 @@ namespace proyectop2
             this.ibtnventas = new FontAwesome.Sharp.IconButton();
             this.submenuproveedor = new System.Windows.Forms.Panel();
             this.iconButton8 = new FontAwesome.Sharp.IconButton();
-            this.ibtnaddproveedor = new FontAwesome.Sharp.IconButton();
             this.ibtnProveedores = new FontAwesome.Sharp.IconButton();
             this.submenuempleados = new System.Windows.Forms.Panel();
             this.ibtnaddempleados = new FontAwesome.Sharp.IconButton();
-            this.ibtnsearchempleados = new FontAwesome.Sharp.IconButton();
             this.ibtnEmpleados = new FontAwesome.Sharp.IconButton();
             this.submenuproductos = new System.Windows.Forms.Panel();
             this.ibtnaddproductos = new FontAwesome.Sharp.IconButton();
-            this.btbbuscarp = new FontAwesome.Sharp.IconButton();
             this.ibtnproductos = new FontAwesome.Sharp.IconButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.logotipo = new System.Windows.Forms.PictureBox();
@@ -159,7 +156,7 @@ namespace proyectop2
             this.submenureportes.Controls.Add(this.iconButton1);
             this.submenureportes.Controls.Add(this.ibtnrepvd);
             this.submenureportes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.submenureportes.Location = new System.Drawing.Point(0, 784);
+            this.submenureportes.Location = new System.Drawing.Point(0, 644);
             this.submenureportes.Name = "submenureportes";
             this.submenureportes.Size = new System.Drawing.Size(328, 193);
             this.submenureportes.TabIndex = 9;
@@ -236,7 +233,7 @@ namespace proyectop2
             this.ibtnReportes.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnReportes.IconSize = 30;
             this.ibtnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtnReportes.Location = new System.Drawing.Point(0, 708);
+            this.ibtnReportes.Location = new System.Drawing.Point(0, 568);
             this.ibtnReportes.Name = "ibtnReportes";
             this.ibtnReportes.Size = new System.Drawing.Size(328, 76);
             this.ibtnReportes.TabIndex = 11;
@@ -256,7 +253,7 @@ namespace proyectop2
             this.ibtnventas.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnventas.IconSize = 30;
             this.ibtnventas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtnventas.Location = new System.Drawing.Point(0, 631);
+            this.ibtnventas.Location = new System.Drawing.Point(0, 491);
             this.ibtnventas.Name = "ibtnventas";
             this.ibtnventas.Size = new System.Drawing.Size(328, 77);
             this.ibtnventas.TabIndex = 10;
@@ -267,11 +264,10 @@ namespace proyectop2
             // submenuproveedor
             // 
             this.submenuproveedor.Controls.Add(this.iconButton8);
-            this.submenuproveedor.Controls.Add(this.ibtnaddproveedor);
             this.submenuproveedor.Dock = System.Windows.Forms.DockStyle.Top;
-            this.submenuproveedor.Location = new System.Drawing.Point(0, 533);
+            this.submenuproveedor.Location = new System.Drawing.Point(0, 436);
             this.submenuproveedor.Name = "submenuproveedor";
-            this.submenuproveedor.Size = new System.Drawing.Size(328, 98);
+            this.submenuproveedor.Size = new System.Drawing.Size(328, 55);
             this.submenuproveedor.TabIndex = 6;
             // 
             // iconButton8
@@ -286,33 +282,13 @@ namespace proyectop2
             this.iconButton8.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton8.IconSize = 30;
             this.iconButton8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton8.Location = new System.Drawing.Point(0, 54);
+            this.iconButton8.Location = new System.Drawing.Point(0, 0);
             this.iconButton8.Name = "iconButton8";
             this.iconButton8.Size = new System.Drawing.Size(328, 44);
             this.iconButton8.TabIndex = 9;
             this.iconButton8.Text = "Agregar Proveedor";
             this.iconButton8.UseVisualStyleBackColor = false;
             this.iconButton8.Click += new System.EventHandler(this.iconButton8_Click);
-            // 
-            // ibtnaddproveedor
-            // 
-            this.ibtnaddproveedor.BackColor = System.Drawing.Color.Black;
-            this.ibtnaddproveedor.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ibtnaddproveedor.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.ibtnaddproveedor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.ibtnaddproveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ibtnaddproveedor.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.ibtnaddproveedor.IconColor = System.Drawing.Color.White;
-            this.ibtnaddproveedor.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ibtnaddproveedor.IconSize = 30;
-            this.ibtnaddproveedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtnaddproveedor.Location = new System.Drawing.Point(0, 0);
-            this.ibtnaddproveedor.Name = "ibtnaddproveedor";
-            this.ibtnaddproveedor.Size = new System.Drawing.Size(328, 54);
-            this.ibtnaddproveedor.TabIndex = 8;
-            this.ibtnaddproveedor.Text = "Buscar Proveedor";
-            this.ibtnaddproveedor.UseVisualStyleBackColor = false;
-            this.ibtnaddproveedor.Click += new System.EventHandler(this.ibtnaddproveedor_Click);
             // 
             // ibtnProveedores
             // 
@@ -326,7 +302,7 @@ namespace proyectop2
             this.ibtnProveedores.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnProveedores.IconSize = 30;
             this.ibtnProveedores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtnProveedores.Location = new System.Drawing.Point(0, 457);
+            this.ibtnProveedores.Location = new System.Drawing.Point(0, 360);
             this.ibtnProveedores.Name = "ibtnProveedores";
             this.ibtnProveedores.Size = new System.Drawing.Size(328, 76);
             this.ibtnProveedores.TabIndex = 7;
@@ -337,11 +313,10 @@ namespace proyectop2
             // submenuempleados
             // 
             this.submenuempleados.Controls.Add(this.ibtnaddempleados);
-            this.submenuempleados.Controls.Add(this.ibtnsearchempleados);
             this.submenuempleados.Dock = System.Windows.Forms.DockStyle.Top;
-            this.submenuempleados.Location = new System.Drawing.Point(0, 359);
+            this.submenuempleados.Location = new System.Drawing.Point(0, 308);
             this.submenuempleados.Name = "submenuempleados";
-            this.submenuempleados.Size = new System.Drawing.Size(328, 98);
+            this.submenuempleados.Size = new System.Drawing.Size(328, 52);
             this.submenuempleados.TabIndex = 4;
             // 
             // ibtnaddempleados
@@ -356,33 +331,13 @@ namespace proyectop2
             this.ibtnaddempleados.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnaddempleados.IconSize = 30;
             this.ibtnaddempleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtnaddempleados.Location = new System.Drawing.Point(0, 51);
+            this.ibtnaddempleados.Location = new System.Drawing.Point(0, 0);
             this.ibtnaddempleados.Name = "ibtnaddempleados";
             this.ibtnaddempleados.Size = new System.Drawing.Size(328, 47);
             this.ibtnaddempleados.TabIndex = 6;
             this.ibtnaddempleados.Text = "Agregar Empleados";
             this.ibtnaddempleados.UseVisualStyleBackColor = false;
             this.ibtnaddempleados.Click += new System.EventHandler(this.ibtnaddempleados_Click);
-            // 
-            // ibtnsearchempleados
-            // 
-            this.ibtnsearchempleados.BackColor = System.Drawing.Color.Black;
-            this.ibtnsearchempleados.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ibtnsearchempleados.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.ibtnsearchempleados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.ibtnsearchempleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ibtnsearchempleados.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.ibtnsearchempleados.IconColor = System.Drawing.Color.White;
-            this.ibtnsearchempleados.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ibtnsearchempleados.IconSize = 30;
-            this.ibtnsearchempleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtnsearchempleados.Location = new System.Drawing.Point(0, 0);
-            this.ibtnsearchempleados.Name = "ibtnsearchempleados";
-            this.ibtnsearchempleados.Size = new System.Drawing.Size(328, 51);
-            this.ibtnsearchempleados.TabIndex = 5;
-            this.ibtnsearchempleados.Text = "Buscar Empleados";
-            this.ibtnsearchempleados.UseVisualStyleBackColor = false;
-            this.ibtnsearchempleados.Click += new System.EventHandler(this.iconButton6_Click);
             // 
             // ibtnEmpleados
             // 
@@ -396,7 +351,7 @@ namespace proyectop2
             this.ibtnEmpleados.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnEmpleados.IconSize = 30;
             this.ibtnEmpleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtnEmpleados.Location = new System.Drawing.Point(0, 272);
+            this.ibtnEmpleados.Location = new System.Drawing.Point(0, 221);
             this.ibtnEmpleados.Name = "ibtnEmpleados";
             this.ibtnEmpleados.Size = new System.Drawing.Size(328, 87);
             this.ibtnEmpleados.TabIndex = 4;
@@ -407,11 +362,10 @@ namespace proyectop2
             // submenuproductos
             // 
             this.submenuproductos.Controls.Add(this.ibtnaddproductos);
-            this.submenuproductos.Controls.Add(this.btbbuscarp);
             this.submenuproductos.Dock = System.Windows.Forms.DockStyle.Top;
             this.submenuproductos.Location = new System.Drawing.Point(0, 170);
             this.submenuproductos.Name = "submenuproductos";
-            this.submenuproductos.Size = new System.Drawing.Size(328, 102);
+            this.submenuproductos.Size = new System.Drawing.Size(328, 51);
             this.submenuproductos.TabIndex = 2;
             // 
             // ibtnaddproductos
@@ -426,33 +380,13 @@ namespace proyectop2
             this.ibtnaddproductos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnaddproductos.IconSize = 30;
             this.ibtnaddproductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtnaddproductos.Location = new System.Drawing.Point(0, 54);
+            this.ibtnaddproductos.Location = new System.Drawing.Point(0, 0);
             this.ibtnaddproductos.Name = "ibtnaddproductos";
             this.ibtnaddproductos.Size = new System.Drawing.Size(328, 50);
             this.ibtnaddproductos.TabIndex = 3;
             this.ibtnaddproductos.Text = "Agregar Productos";
             this.ibtnaddproductos.UseVisualStyleBackColor = false;
             this.ibtnaddproductos.Click += new System.EventHandler(this.ibtnaddproductos_Click);
-            // 
-            // btbbuscarp
-            // 
-            this.btbbuscarp.BackColor = System.Drawing.Color.Black;
-            this.btbbuscarp.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btbbuscarp.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btbbuscarp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.btbbuscarp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btbbuscarp.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.btbbuscarp.IconColor = System.Drawing.Color.White;
-            this.btbbuscarp.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btbbuscarp.IconSize = 35;
-            this.btbbuscarp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btbbuscarp.Location = new System.Drawing.Point(0, 0);
-            this.btbbuscarp.Name = "btbbuscarp";
-            this.btbbuscarp.Size = new System.Drawing.Size(328, 54);
-            this.btbbuscarp.TabIndex = 2;
-            this.btbbuscarp.Text = "Buscar Productos";
-            this.btbbuscarp.UseVisualStyleBackColor = false;
-            this.btbbuscarp.Click += new System.EventHandler(this.iconButton2_Click);
             // 
             // ibtnproductos
             // 
@@ -500,9 +434,9 @@ namespace proyectop2
             this.panelcontenedor2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelcontenedor2.Location = new System.Drawing.Point(366, 140);
+            this.panelcontenedor2.Location = new System.Drawing.Point(369, 140);
             this.panelcontenedor2.Name = "panelcontenedor2";
-            this.panelcontenedor2.Size = new System.Drawing.Size(723, 984);
+            this.panelcontenedor2.Size = new System.Drawing.Size(723, 902);
             this.panelcontenedor2.TabIndex = 2;
             this.panelcontenedor2.Paint += new System.Windows.Forms.PaintEventHandler(this.panelcontenedor2_Paint);
             // 
@@ -544,16 +478,13 @@ namespace proyectop2
         private FontAwesome.Sharp.IconButton ibtnEmpleados;
         private System.Windows.Forms.Panel submenuproductos;
         private FontAwesome.Sharp.IconButton ibtnaddproductos;
-        private FontAwesome.Sharp.IconButton btbbuscarp;
         private FontAwesome.Sharp.IconButton ibtnproductos;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel submenuproveedor;
         private FontAwesome.Sharp.IconButton iconButton8;
-        private FontAwesome.Sharp.IconButton ibtnaddproveedor;
         private FontAwesome.Sharp.IconButton ibtnProveedores;
         private System.Windows.Forms.Panel submenuempleados;
         private FontAwesome.Sharp.IconButton ibtnaddempleados;
-        private FontAwesome.Sharp.IconButton ibtnsearchempleados;
         private FontAwesome.Sharp.IconButton ibtnventas;
         private System.Windows.Forms.Panel submenureportes;
         private FontAwesome.Sharp.IconButton ibtnrepvd;

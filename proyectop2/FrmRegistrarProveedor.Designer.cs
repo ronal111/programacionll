@@ -118,6 +118,7 @@ namespace proyectop2
             this.lblidprov.Name = "lblidprov";
             this.lblidprov.Size = new System.Drawing.Size(0, 23);
             this.lblidprov.TabIndex = 160;
+            this.lblidprov.Visible = false;
             // 
             // Actualizar
             // 

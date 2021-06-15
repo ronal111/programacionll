@@ -150,7 +150,7 @@ namespace proyectop2
 
         private void iconButton2_Click(object sender, EventArgs e)
         {
-            abrirformuhijo(new FrmBuscarProducto());
+           
         }
 
         private void panelcontenedor2_Paint(object sender, PaintEventArgs e)
@@ -160,7 +160,7 @@ namespace proyectop2
 
         private void iconButton6_Click(object sender, EventArgs e)
         {
-            abrirformuhijo(new FrmBuscarEmpleado());
+       
         }
 
         private void ibtnaddproductos_Click(object sender, EventArgs e)
@@ -174,12 +174,12 @@ namespace proyectop2
         }
         private void ibtnaddempleados_Click(object sender, EventArgs e)
         {
-            abrirformuhijo(new FrmEmpleadoReg());
+            abrirformuhijo(new FrmRegistrarEmpleado());
         }
 
         private void ibtnaddproveedor_Click(object sender, EventArgs e)
         {
-            abrirformuhijo(new FrmBuscarProveedor());
+           
         }
 
         private void iconButton8_Click(object sender, EventArgs e)

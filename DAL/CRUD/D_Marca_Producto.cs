@@ -11,6 +11,7 @@ namespace DAL
 {
     public class D_Marca_Producto
     {
+        D_Conexion conectar = new D_Conexion();
         public int idmarca_producto { get; set; }
         public string marcaproducto { get; set; }
 
@@ -21,12 +22,14 @@ namespace DAL
             DataTable tablamarca= new DataTable();
             try
             {
+                conectar.abrir();                
                 string consulta = "select Marca_Producto.* from Marca_Producto;";
-                SqlCommand cmd = new SqlCommand(consulta, D_Conexion.Conectar());
+                SqlCommand cmd = new SqlCommand(consulta, conectar.Conectar);
                 var reader = cmd.ExecuteReader();
                 if (reader.HasRows == false)
                     return null;
                 tablamarca.Load(reader);
+                conectar.cerrar();
             }
             catch (Exception)
             {
@@ -36,26 +39,100 @@ namespace DAL
             return tablamarca;
 
         }
-
-
-
-
-        public void insertar()
+        public DataTable mostaracategorias()
         {
+            DataTable tablacategoria = new DataTable();
+            try
+            {
+                conectar.abrir();
+                string consulta = "select Marca_Producto.* from Marca_Producto;";
+                SqlCommand cmd = new SqlCommand(consulta, conectar.Conectar);
+                var reader = cmd.ExecuteReader();
+                if (reader.HasRows == false)
+                    return null;
+                tablacategoria.Load(reader);
+                conectar.cerrar();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return tablacategoria;
 
         }
-        public void mostrar()
+        public bool insertarMarca()
         {
+            bool success = false;
+
+            try
+            {
+
+                conectar.abrir();
+                string insertar = "insert into Marca_Producto values ('" + marcaproducto + "')";
+                SqlCommand cmd = new SqlCommand(insertar, conectar.Conectar);
+                var resultado = cmd.ExecuteNonQuery();
+                if (resultado == 1)
+                    success = true;
+
+                conectar.cerrar();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return success;
 
         }
-        public void borrar()
+
+        public bool actualizarmarca()
         {
+            bool success = false;
+
+            try
+            {
+                conectar.abrir();
+
+                string insertar = "update Marca_Producto set marcaproducto='" + marcaproducto + "'  where idmarca='" + idmarca_producto + "'";
+                SqlCommand cmd = new SqlCommand(insertar, conectar.Conectar);
+                var resultado = cmd.ExecuteNonQuery();
+                if (resultado == 1)
+                    success = true;
+                conectar.cerrar();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return success;
+        }
+
+        public DataTable mostrarMarcaEspecifica(string marca)
+        {
+            DataTable tablaempleado = new DataTable();
+            try
+            {
+                conectar.abrir();
+                string consulta = "select Marca_Producto.* from Marca_Producto where marcaproducto  LIKE " + "'%" + marca + "%'";
+                SqlCommand cmd = new SqlCommand(consulta, conectar.Conectar);
+                var reader = cmd.ExecuteReader();
+                if (reader.HasRows == false)
+                    return null;
+                tablaempleado.Load(reader);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return tablaempleado;
 
         }
 
-        public void actualizar()
-        {
 
-        }
+
+
     }
 }

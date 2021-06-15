@@ -107,29 +107,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmBuscarProducto.cs">
+    <Compile Include="FrmRegistrarCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmBuscarProducto.Designer.cs">
-      <DependentUpon>FrmBuscarProducto.cs</DependentUpon>
+    <Compile Include="FrmRegistrarCategoria.Designer.cs">
+      <DependentUpon>FrmRegistrarCategoria.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmBuscarProveedor.cs">
+    <Compile Include="FrmRegistrarEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmBuscarProveedor.Designer.cs">
-      <DependentUpon>FrmBuscarProveedor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmBusquedaEmergente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmBusquedaEmergente.Designer.cs">
-      <DependentUpon>FrmBusquedaEmergente.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmEmpleadoReg.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmEmpleadoReg.Designer.cs">
-      <DependentUpon>FrmEmpleadoReg.cs</DependentUpon>
+    <Compile Include="FrmRegistrarEmpleado.Designer.cs">
+      <DependentUpon>FrmRegistrarEmpleado.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmMenu.cs">
       <SubType>Form</SubType>
@@ -142,12 +130,6 @@
     </Compile>
     <Compile Include="FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmBuscarEmpleado.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmBuscarEmpleado.Designer.cs">
-      <DependentUpon>FrmBuscarEmpleado.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmRegistrarProductos.cs">
       <SubType>Form</SubType>
@@ -179,6 +161,18 @@
     <Compile Include="FrmReporteVentas.Designer.cs">
       <DependentUpon>FrmReporteVentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="FRM_MARCA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_MARCA.Designer.cs">
+      <DependentUpon>FRM_MARCA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_Modelos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_Modelos.Designer.cs">
+      <DependentUpon>FRM_Modelos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FrmVentas.cs">
@@ -187,26 +181,17 @@
     <Compile Include="FrmVentas.Designer.cs">
       <DependentUpon>FrmVentas.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FrmBuscarProducto.resx">
-      <DependentUpon>FrmBuscarProducto.cs</DependentUpon>
+    <EmbeddedResource Include="FrmRegistrarCategoria.resx">
+      <DependentUpon>FrmRegistrarCategoria.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmBuscarProveedor.resx">
-      <DependentUpon>FrmBuscarProveedor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmBusquedaEmergente.resx">
-      <DependentUpon>FrmBusquedaEmergente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmEmpleadoReg.resx">
-      <DependentUpon>FrmEmpleadoReg.cs</DependentUpon>
+    <EmbeddedResource Include="FrmRegistrarEmpleado.resx">
+      <DependentUpon>FrmRegistrarEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMenu.resx">
       <DependentUpon>FrmMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmBuscarEmpleado.resx">
-      <DependentUpon>FrmBuscarEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRegistrarProductos.resx">
       <DependentUpon>FrmRegistrarProductos.cs</DependentUpon>
@@ -222,6 +207,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmReporteVentas.resx">
       <DependentUpon>FrmReporteVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_MARCA.resx">
+      <DependentUpon>FRM_MARCA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_Modelos.resx">
+      <DependentUpon>FRM_Modelos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
