@@ -105,7 +105,21 @@ namespace proyectop2
                 ok = false;
                 errorProvider1.SetError(txtcalle, "ingresar sueldo");
             }
-
+            if (txtnumero.Text == "")
+            {
+                ok = false;
+                errorProvider1.SetError(txtnumero, "ingresar sueldo");
+            }
+            if (txtcodigopos.Text == "")
+            {
+                ok = false;
+                errorProvider1.SetError(txtcodigopos, "ingresar sueldo");
+            }
+            if (cboxcolonia.Text == "")
+            {
+                ok = false;
+                errorProvider1.SetError(cboxcolonia, "ingresar sueldo");
+            }
             return ok;
 
 
@@ -120,7 +134,9 @@ namespace proyectop2
             errorProvider1.SetError(txtpuesto, "");
             errorProvider1.SetError(txtsueldo, "");
             errorProvider1.SetError(txtnumero, "");
-
+            errorProvider1.SetError(txtnumero, "");
+            errorProvider1.SetError(txtcodigopos, "");
+            errorProvider1.SetError(cboxcolonia, "");
         }
 
         public void conversiones()
@@ -254,6 +270,141 @@ namespace proyectop2
         {
             var lista = bopem.buscarempleadoespecifico(textBox4.Text);
             dgvempleados.DataSource = lista;
+        }
+
+        private void txtrfc_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtsueldo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboxedad_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblrfc_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtnumerointerior_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtmunicipio_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtestado_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboxcolonia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtcalle_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtnumero_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblmuni_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtapellido_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtpuesto_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txttelefonoe_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtempleado_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblcompañiaprov_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblnomEmp_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblcoreo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbltelp_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

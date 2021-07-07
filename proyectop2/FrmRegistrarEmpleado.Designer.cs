@@ -229,6 +229,7 @@ namespace proyectop2
             this.cboxedad.Name = "cboxedad";
             this.cboxedad.Size = new System.Drawing.Size(175, 22);
             this.cboxedad.TabIndex = 166;
+            this.cboxedad.ValueChanged += new System.EventHandler(this.cboxedad_ValueChanged);
             // 
             // Actualizar
             // 
@@ -259,6 +260,7 @@ namespace proyectop2
             this.txtsueldo.Name = "txtsueldo";
             this.txtsueldo.Size = new System.Drawing.Size(175, 28);
             this.txtsueldo.TabIndex = 165;
+            this.txtsueldo.TextChanged += new System.EventHandler(this.txtsueldo_TextChanged);
             // 
             // label8
             // 
@@ -270,6 +272,7 @@ namespace proyectop2
             this.label8.Size = new System.Drawing.Size(82, 23);
             this.label8.TabIndex = 164;
             this.label8.Text = "Sueldo:";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label7
             // 
@@ -281,6 +284,7 @@ namespace proyectop2
             this.label7.Size = new System.Drawing.Size(80, 23);
             this.label7.TabIndex = 163;
             this.label7.Text = "Puesto:";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // txtrfc
             // 
@@ -291,6 +295,7 @@ namespace proyectop2
             this.txtrfc.Name = "txtrfc";
             this.txtrfc.Size = new System.Drawing.Size(175, 28);
             this.txtrfc.TabIndex = 162;
+            this.txtrfc.TextChanged += new System.EventHandler(this.txtrfc_TextChanged);
             // 
             // lblrfc
             // 
@@ -302,6 +307,7 @@ namespace proyectop2
             this.lblrfc.Size = new System.Drawing.Size(54, 23);
             this.lblrfc.TabIndex = 161;
             this.lblrfc.Text = "RFC:";
+            this.lblrfc.Click += new System.EventHandler(this.lblrfc_Click);
             // 
             // label2
             // 
@@ -313,6 +319,7 @@ namespace proyectop2
             this.label2.Size = new System.Drawing.Size(152, 23);
             this.label2.TabIndex = 159;
             this.label2.Text = "Codigo Postal:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -324,6 +331,7 @@ namespace proyectop2
             this.label1.Size = new System.Drawing.Size(167, 23);
             this.label1.TabIndex = 158;
             this.label1.Text = "Numero Interior:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtcodigopos
             // 
@@ -345,6 +353,7 @@ namespace proyectop2
             this.txtnumerointerior.Name = "txtnumerointerior";
             this.txtnumerointerior.Size = new System.Drawing.Size(175, 28);
             this.txtnumerointerior.TabIndex = 156;
+            this.txtnumerointerior.TextChanged += new System.EventHandler(this.txtnumerointerior_TextChanged);
             // 
             // txtmunicipio
             // 
@@ -356,6 +365,7 @@ namespace proyectop2
             this.txtmunicipio.Name = "txtmunicipio";
             this.txtmunicipio.Size = new System.Drawing.Size(175, 28);
             this.txtmunicipio.TabIndex = 155;
+            this.txtmunicipio.TextChanged += new System.EventHandler(this.txtmunicipio_TextChanged);
             // 
             // txtestado
             // 
@@ -367,6 +377,7 @@ namespace proyectop2
             this.txtestado.Name = "txtestado";
             this.txtestado.Size = new System.Drawing.Size(175, 28);
             this.txtestado.TabIndex = 154;
+            this.txtestado.TextChanged += new System.EventHandler(this.txtestado_TextChanged);
             // 
             // cboxcolonia
             // 
@@ -377,6 +388,7 @@ namespace proyectop2
             this.cboxcolonia.Name = "cboxcolonia";
             this.cboxcolonia.Size = new System.Drawing.Size(175, 24);
             this.cboxcolonia.TabIndex = 153;
+            this.cboxcolonia.SelectedIndexChanged += new System.EventHandler(this.cboxcolonia_SelectedIndexChanged);
             // 
             // txtcalle
             // 
@@ -387,6 +399,7 @@ namespace proyectop2
             this.txtcalle.Name = "txtcalle";
             this.txtcalle.Size = new System.Drawing.Size(175, 28);
             this.txtcalle.TabIndex = 152;
+            this.txtcalle.TextChanged += new System.EventHandler(this.txtcalle_TextChanged);
             // 
             // txtnumero
             // 
@@ -397,6 +410,7 @@ namespace proyectop2
             this.txtnumero.Name = "txtnumero";
             this.txtnumero.Size = new System.Drawing.Size(175, 28);
             this.txtnumero.TabIndex = 146;
+            this.txtnumero.TextChanged += new System.EventHandler(this.txtnumero_TextChanged);
             // 
             // lblmuni
             // 
@@ -408,6 +422,7 @@ namespace proyectop2
             this.lblmuni.Size = new System.Drawing.Size(112, 23);
             this.lblmuni.TabIndex = 151;
             this.lblmuni.Text = "Municipio:";
+            this.lblmuni.Click += new System.EventHandler(this.lblmuni_Click);
             // 
             // label3
             // 
@@ -419,6 +434,7 @@ namespace proyectop2
             this.label3.Size = new System.Drawing.Size(80, 23);
             this.label3.TabIndex = 150;
             this.label3.Text = "Estado:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -430,6 +446,7 @@ namespace proyectop2
             this.label4.Size = new System.Drawing.Size(93, 23);
             this.label4.TabIndex = 149;
             this.label4.Text = "Colonia:";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -441,6 +458,7 @@ namespace proyectop2
             this.label5.Size = new System.Drawing.Size(94, 23);
             this.label5.TabIndex = 148;
             this.label5.Text = "Numero:";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -452,6 +470,7 @@ namespace proyectop2
             this.label6.Size = new System.Drawing.Size(68, 23);
             this.label6.TabIndex = 147;
             this.label6.Text = "Calle:";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // btncancelar
             // 
@@ -502,6 +521,7 @@ namespace proyectop2
             this.txtapellido.Name = "txtapellido";
             this.txtapellido.Size = new System.Drawing.Size(175, 28);
             this.txtapellido.TabIndex = 2;
+            this.txtapellido.TextChanged += new System.EventHandler(this.txtapellido_TextChanged);
             // 
             // txtpuesto
             // 
@@ -512,6 +532,7 @@ namespace proyectop2
             this.txtpuesto.Name = "txtpuesto";
             this.txtpuesto.Size = new System.Drawing.Size(175, 28);
             this.txtpuesto.TabIndex = 3;
+            this.txtpuesto.TextChanged += new System.EventHandler(this.txtpuesto_TextChanged);
             // 
             // txttelefonoe
             // 
@@ -522,6 +543,7 @@ namespace proyectop2
             this.txttelefonoe.Name = "txttelefonoe";
             this.txttelefonoe.Size = new System.Drawing.Size(175, 28);
             this.txttelefonoe.TabIndex = 4;
+            this.txttelefonoe.TextChanged += new System.EventHandler(this.txttelefonoe_TextChanged);
             // 
             // txtempleado
             // 
@@ -532,6 +554,7 @@ namespace proyectop2
             this.txtempleado.Name = "txtempleado";
             this.txtempleado.Size = new System.Drawing.Size(175, 28);
             this.txtempleado.TabIndex = 1;
+            this.txtempleado.TextChanged += new System.EventHandler(this.txtempleado_TextChanged);
             // 
             // lblcompañiaprov
             // 
@@ -543,6 +566,7 @@ namespace proyectop2
             this.lblcompañiaprov.Size = new System.Drawing.Size(98, 23);
             this.lblcompañiaprov.TabIndex = 134;
             this.lblcompañiaprov.Text = "Apellido:";
+            this.lblcompañiaprov.Click += new System.EventHandler(this.lblcompañiaprov_Click);
             // 
             // lblnomEmp
             // 
@@ -554,6 +578,7 @@ namespace proyectop2
             this.lblnomEmp.Size = new System.Drawing.Size(95, 23);
             this.lblnomEmp.TabIndex = 133;
             this.lblnomEmp.Text = "Nombre:";
+            this.lblnomEmp.Click += new System.EventHandler(this.lblnomEmp_Click);
             // 
             // lblcoreo
             // 
@@ -565,6 +590,7 @@ namespace proyectop2
             this.lblcoreo.Size = new System.Drawing.Size(65, 23);
             this.lblcoreo.TabIndex = 135;
             this.lblcoreo.Text = "Edad:";
+            this.lblcoreo.Click += new System.EventHandler(this.lblcoreo_Click);
             // 
             // lbltelp
             // 
@@ -576,12 +602,13 @@ namespace proyectop2
             this.lbltelp.Size = new System.Drawing.Size(99, 23);
             this.lbltelp.TabIndex = 136;
             this.lbltelp.Text = "Telefono:";
+            this.lbltelp.Click += new System.EventHandler(this.lbltelp_Click);
             // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // FrmEmpleadoReg
+            // FrmRegistrarEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -590,7 +617,7 @@ namespace proyectop2
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FrmEmpleadoReg";
+            this.Name = "FrmRegistrarEmpleado";
             this.Text = "FrmEmpleadoReg";
             this.Load += new System.EventHandler(this.FrmEmpleadoReg_Load);
             this.groupBox2.ResumeLayout(false);

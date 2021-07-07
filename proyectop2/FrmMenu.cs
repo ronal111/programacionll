@@ -199,7 +199,7 @@ namespace proyectop2
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
-            abrirformuhijo(new FrmReporteCompra());
+            abrirformuhijo(new FRMReporteDeStock());
         }
 
         private void iconButton2_Click_1(object sender, EventArgs e)

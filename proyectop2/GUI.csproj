@@ -48,6 +48,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.5.15.3\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
@@ -96,6 +101,8 @@
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -143,11 +150,11 @@
     <Compile Include="FrmRegistrarProveedor.Designer.cs">
       <DependentUpon>FrmRegistrarProveedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmReporteCompra.cs">
+    <Compile Include="FRMReporteDeStock.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmReporteCompra.Designer.cs">
-      <DependentUpon>FrmReporteCompra.cs</DependentUpon>
+    <Compile Include="FRMReporteDeStock.Designer.cs">
+      <DependentUpon>FRMReporteDeStock.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmReporteProductoMasVendido.cs">
       <SubType>Form</SubType>
@@ -181,6 +188,24 @@
     <Compile Include="FrmVentas.Designer.cs">
       <DependentUpon>FrmVentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="reportes\REPORTESTOCK.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>REPORTESTOCK.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reportes\REPORTEELMASVENDIDO.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>REPORTEELMASVENDIDO.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reportes\reporteventas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>reporteventas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="FrmRegistrarCategoria.resx">
       <DependentUpon>FrmRegistrarCategoria.cs</DependentUpon>
     </EmbeddedResource>
@@ -199,8 +224,8 @@
     <EmbeddedResource Include="FrmRegistrarProveedor.resx">
       <DependentUpon>FrmRegistrarProveedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmReporteCompra.resx">
-      <DependentUpon>FrmReporteCompra.cs</DependentUpon>
+    <EmbeddedResource Include="FRMReporteDeStock.resx">
+      <DependentUpon>FRMReporteDeStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmReporteProductoMasVendido.resx">
       <DependentUpon>FrmReporteProductoMasVendido.cs</DependentUpon>
@@ -226,6 +251,18 @@
     </Compile>
     <EmbeddedResource Include="FrmVentas.resx">
       <DependentUpon>FrmVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportes\REPORTESTOCK.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>REPORTESTOCK.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportes\REPORTEELMASVENDIDO.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>REPORTEELMASVENDIDO.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportes\reporteventas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>reporteventas.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -297,6 +334,9 @@
       <Project>{f0435259-5300-42db-9db3-0c33d1769b34}</Project>
       <Name>business</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace proyectop2
 {
-    public partial class FrmReporteCompra : Form
+    public partial class reprotes : Form
     {
-        public FrmReporteCompra()
+        public reprotes()
         {
             InitializeComponent();
-        }
-
-        private void FrmReporteCompra_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

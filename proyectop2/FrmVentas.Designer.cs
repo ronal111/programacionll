@@ -30,8 +30,8 @@ namespace proyectop2
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupventa = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
@@ -39,32 +39,31 @@ namespace proyectop2
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtbuscar = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cboxProducto = new System.Windows.Forms.ComboBox();
             this.ibtncancelar = new FontAwesome.Sharp.IconButton();
+            this.btbbuscarp = new FontAwesome.Sharp.IconButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lbimpuesto = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.lbsubtotal = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.dgvbproductos = new System.Windows.Forms.DataGridView();
             this.ibtnvenderp = new FontAwesome.Sharp.IconButton();
             this.quitarp = new FontAwesome.Sharp.IconButton();
-            this.btbbuscarp = new FontAwesome.Sharp.IconButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dgvbproductos = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lbtotal = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomproduct = new System.Windows.Forms.DataGridViewLinkColumn();
             this.preciouni = new System.Windows.Forms.DataGridViewLinkColumn();
             this.cantidadp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iva = new System.Windows.Forms.DataGridViewLinkColumn();
             this.preciov = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.groupventa.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -83,10 +82,11 @@ namespace proyectop2
             this.groupventa.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupventa.Location = new System.Drawing.Point(0, 0);
             this.groupventa.Name = "groupventa";
-            this.groupventa.Size = new System.Drawing.Size(1317, 799);
+            this.groupventa.Size = new System.Drawing.Size(1314, 799);
             this.groupventa.TabIndex = 89;
             this.groupventa.TabStop = false;
             this.groupventa.Text = "VENTAS";
+            this.groupventa.Enter += new System.EventHandler(this.groupventa_Enter);
             // 
             // groupBox3
             // 
@@ -177,28 +177,6 @@ namespace proyectop2
             this.label5.TabIndex = 109;
             this.label5.Text = "Paga Con:";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(563, 264);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 23);
-            this.label4.TabIndex = 108;
-            this.label4.Text = "$$$$$";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(496, 264);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 23);
-            this.label3.TabIndex = 107;
-            this.label3.Text = "Total:";
-            // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
@@ -217,15 +195,13 @@ namespace proyectop2
             this.groupBox2.Controls.Add(this.txtbuscar);
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.numericUpDown2);
-            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.cboxProducto);
             this.groupBox2.Controls.Add(this.ibtncancelar);
             this.groupBox2.Controls.Add(this.btbbuscarp);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox2.Location = new System.Drawing.Point(60, 21);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1224, 239);
+            this.groupBox2.Size = new System.Drawing.Size(1221, 239);
             this.groupBox2.TabIndex = 91;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Opciones";
@@ -239,6 +215,7 @@ namespace proyectop2
             this.txtbuscar.Name = "txtbuscar";
             this.txtbuscar.Size = new System.Drawing.Size(181, 28);
             this.txtbuscar.TabIndex = 1;
+            this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
             // 
             // label13
             // 
@@ -256,19 +233,28 @@ namespace proyectop2
             this.numericUpDown2.BackColor = System.Drawing.Color.Black;
             this.numericUpDown2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown2.ForeColor = System.Drawing.SystemColors.Info;
-            this.numericUpDown2.Location = new System.Drawing.Point(210, 99);
+            this.numericUpDown2.Location = new System.Drawing.Point(209, 99);
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(174, 28);
             this.numericUpDown2.TabIndex = 7;
+            this.numericUpDown2.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
-            // comboBox1
+            // cboxProducto
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.Black;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(209, 46);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(175, 24);
-            this.comboBox1.TabIndex = 2;
+            this.cboxProducto.BackColor = System.Drawing.Color.Black;
+            this.cboxProducto.ForeColor = System.Drawing.Color.White;
+            this.cboxProducto.FormattingEnabled = true;
+            this.cboxProducto.Items.AddRange(new object[] {
+            "nombrep",
+            "idproducto"});
+            this.cboxProducto.Location = new System.Drawing.Point(209, 46);
+            this.cboxProducto.Name = "cboxProducto";
+            this.cboxProducto.Size = new System.Drawing.Size(175, 24);
+            this.cboxProducto.TabIndex = 2;
             // 
             // ibtncancelar
             // 
@@ -282,12 +268,136 @@ namespace proyectop2
             this.ibtncancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtncancelar.IconSize = 35;
             this.ibtncancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtncancelar.Location = new System.Drawing.Point(579, 39);
+            this.ibtncancelar.Location = new System.Drawing.Point(619, 39);
             this.ibtncancelar.Name = "ibtncancelar";
             this.ibtncancelar.Size = new System.Drawing.Size(158, 43);
             this.ibtncancelar.TabIndex = 6;
             this.ibtncancelar.Text = "Cancelar";
             this.ibtncancelar.UseVisualStyleBackColor = false;
+            // 
+            // btbbuscarp
+            // 
+            this.btbbuscarp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btbbuscarp.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btbbuscarp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btbbuscarp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btbbuscarp.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btbbuscarp.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btbbuscarp.IconColor = System.Drawing.Color.White;
+            this.btbbuscarp.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btbbuscarp.IconSize = 35;
+            this.btbbuscarp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btbbuscarp.Location = new System.Drawing.Point(399, 36);
+            this.btbbuscarp.Name = "btbbuscarp";
+            this.btbbuscarp.Size = new System.Drawing.Size(199, 43);
+            this.btbbuscarp.TabIndex = 3;
+            this.btbbuscarp.Text = "Agregar Producto";
+            this.btbbuscarp.UseVisualStyleBackColor = false;
+            this.btbbuscarp.Click += new System.EventHandler(this.btbbuscarp_Click_1);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox1.AutoSize = true;
+            this.groupBox1.Controls.Add(this.lbimpuesto);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.lbsubtotal);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.dgvbproductos);
+            this.groupBox1.Controls.Add(this.ibtnvenderp);
+            this.groupBox1.Controls.Add(this.quitarp);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.lbtotal);
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox1.Location = new System.Drawing.Point(60, 275);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(839, 328);
+            this.groupBox1.TabIndex = 90;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Productos a Vender";
+            // 
+            // lbimpuesto
+            // 
+            this.lbimpuesto.AutoSize = true;
+            this.lbimpuesto.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbimpuesto.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbimpuesto.Location = new System.Drawing.Point(404, 264);
+            this.lbimpuesto.Name = "lbimpuesto";
+            this.lbimpuesto.Size = new System.Drawing.Size(65, 23);
+            this.lbimpuesto.TabIndex = 112;
+            this.lbimpuesto.Text = "$$$$$";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label10.Location = new System.Drawing.Point(277, 264);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(107, 23);
+            this.label10.TabIndex = 111;
+            this.label10.Text = "Impuesto:";
+            // 
+            // lbsubtotal
+            // 
+            this.lbsubtotal.AutoSize = true;
+            this.lbsubtotal.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbsubtotal.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbsubtotal.Location = new System.Drawing.Point(191, 264);
+            this.lbsubtotal.Name = "lbsubtotal";
+            this.lbsubtotal.Size = new System.Drawing.Size(65, 23);
+            this.lbsubtotal.TabIndex = 110;
+            this.lbsubtotal.Text = "$$$$$";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label8.Location = new System.Drawing.Point(80, 264);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(94, 23);
+            this.label8.TabIndex = 109;
+            this.label8.Text = "Subtotal:";
+            // 
+            // dgvbproductos
+            // 
+            this.dgvbproductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvbproductos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvbproductos.BackgroundColor = System.Drawing.Color.Black;
+            this.dgvbproductos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvbproductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvbproductos.ColumnHeadersHeight = 29;
+            this.dgvbproductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.nomproduct,
+            this.preciouni,
+            this.cantidadp,
+            this.iva,
+            this.preciov});
+            this.dgvbproductos.EnableHeadersVisualStyles = false;
+            this.dgvbproductos.GridColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvbproductos.Location = new System.Drawing.Point(22, 41);
+            this.dgvbproductos.Name = "dgvbproductos";
+            this.dgvbproductos.RowHeadersWidth = 8;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.dgvbproductos.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvbproductos.RowTemplate.Height = 24;
+            this.dgvbproductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvbproductos.Size = new System.Drawing.Size(634, 192);
+            this.dgvbproductos.TabIndex = 38;
+            this.dgvbproductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvbproductos_CellContentClick);
             // 
             // ibtnvenderp
             // 
@@ -307,6 +417,7 @@ namespace proyectop2
             this.ibtnvenderp.TabIndex = 5;
             this.ibtnvenderp.Text = "Vender";
             this.ibtnvenderp.UseVisualStyleBackColor = false;
+            this.ibtnvenderp.Click += new System.EventHandler(this.ibtnvenderp_Click);
             // 
             // quitarp
             // 
@@ -326,110 +437,40 @@ namespace proyectop2
             this.quitarp.TabIndex = 4;
             this.quitarp.Text = "Quitar";
             this.quitarp.UseVisualStyleBackColor = false;
+            this.quitarp.Click += new System.EventHandler(this.quitarp_Click);
             // 
-            // btbbuscarp
+            // label3
             // 
-            this.btbbuscarp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.btbbuscarp.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.btbbuscarp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.btbbuscarp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btbbuscarp.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btbbuscarp.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.btbbuscarp.IconColor = System.Drawing.Color.White;
-            this.btbbuscarp.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btbbuscarp.IconSize = 35;
-            this.btbbuscarp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btbbuscarp.Location = new System.Drawing.Point(399, 36);
-            this.btbbuscarp.Name = "btbbuscarp";
-            this.btbbuscarp.Size = new System.Drawing.Size(158, 43);
-            this.btbbuscarp.TabIndex = 3;
-            this.btbbuscarp.Text = "Buscar";
-            this.btbbuscarp.UseVisualStyleBackColor = false;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(496, 264);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(61, 23);
+            this.label3.TabIndex = 107;
+            this.label3.Text = "Total:";
             // 
-            // label2
+            // lbtotal
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(241, 187);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(169, 34);
-            this.label2.TabIndex = 98;
-            this.label2.Text = "___________";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(16, 187);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(219, 34);
-            this.label1.TabIndex = 97;
-            this.label1.Text = "Folio de Venta:";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.groupBox1.AutoSize = true;
-            this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.dgvbproductos);
-            this.groupBox1.Controls.Add(this.ibtnvenderp);
-            this.groupBox1.Controls.Add(this.quitarp);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox1.Location = new System.Drawing.Point(60, 275);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(839, 328);
-            this.groupBox1.TabIndex = 90;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Productos a Vender";
-            // 
-            // dgvbproductos
-            // 
-            this.dgvbproductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvbproductos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvbproductos.BackgroundColor = System.Drawing.Color.Black;
-            this.dgvbproductos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvbproductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvbproductos.ColumnHeadersHeight = 29;
-            this.dgvbproductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nomproduct,
-            this.preciouni,
-            this.cantidadp,
-            this.iva,
-            this.preciov});
-            this.dgvbproductos.EnableHeadersVisualStyles = false;
-            this.dgvbproductos.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvbproductos.Location = new System.Drawing.Point(22, 41);
-            this.dgvbproductos.Name = "dgvbproductos";
-            this.dgvbproductos.RowHeadersWidth = 8;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.dgvbproductos.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvbproductos.RowTemplate.Height = 24;
-            this.dgvbproductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvbproductos.Size = new System.Drawing.Size(634, 192);
-            this.dgvbproductos.TabIndex = 38;
-            this.dgvbproductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvbproductos_CellContentClick);
+            this.lbtotal.AutoSize = true;
+            this.lbtotal.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbtotal.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbtotal.Location = new System.Drawing.Point(563, 264);
+            this.lbtotal.Name = "lbtotal";
+            this.lbtotal.Size = new System.Drawing.Size(65, 23);
+            this.lbtotal.TabIndex = 108;
+            this.lbtotal.Text = "$$$$$";
             // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
+            this.ID.Width = 57;
             // 
             // nomproduct
             // 
@@ -466,56 +507,12 @@ namespace proyectop2
             this.preciov.Name = "preciov";
             this.preciov.Width = 88;
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(80, 264);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(94, 23);
-            this.label8.TabIndex = 109;
-            this.label8.Text = "Subtotal:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Location = new System.Drawing.Point(191, 264);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(65, 23);
-            this.label9.TabIndex = 110;
-            this.label9.Text = "$$$$$";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label10.Location = new System.Drawing.Point(277, 264);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(107, 23);
-            this.label10.TabIndex = 111;
-            this.label10.Text = "Impuesto:";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label11.Location = new System.Drawing.Point(404, 264);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(65, 23);
-            this.label11.TabIndex = 112;
-            this.label11.Text = "$$$$$";
-            // 
             // FrmVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1317, 618);
+            this.ClientSize = new System.Drawing.Size(1314, 629);
             this.Controls.Add(this.groupventa);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -543,29 +540,28 @@ namespace proyectop2
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbtotal;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtbuscar;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cboxProducto;
         private FontAwesome.Sharp.IconButton ibtncancelar;
         private FontAwesome.Sharp.IconButton ibtnvenderp;
         private FontAwesome.Sharp.IconButton quitarp;
         private FontAwesome.Sharp.IconButton btbbuscarp;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvbproductos;
         private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lbimpuesto;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lbsubtotal;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewLinkColumn nomproduct;
         private System.Windows.Forms.DataGridViewLinkColumn preciouni;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidadp;

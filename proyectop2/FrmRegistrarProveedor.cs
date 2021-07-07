@@ -66,7 +66,10 @@ namespace proyectop2
             errorProvider1.SetError(txtcompañia, "");
             errorProvider1.SetError(txtcorreo, "");
             errorProvider1.SetError(txttelefono, "");
-         
+            errorProvider1.SetError(txtcalle, "");
+            errorProvider1.SetError(txtnumero, "");
+            errorProvider1.SetError(txtcodigopos, "");
+            errorProvider1.SetError(cboxcolonia, "");
         }
         private bool ValidarCampos()
         {
@@ -108,9 +111,30 @@ namespace proyectop2
             if (txttelefono.Text == "")
             {
                 ok = false;
-                errorProvider1.SetError(txttelefono, "ingresar el rfc del empleado ");
+                errorProvider1.SetError(txttelefono, "ingresar el telefono ");
             }
-        
+            if (txtcalle.Text == "")
+            {
+                ok = false;
+                errorProvider1.SetError(txtcalle, "ingresar la calle ");
+            }
+            if (txtnumero.Text == "")
+            {
+                ok = false;
+                errorProvider1.SetError(txtnumero, "ingresar numero de calle ");
+            }
+            if (txtcodigopos.Text == "")
+            {
+                ok = false;
+                errorProvider1.SetError(txtcodigopos, "ingresar el codigo potal ");
+            }
+            if (cboxcolonia.Text == "")
+            {
+                ok = false;
+                errorProvider1.SetError(cboxcolonia, "ingresar el codigo potal ");
+            }
+
+
 
             return ok;
         }

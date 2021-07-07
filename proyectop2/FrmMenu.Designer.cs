@@ -54,6 +54,8 @@ namespace proyectop2
             this.panel3 = new System.Windows.Forms.Panel();
             this.logotipo = new System.Windows.Forms.PictureBox();
             this.panelcontenedor2 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxRestaurar)).BeginInit();
@@ -66,6 +68,9 @@ namespace proyectop2
             this.submenuproductos.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logotipo)).BeginInit();
+            this.panelcontenedor2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -197,7 +202,7 @@ namespace proyectop2
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(328, 55);
             this.iconButton1.TabIndex = 13;
-            this.iconButton1.Text = "Reporte De Compra";
+            this.iconButton1.Text = "Reporte De Stock";
             this.iconButton1.UseVisualStyleBackColor = false;
             this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
@@ -434,11 +439,35 @@ namespace proyectop2
             this.panelcontenedor2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelcontenedor2.Controls.Add(this.pictureBox2);
+            this.panelcontenedor2.Controls.Add(this.pictureBox1);
             this.panelcontenedor2.Location = new System.Drawing.Point(369, 140);
             this.panelcontenedor2.Name = "panelcontenedor2";
             this.panelcontenedor2.Size = new System.Drawing.Size(723, 902);
             this.panelcontenedor2.TabIndex = 2;
             this.panelcontenedor2.Paint += new System.Windows.Forms.PaintEventHandler(this.panelcontenedor2_Paint);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox2.Image = global::proyectop2.Properties.Resources.img_411693535_720x480;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 290);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(723, 612);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox1.Image = global::proyectop2.Properties.Resources.electronica;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(723, 290);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // FrmMenu
             // 
@@ -467,6 +496,9 @@ namespace proyectop2
             this.submenuproductos.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.logotipo)).EndInit();
+            this.panelcontenedor2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -497,5 +529,7 @@ namespace proyectop2
         private FontAwesome.Sharp.IconButton iconButton1;
         private FontAwesome.Sharp.IconButton iconButton2;
         public System.Windows.Forms.Panel panelcontenedor2;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

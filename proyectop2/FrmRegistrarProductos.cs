@@ -72,6 +72,13 @@ namespace proyectop2
             errorProvider1.SetError(cbocproveedor, "");
             errorProvider1.SetError(txtventa, "");
             errorProvider1.SetError(txtcolor, "");
+            errorProvider1.SetError(txtnombreproducto, "");
+            errorProvider1.SetError(cboxcat, "");
+            errorProvider1.SetError(cboxmarca, "");
+            errorProvider1.SetError(cboxmodelo, "");
+            errorProvider1.SetError(txtdescripcion, "");
+            errorProvider1.SetError(numericUpDown2, "");
+            errorProvider1.SetError(cbocproveedor, "");
 
         }
         public void limpiar_campos() {
@@ -132,6 +139,42 @@ namespace proyectop2
                 ok = false;
                 errorProvider1.SetError(txtcolor, "ingresar la descripcion del producto ");
             }
+            if (txtnombreproducto.Text == "")
+            {
+                ok = false;
+                errorProvider1.SetError(txtnombreproducto, "ingresar nombre del producto ");
+            }
+            if (cboxcat.Text == "")
+            {
+                ok = false;
+                errorProvider1.SetError(cboxcat, "ingresar la categoria ");
+            }
+            if (cboxmarca.Text == "")
+            {
+                ok = false;
+                errorProvider1.SetError(cboxmarca, "ingresar la marca del producto ");
+            }
+            if (cboxmodelo.Text == "")
+            {
+                ok = false;
+                errorProvider1.SetError(cboxmodelo, "ingresar el modelo del producto ");
+            }
+            if (txtdescripcion.Text == "")
+            {
+                ok = false;
+                errorProvider1.SetError(txtdescripcion, "ingresar una breve descripcion del producto ");
+            }
+            if (numericUpDown2.Text == "")
+            {
+                ok = false;
+                errorProvider1.SetError(numericUpDown2, "ingresar una cantidad");
+            }
+            if (cbocproveedor.Text == "")
+            {
+                ok = false;
+                errorProvider1.SetError(cbocproveedor, "ingresar un proveedor ");
+            }
+
 
 
 
@@ -285,6 +328,7 @@ namespace proyectop2
             {
                 conversiones();
                 btnActualizar.Enabled = true;
+                MessageBox.Show("DATOS REGISTRADOS CORRECTAMENTE");
                 limpiar_campos();
               
 
